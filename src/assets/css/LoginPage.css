@@ -1,0 +1,30 @@
+.loginPage .colLeft {
+    border-top: 1px solid #ccc;
+    border-left: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    border-radius: 10px 0 0 10px;
+}
+
+.loginPage .colRight {
+    border-top: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    border-radius: 0 10px 10px 0;
+    padding: 20px;
+}
+
+@media (max-width: 992px) {
+    .loginPage .colLeft {
+        border-top: 1px solid #ccc;
+        border-left: 1px solid #ccc;
+        border-right: 1px solid #ccc;
+        border-radius: 10px 10px 0 0;
+    }
+
+    .loginPage .colRight {
+        border-left: 1px solid #ccc;
+        border-right: 1px solid #ccc;
+        border-bottom: 1px solid #ccc;
+        border-radius: 0 0 10px 10px;
+    }
+}
