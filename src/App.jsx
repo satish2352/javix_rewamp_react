@@ -14,6 +14,14 @@ import { AreaCards } from "./components";
 import LoginPage from "./screens/LoginPage";
 import ForgotPassword from "./screens/ForgotPassword";
 import Footer from "./screens/dashboard/Footer";
+import General_survey from "./screens/general survey/General_survey";
+import Health_survey from "./screens/health survey/Health_survey";
+import Socieconomin_survey from "./screens/socieconomic survey/Socieconomin_survey";
+import Screening_screener from "./screens/daily and weely data/Screening_screener";
+import Screening_sevika from "./screens/daily and weely data/Screening_sevika";
+import Patient_List_For_Lipid_Panel_Test from "./screens/daily and weely data/Patient_List_For_Lipid_Panel_Test";
+import New_issue from "./screens/issue addressing/New_issue";
+import Update_issue from "./screens/issue addressing/Update_issue";
 
 
 function App() {
@@ -38,6 +46,14 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path='/adduser' element={<Adduser />} />
             <Route path='/approveduser/activeuser' element={<AreaCards />} />
+            <Route path='/generalsurvey' element={<General_survey />} />
+            <Route path='/healthsurvey' element={<Health_survey />} />
+            <Route path='/socieconomic_survey' element={<Socieconomin_survey />} />
+            <Route path='/dailyandweeklydata/screening_screener' element={<Screening_screener />} />
+            <Route path='/dailyandweeklydata/screening_sevika' element={<Screening_sevika />} />
+            <Route path='/dailyandweeklydata/patientlist' element={<Patient_List_For_Lipid_Panel_Test />} />
+            <Route path='/issueaddressing/newissue' element={<New_issue />} />
+            <Route path='/issueaddressing/updateissue' element={<Update_issue />} />
 
 
             {/* <Route path="*" element={<PageNotFound />} /> */}

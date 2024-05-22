@@ -11,7 +11,7 @@ function Home() {
   return (
     <>
       <AreaTop />
-      <Navbar style={{ backgroundColor: '' }}>
+      <Navbar style={{ backgroundColor: '#f8f8f8' }}>
         <Container>
           <Navbar.Brand >
             <i className="fa-regular fa-square-check" style={{ padding: "10px" }}></i>

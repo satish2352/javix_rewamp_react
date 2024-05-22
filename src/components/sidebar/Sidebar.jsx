@@ -76,48 +76,52 @@ const Sidebar = () => {
           <ul className="menu-list">
             <Menu>
               <li className="menu-item">
-                <Link to="/"><MenuItem icon={<IoHomeSharp />} style={{color : "black"}}>Home</MenuItem></Link>
+                <Link to="/"><MenuItem icon={<IoHomeSharp />} style={{ color: "black" }}>Home</MenuItem></Link>
               </li>
               <li className="menu-item">
-              <Link to="/adduser"><MenuItem icon={<RiUserAddFill />} style={{color : "black"}}>Add User</MenuItem></Link>
+                <Link to="/adduser"><MenuItem icon={<RiUserAddFill />} style={{ color: "black" }}>Add User</MenuItem></Link>
               </li>
               <li className="menu-item">
                 <SubMenu label="Approved User" icon={<MdApproval />}>
-                  <Link to="/approveduser/activeuser"><MenuItem style={{color : "black"}}>Active Users</MenuItem></Link>
-                  <MenuItem>Inactive Users</MenuItem>
+                  <MenuItem>Doctors</MenuItem>
+                  <MenuItem>NGO</MenuItem>
+                  <MenuItem>Screener</MenuItem>
+                  <MenuItem>Sevika</MenuItem>
+                  <MenuItem>Pharmacy</MenuItem>
                 </SubMenu>
               </li>
               <li className="menu-item">
                 <SubMenu label="Users" icon={<FaRegUser />}>
-                  <MenuItem>Active Users</MenuItem>
+                  <Link to="/approveduser/activeuser"><MenuItem>Active Users</MenuItem></Link>
                   <MenuItem>Inactive Users</MenuItem>
                 </SubMenu>
               </li>
               <li className="menu-item">
-                <SubMenu label="Daily Weekly" icon={<FaRegUser />}>
-                  <MenuItem>Active Users</MenuItem>
-                  <MenuItem>Inactive Users</MenuItem>
+                <SubMenu label="Daily and Weekly Reports" icon={<FaRegUser />}>
+                  <Link to='/dailyandweeklydata/screening_screener'><MenuItem>Screening Screener</MenuItem></Link>
+                  <Link to='/dailyandweeklydata/screening_sevika'><MenuItem>Screening Sevika</MenuItem></Link>
+                  <Link to='/dailyandweeklydata/patientlist'><MenuItem>Patient List For Lipid Panel Test</MenuItem></Link>
                 </SubMenu>
               </li>
               <li className="menu-item">
                 <MenuItem icon={<TbActivityHeartbeat />}>Insights</MenuItem>
               </li>
               <li className="menu-item">
-                <MenuItem icon={<TbActivityHeartbeat />}>General Survy</MenuItem>
+                <Link to='/generalsurvey'><MenuItem icon={<TbActivityHeartbeat />}>General Survey Data</MenuItem></Link>
               </li>
               <li className="menu-item">
-                <MenuItem icon={<TbActivityHeartbeat />}>Health Survy</MenuItem>
+                <Link to='/healthsurvey'><MenuItem icon={<TbActivityHeartbeat />}>Health Survey Data</MenuItem></Link>
               </li>
               <li className="menu-item">
-                <MenuItem icon={<TbActivityHeartbeat />}>Socieconomic</MenuItem>
+                <Link to='/socieconomic_survey'><MenuItem icon={<TbActivityHeartbeat />}>Socieconomic Survey Data</MenuItem></Link>
               </li>
               <li className="menu-item">
                 <MenuItem icon={<IoMdCheckboxOutline />}>Change Request</MenuItem>
               </li>
               <li className="menu-item">
                 <SubMenu label="Issue Addressing" icon={<LuBellRing />}>
-                  <MenuItem>Active Users</MenuItem>
-                  <MenuItem>Inactive Users</MenuItem>
+                  <Link to='/issueaddressing/newissue'><MenuItem>New Issue</MenuItem></Link>
+                  <Link to='/issueaddressing/updateissue'><MenuItem>Update Issue</MenuItem></Link>
                 </SubMenu>
               </li>
               <li className="menu-item">
