@@ -5,7 +5,9 @@ function Patient_List_For_Lipid_Panel_Test() {
   return (
     <>
     <Home/>
-    <h1>Patient_List_For_Lipid_Panel_Test</h1>
+    <br></br>
+    <h5 style={{color : "#ea5455"}}><b>Patient_List_For_Lipid_Panel_Test</b></h5>
+    
     </>
       
     

@@ -93,7 +93,7 @@ const Sidebar = () => {
               <li className="menu-item">
                 <SubMenu label="Users" icon={<FaRegUser />}>
                   <Link to="/approveduser/activeuser"><MenuItem>Active Users</MenuItem></Link>
-                  <MenuItem>Inactive Users</MenuItem>
+                  <Link to='/approveduser/Inactiveuser'><MenuItem>Inactive Users</MenuItem></Link>
                 </SubMenu>
               </li>
               <li className="menu-item">
@@ -116,7 +116,7 @@ const Sidebar = () => {
                 <Link to='/socieconomic_survey'><MenuItem icon={<TbActivityHeartbeat />}>Socieconomic Survey Data</MenuItem></Link>
               </li>
               <li className="menu-item">
-                <MenuItem icon={<IoMdCheckboxOutline />}>Change Request</MenuItem>
+                <Link to='/changerequest'><MenuItem icon={<IoMdCheckboxOutline />} style={{ color: "black" }}>Change Request</MenuItem></Link>
               </li>
               <li className="menu-item">
                 <SubMenu label="Issue Addressing" icon={<LuBellRing />}>
@@ -125,7 +125,7 @@ const Sidebar = () => {
                 </SubMenu>
               </li>
               <li className="menu-item">
-                <MenuItem icon={<IoMdLogOut />}>Logout</MenuItem>
+                <Link to='/login'><MenuItem icon={<IoMdLogOut />}>Logout</MenuItem></Link>
               </li>
             </Menu>
           </ul>

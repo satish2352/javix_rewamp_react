@@ -1,6 +1,6 @@
 import React, { useMemo } from 'react';
-import "./AreaCards.scss";
-import ActivateUserIcon from '../../../assets/images/Activate User.png';
+import "./activeuser.scss";
+import ActivateUserIcon from '../../assets/images/Activate User.png';
 
 import {
   MaterialReactTable,
@@ -9,7 +9,7 @@ import {
   MRT_ToggleFiltersButton,
 } from 'material-react-table';
 import { Box, Button, lighten } from '@mui/material';
-import Home from '../../../screens/dashboard/home/Home';
+import Home from '../dashboard/home/Home';
 
 
 const data = [
@@ -304,107 +304,108 @@ const data = [
   },
 ]
 
-const AreaCards = () => {
-  const columns = useMemo(
-    () => [
-      {
-        accessorKey: 'userid',
-        header: 'User ID',
-        size: 150,
-      },
-      {
-        accessorKey: 'user_role',
-        header: 'User Role',
-        size: 150,
-      },
-      {
-        accessorKey: 'status',
-        header: 'Status',
-        size: 150,
-        Cell: ({ cell }) => (
-          <span className={`pill ${cell.getValue()?.toLowerCase()}`}>
-            {cell.getValue()}
-          </span>
-        ),
-      },
-      {
-        accessorKey: 'name',
-        header: 'Name',
-        size: 200,
-      },
-      {
-        accessorKey: 'blocked',
-        header: 'Blocked',
-        size: 150,
-        Cell: ({ cell }) => (
-          <span className={`pill ${cell.getValue()?.toLowerCase()}`}>
-            {cell.getValue()}
-          </span>
-        ),
-      },
-      {
-        accessorKey: 'expired',
-        header: 'Expired',
-        size: 150,
-        Cell: ({ cell }) => (
-          <span className={`pill ${cell.getValue()?.toLowerCase()}`}>
-            {cell.getValue()}
-          </span>
-        ),
-      },
-      {
-        accessorKey: 'active',
-        header: 'Active',
-        size: 150,
-        Cell: ({ cell }) => (
-          <span className={`pill ${cell.getValue()?.toLowerCase()}`}>
-            {cell.getValue()}
-          </span>
-        ),
-      },
-      {
-        accessorKey: 'action',
-        header: 'Action',
-        size: 150,
-        Cell: ({ row }) => (
-          <Box>
-            <button onClick={() => handleActivateUser(row)} style={{ height: '32px', width: '32px', borderRadius: '50%' }}>
-              <img src={ActivateUserIcon} alt="" style={{ width: '100%', height: 'auto' }} />
-            </button>
-          </Box>
-        ),
-      },
-    ],
-    []
-  );
 
-  const table = useMaterialReactTable({
-    columns,
-    data,
-    enableRowSelection: true,
-  });
-
-  const handleDeactivate = () => {
-    table.getSelectedRowModel().flatRows.forEach((row) => {
-      alert('deactivating ' + row.getValue('name'));
-    });
-  };
-
-  const handleActivate = () => {
-    table.getSelectedRowModel().flatRows.forEach((row) => {
-      alert('activating ' + row.getValue('name'));
-    });
-  };
-
-  const handleActivateUser = (row) => {
-    alert('activating ' + row.getValue('name'));
-  };
-
+function Active_users() {
+    const columns = useMemo(
+        () => [
+          {
+            accessorKey: 'userid',
+            header: 'User ID',
+            size: 150,
+          },
+          {
+            accessorKey: 'user_role',
+            header: 'User Role',
+            size: 150,
+          },
+          {
+            accessorKey: 'status',
+            header: 'Status',
+            size: 150,
+            Cell: ({ cell }) => (
+              <span className={`pill ${cell.getValue()?.toLowerCase()}`}>
+                {cell.getValue()}
+              </span>
+            ),
+          },
+          {
+            accessorKey: 'name',
+            header: 'Name',
+            size: 200,
+          },
+          {
+            accessorKey: 'blocked',
+            header: 'Blocked',
+            size: 150,
+            Cell: ({ cell }) => (
+              <span className={`pill ${cell.getValue()?.toLowerCase()}`}>
+                {cell.getValue()}
+              </span>
+            ),
+          },
+          {
+            accessorKey: 'expired',
+            header: 'Expired',
+            size: 150,
+            Cell: ({ cell }) => (
+              <span className={`pill ${cell.getValue()?.toLowerCase()}`}>
+                {cell.getValue()}
+              </span>
+            ),
+          },
+          {
+            accessorKey: 'active',
+            header: 'Active',
+            size: 150,
+            Cell: ({ cell }) => (
+              <span className={`pill ${cell.getValue()?.toLowerCase()}`}>
+                {cell.getValue()}
+              </span>
+            ),
+          },
+          {
+            accessorKey: 'action',
+            header: 'Action',
+            size: 150,
+            Cell: ({ row }) => (
+              <Box>
+                <button onClick={() => handleActivateUser(row)} style={{ height: '32px', width: '32px', borderRadius: '50%' }}>
+                  <img src={ActivateUserIcon} alt="" style={{ width: '100%', height: 'auto' }} />
+                </button>
+              </Box>
+            ),
+          },
+        ],
+        []
+      );
+    
+      const table = useMaterialReactTable({
+        columns,
+        data,
+        enableRowSelection: true,
+      });
+    
+      const handleDeactivate = () => {
+        table.getSelectedRowModel().flatRows.forEach((row) => {
+          alert('deactivating ' + row.getValue('name'));
+        });
+      };
+    
+      const handleActivate = () => {
+        table.getSelectedRowModel().flatRows.forEach((row) => {
+          alert('activating ' + row.getValue('name'));
+        });
+      };
+    
+      const handleActivateUser = (row) => {
+        alert('activating ' + row.getValue('name'));
+      };
+    
   return (
     <>
-    <Home/>
+     <Home/>
     <br></br>
-    <h5 style={{color : "#ea5455"}}>Active users</h5>
+    <h5 style={{color : "#ea5455"}}><b>Active users</b></h5>
     
       <Box
         sx={(theme) => ({
@@ -443,9 +444,8 @@ const AreaCards = () => {
 
       <MaterialReactTable table={table} />
       <br></br>
-      
     </>
-  );
-};
+  )
+}
 
-export default AreaCards;
+export default Active_users

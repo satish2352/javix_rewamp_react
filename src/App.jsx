@@ -22,6 +22,9 @@ import Screening_sevika from "./screens/daily and weely data/Screening_sevika";
 import Patient_List_For_Lipid_Panel_Test from "./screens/daily and weely data/Patient_List_For_Lipid_Panel_Test";
 import New_issue from "./screens/issue addressing/New_issue";
 import Update_issue from "./screens/issue addressing/Update_issue";
+import Active_users from "./screens/users/Active_users";
+import Change_request from "./screens/change request/Change_request";
+import Inactive_users from "./screens/users/Inactive_users";
 
 
 function App() {
@@ -45,7 +48,8 @@ function App() {
           <Route element={<BaseLayout />}>
             <Route path="/" element={<Home />} />
             <Route path='/adduser' element={<Adduser />} />
-            <Route path='/approveduser/activeuser' element={<AreaCards />} />
+            <Route path='/approveduser/activeuser' element={<Active_users />} />
+            <Route path='/approveduser/Inactiveuser' element={<Inactive_users />} />
             <Route path='/generalsurvey' element={<General_survey />} />
             <Route path='/healthsurvey' element={<Health_survey />} />
             <Route path='/socieconomic_survey' element={<Socieconomin_survey />} />
@@ -54,6 +58,7 @@ function App() {
             <Route path='/dailyandweeklydata/patientlist' element={<Patient_List_For_Lipid_Panel_Test />} />
             <Route path='/issueaddressing/newissue' element={<New_issue />} />
             <Route path='/issueaddressing/updateissue' element={<Update_issue />} />
+            <Route path='/changerequest' element={<Change_request />} />
 
 
             {/* <Route path="*" element={<PageNotFound />} /> */}
