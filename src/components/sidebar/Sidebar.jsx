@@ -86,11 +86,11 @@ const Sidebar = () => {
               </li>
               <li className="menu-item">
                 <SubMenu label="Approved User" icon={<MdApproval />}>
-                  <MenuItem>Doctors</MenuItem>
-                  <MenuItem>NGO</MenuItem>
-                  <MenuItem>Screener</MenuItem>
-                  <MenuItem>Sevika</MenuItem>
-                  <MenuItem>Pharmacy</MenuItem>
+                  <Link to='/approvedusers/doctors'><MenuItem>Doctors</MenuItem></Link>
+                  <Link to='/approvedusers/ngo'><MenuItem>NGO</MenuItem></Link>
+                  <Link to='/approvedusers/screener'><MenuItem>Screener</MenuItem></Link>
+                  <Link to='/approvedusers/sevika'><MenuItem>Sevika</MenuItem></Link>
+                  <Link to='/approvedusers/pharmacy'><MenuItem>Pharmacy</MenuItem></Link>
                 </SubMenu>
               </li>
               <li className="menu-item">

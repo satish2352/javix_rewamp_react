@@ -35,8 +35,8 @@ const AdminHome = () => {
             </div>
             <SquareCards cardsData={squareCardsData} />
             <BarAndPie data={barAndPieData} colors={barAndPieColors} />
-                    {/* <PieAndBar data={pieAndBarData} colors={pieAndBarColors} /> */}
-                
+            {/* <PieAndBar data={pieAndBarData} colors={pieAndBarColors} /> */}
+
 
         </div>
     );

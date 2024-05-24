@@ -75,6 +75,12 @@ import Haemoglobin_amber_case from "./screens/insights/Haemoglobin/Haemoglobin_a
 // import AdminHome from '../src/components/home pages/AdminHome'
 import AdminHome from '../src/components/home pages/AdminHome'
 import DoctorHome from '../src/components/home pages/DoctorHome'
+import DoctorsCard_table from "./components/Home_page_card_data/DoctorsCard_table";
+import Doctors from "./screens/Approved Users/Doctors";
+import Ngo from "./screens/Approved Users/Ngo";
+import Screener from "./screens/Approved Users/Screener";
+import Sevika from "./screens/Approved Users/Sevika";
+import Pharmacy from "./screens/Approved Users/Pharmacy";
 
 
 function App() {
@@ -94,79 +100,92 @@ function App() {
       <Router>
         <Routes>
 
-    
+
 
           {/* Login pages */}
           <Route path='/login' element={<LoginPage />} />
           <Route path='/forgot-password' element={<ForgotPassword />} />
-          
+
           {/* Base layout start */}
           <Route element={<BaseLayout />}>
             {/* Admin section start */}
-            <Route path="/" element={<AdminHome/>} />
+            <Route path="/" element={<AdminHome />} />
+
+              <Route path='/home/doctots_list' element={<DoctorsCard_table />} />
+
             <Route path="/home/directory" element={<Directory />} />
             <Route path='/adduser' element={<Adduser />} />
+
+            {/* Approved users */}
+            <Route path='/approvedusers/doctors' element={<Doctors />} />
+            <Route path='/approvedusers/ngo' element={<Ngo />} />
+            <Route path='/approvedusers/screener' element={<Screener />} />
+            <Route path='/approvedusers/sevika' element={<Sevika />} />
+            <Route path='/approvedusers/pharmacy' element={<Pharmacy />} />
+            
+
+
             <Route path='/approveduser/activeuser' element={<Active_users />} />
             <Route path='/approveduser/Inactiveuser' element={<Inactive_users />} />
             <Route path='/generalsurvey' element={<General_survey />} />
             <Route path='/healthsurvey' element={<Health_survey />} />
             <Route path='/admin/insights' element={<Insights2 />} />
-            
-                  <Route path='/admin/insights/bloodpresure_table' element={<Blood_pressure_table />} />
-                  <Route path='/admin/insights/bloodpresure_table/Blood_Pressure_Amber_Cases' element={<Blood_Pressure_Amber_Cases />} />
-                  <Route path='/admin/insights/bloodpresure_table/Blood_Pressure_Red_Cases' element={<Blood_Pressure_Red_Cases />} />
 
-                  <Route path='/admin/insights/SPO2/SPO2_Green_Cases' element={<SPO2_Green_Cases />} />
-                  <Route path='/admin/insights/SPO2/SPO2_Amber_Cases' element={<SPO2_Amber_Cases />} />
-                  <Route path='/admin/insights/SPO2/SPO2_Red_Cases' element={<SPO2_Red_Cases />} />
+            <Route path='/admin/insights/bloodpresure_table' element={<Blood_pressure_table />} />
+            <Route path='/admin/insights/bloodpresure_table/Blood_Pressure_Amber_Cases' element={<Blood_Pressure_Amber_Cases />} />
+            <Route path='/admin/insights/bloodpresure_table/Blood_Pressure_Red_Cases' element={<Blood_Pressure_Red_Cases />} />
 
-                  <Route path='/admin/insights/temperature/Temperature_Green_Cases' element={<Temperature_Green_Cases />} />
-                  <Route path='/admin/insights/temperature/Temperature_Amber_Cases' element={<Temperature_Amber_Cases />} />
-                  <Route path='/admin/insights/temperature/Temperature_Red_Cases' element={<Temperature_Red_Cases />} />
+            <Route path='/admin/insights/SPO2/SPO2_Green_Cases' element={<SPO2_Green_Cases />} />
+            <Route path='/admin/insights/SPO2/SPO2_Amber_Cases' element={<SPO2_Amber_Cases />} />
+            <Route path='/admin/insights/SPO2/SPO2_Red_Cases' element={<SPO2_Red_Cases />} />
 
-                  <Route path='/admin/insights/Heart_rate/Heart_Rate_Green_Cases' element={<Heart_Rate_Green_Cases />} />
-                  <Route path='/admin/insights/Heart_rate/Heart_Rate_Amber_Cases' element={<Heart_Rate_Amber_Cases />} />
-                  <Route path='/admin/insights/Heart_rate/Heart_Rate_Red_Cases' element={<Heart_Rate_Red_Cases />} />
+            <Route path='/admin/insights/temperature/Temperature_Green_Cases' element={<Temperature_Green_Cases />} />
+            <Route path='/admin/insights/temperature/Temperature_Amber_Cases' element={<Temperature_Amber_Cases />} />
+            <Route path='/admin/insights/temperature/Temperature_Red_Cases' element={<Temperature_Red_Cases />} />
 
-                  <Route path='/admin/insights/BMI/BMI_Green_Cases' element={<BMI_Green_Cases />} />
-                  <Route path='/admin/insights/BMI/BMI_Red_Cases' element={<BMI_Red_Cases />} />
-                  <Route path='/admin/insights/BMI/BMI_Amber_Cases' element={<BMI_Amber_Cases />} />
+            <Route path='/admin/insights/Heart_rate/Heart_Rate_Green_Cases' element={<Heart_Rate_Green_Cases />} />
+            <Route path='/admin/insights/Heart_rate/Heart_Rate_Amber_Cases' element={<Heart_Rate_Amber_Cases />} />
+            <Route path='/admin/insights/Heart_rate/Heart_Rate_Red_Cases' element={<Heart_Rate_Red_Cases />} />
 
-                  <Route path='/admin/insights/blood_glucose/Blood_Glucose_Green_Cases' element={<Blood_Glucose_Green_Cases />} />
-                  <Route path='/admin/insights/blood_glucose/Blood_Glucose_Red_Cases' element={<Blood_Glucose_Red_Cases />} />
-                  <Route path='/admin/insights/blood_glucose/Blood_Glucose_Amber_Cases' element={<Blood_Glucose_Amber_Cases />} />
+            <Route path='/admin/insights/BMI/BMI_Green_Cases' element={<BMI_Green_Cases />} />
+            <Route path='/admin/insights/BMI/BMI_Red_Cases' element={<BMI_Red_Cases />} />
+            <Route path='/admin/insights/BMI/BMI_Amber_Cases' element={<BMI_Amber_Cases />} />
 
-                  <Route path='/admin/insights/LDL-Lipid panel/LDL_Lipid_Panel_Green_cases' element={<LDL_Lipid_Panel_Green_cases />} />
-                  <Route path='/admin/insights/LDL-Lipid panel/LDL_Lipid_Panel_Red_cases' element={<LDL_Lipid_Panel_Red_cases />} />
-                  <Route path='/admin/insights/LDL-Lipid panel/LDL_Lipid_Panel_amber_cases' element={<LDL_Lipid_Panel_amber_cases />} />
+            <Route path='/admin/insights/blood_glucose/Blood_Glucose_Green_Cases' element={<Blood_Glucose_Green_Cases />} />
+            <Route path='/admin/insights/blood_glucose/Blood_Glucose_Red_Cases' element={<Blood_Glucose_Red_Cases />} />
+            <Route path='/admin/insights/blood_glucose/Blood_Glucose_Amber_Cases' element={<Blood_Glucose_Amber_Cases />} />
+
+            <Route path='/admin/insights/LDL-Lipid panel/LDL_Lipid_Panel_Green_cases' element={<LDL_Lipid_Panel_Green_cases />} />
+            <Route path='/admin/insights/LDL-Lipid panel/LDL_Lipid_Panel_Red_cases' element={<LDL_Lipid_Panel_Red_cases />} />
+            <Route path='/admin/insights/LDL-Lipid panel/LDL_Lipid_Panel_amber_cases' element={<LDL_Lipid_Panel_amber_cases />} />
 
 
-                  <Route path='/admin/insights/HDL-Lipid Panel/HDL_Lipid_Panel_Green_Cases' element={<HDL_Lipid_Panel_Green_Cases />} />
-                  <Route path='/admin/insights/HDL-Lipid Panel/HDL_Lipid_Panel_Amber_Cases' element={<HDL_Lipid_Panel_Amber_Cases />} />
-                  <Route path='/admin/insights/HDL-Lipid Panel/HDL_Lipid_Panel_Red_Cases' element={<HDL_Lipid_Panel_Red_Cases />} />
+            <Route path='/admin/insights/HDL-Lipid Panel/HDL_Lipid_Panel_Green_Cases' element={<HDL_Lipid_Panel_Green_Cases />} />
+            <Route path='/admin/insights/HDL-Lipid Panel/HDL_Lipid_Panel_Amber_Cases' element={<HDL_Lipid_Panel_Amber_Cases />} />
+            <Route path='/admin/insights/HDL-Lipid Panel/HDL_Lipid_Panel_Red_Cases' element={<HDL_Lipid_Panel_Red_Cases />} />
 
-                  <Route path='/admin/insights/Triglycerides_Lipid_Panel/Triglycerides_Lipid_Panel_green_cases' element={<Triglycerides_Lipid_Panel_green_cases />} />
-                  <Route path='/admin/insights/Triglycerides_Lipid_Panel/Triglycerides_Lipid_Panel_red_cases' element={<Triglycerides_Lipid_Panel_red_cases />} />
-                  <Route path='/admin/insights/Triglycerides_Lipid_Panel/Triglycerides_Lipid_Panel_amber_cases' element={<Triglycerides_Lipid_Panel_amber_cases />} />
+            <Route path='/admin/insights/Triglycerides_Lipid_Panel/Triglycerides_Lipid_Panel_green_cases' element={<Triglycerides_Lipid_Panel_green_cases />} />
+            <Route path='/admin/insights/Triglycerides_Lipid_Panel/Triglycerides_Lipid_Panel_red_cases' element={<Triglycerides_Lipid_Panel_red_cases />} />
+            <Route path='/admin/insights/Triglycerides_Lipid_Panel/Triglycerides_Lipid_Panel_amber_cases' element={<Triglycerides_Lipid_Panel_amber_cases />} />
 
-                  <Route path='/admin/insights/Cholesterol-Lipid Panel/Cholesterol_Lipid_Panel_Green_Cases' element={<Cholesterol_Lipid_Panel_Green_Cases />} />
-                  <Route path='/admin/insights/Cholesterol-Lipid Panel/Cholesterol_Lipid_Panel_Red_Cases' element={<Cholesterol_Lipid_Panel_Red_Cases />} />
-                  <Route path='/admin/insights/Cholesterol-Lipid Panel/Cholesterol_Lipid_Panel_amber_Cases' element={<Cholesterol_Lipid_Panel_amber_Cases />} />
+            <Route path='/admin/insights/Cholesterol-Lipid Panel/Cholesterol_Lipid_Panel_Green_Cases' element={<Cholesterol_Lipid_Panel_Green_Cases />} />
+            <Route path='/admin/insights/Cholesterol-Lipid Panel/Cholesterol_Lipid_Panel_Red_Cases' element={<Cholesterol_Lipid_Panel_Red_Cases />} />
+            <Route path='/admin/insights/Cholesterol-Lipid Panel/Cholesterol_Lipid_Panel_amber_Cases' element={<Cholesterol_Lipid_Panel_amber_Cases />} />
 
-                  <Route path='/admin/insights/Right_Eye_Tests/Right_Eye_Tests_Amber_case' element={<Right_Eye_Tests_Amber_case />} />
-                  <Route path='/admin/insights/Right_Eye_Tests/Right_Eye_Tests_Green_case' element={<Right_Eye_Tests_Green_case />} />
-                  <Route path='/admin/insights/Right_Eye_Tests/Right_Eye_Tests_Red_case' element={<Right_Eye_Tests_Red_case />} />
+            <Route path='/admin/insights/Right_Eye_Tests/Right_Eye_Tests_Amber_case' element={<Right_Eye_Tests_Amber_case />} />
+            <Route path='/admin/insights/Right_Eye_Tests/Right_Eye_Tests_Green_case' element={<Right_Eye_Tests_Green_case />} />
+            <Route path='/admin/insights/Right_Eye_Tests/Right_Eye_Tests_Red_case' element={<Right_Eye_Tests_Red_case />} />
 
-                  <Route path='/admin/insights/Left_Eye_Tests/Left_Eye_Tests_Green_Tests' element={<Left_Eye_Tests_Green_Tests />} />
-                  <Route path='/admin/insights/Left_Eye_Tests/Left_Eye_Tests_Red_Tests' element={<Left_Eye_Tests_Red_Tests />} />
-                  <Route path='/admin/insights/Left_Eye_Tests/Left_Eye_Tests_Amber_Tests' element={<Left_Eye_Tests_Amber_Tests />} />
+            <Route path='/admin/insights/Left_Eye_Tests/Left_Eye_Tests_Green_Tests' element={<Left_Eye_Tests_Green_Tests />} />
+            <Route path='/admin/insights/Left_Eye_Tests/Left_Eye_Tests_Red_Tests' element={<Left_Eye_Tests_Red_Tests />} />
+            <Route path='/admin/insights/Left_Eye_Tests/Left_Eye_Tests_Amber_Tests' element={<Left_Eye_Tests_Amber_Tests />} />
 
-                  <Route path='/admin/insights/Haemoglobin/Haemoglobin_green_case' element={<Haemoglobin_green_case />} />
-                  <Route path='/admin/insights/Haemoglobin/Haemoglobin_red_case' element={<Haemoglobin_red_case />} />
-                  <Route path='/admin/insights/Haemoglobin/Haemoglobin_amber_case' element={<Haemoglobin_amber_case />} />
+            <Route path='/admin/insights/Haemoglobin/Haemoglobin_green_case' element={<Haemoglobin_green_case />} />
+            <Route path='/admin/insights/Haemoglobin/Haemoglobin_red_case' element={<Haemoglobin_red_case />} />
+            <Route path='/admin/insights/Haemoglobin/Haemoglobin_amber_case' element={<Haemoglobin_amber_case />} />
 
-                  
-                  
+
+
             {/* <Route path='/admin/insights' element={<Insights2 />} /> */}
             <Route path='/socieconomic_survey' element={<Socieconomin_survey />} />
             <Route path='/dailyandweeklydata/screening_screener' element={<Screening_screener />} />
@@ -178,7 +197,7 @@ function App() {
             {/* Admin section End */}
 
             {/* Doctors Section start */}
-            <Route path="/DoctorHome" element={<DoctorHome/>} />
+            <Route path="/DoctorHome" element={<DoctorHome />} />
             <Route path='/referred_patient' element={<Referred_patient />} />
             <Route path='/petient_view' element={<Petient_view />} />
             <Route path='/help_doctors' element={<Help_doctors />} />
