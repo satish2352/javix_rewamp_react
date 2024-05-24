@@ -158,6 +158,8 @@ function Screening_sevika() {
     <Home/>
     <br></br>
     <h5 style={{color : "#ea5455"}}><b>Screening sevika</b></h5>
+
+    
       <Box
         sx={(theme) => ({
           backgroundColor: lighten(theme.palette.background.default, 0.05),
@@ -189,6 +191,7 @@ function Screening_sevika() {
             >
               Deactivate
             </Button>
+            <Button variant='primary' style={{backgroundColor : '#4848d1' ,  color : 'white'}}>Export</Button>
           </Box>
         </Box>
       </Box>

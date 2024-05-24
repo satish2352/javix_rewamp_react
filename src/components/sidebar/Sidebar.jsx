@@ -30,6 +30,7 @@ import { TbActivityHeartbeat } from "react-icons/tb";
 import { IoMdCheckboxOutline } from "react-icons/io";
 import { LuBellRing } from "react-icons/lu";
 import { IoMdLogOut } from "react-icons/io";
+import { FaHandsHelping } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
 const Sidebar = () => {
@@ -74,7 +75,9 @@ const Sidebar = () => {
       <div className="sidebar-body">
         <div className="sidebar-menu">
           <ul className="menu-list">
+            {/* Sidebar start */}
             <Menu>
+              {/* Admin secion start */}
               <li className="menu-item">
                 <Link to="/"><MenuItem icon={<IoHomeSharp />} style={{ color: "black" }}>Home</MenuItem></Link>
               </li>
@@ -104,7 +107,7 @@ const Sidebar = () => {
                 </SubMenu>
               </li>
               <li className="menu-item">
-                <MenuItem icon={<TbActivityHeartbeat />}>Insights</MenuItem>
+                <Link to='/admin/insights'><MenuItem icon={<TbActivityHeartbeat />}>Insights</MenuItem></Link>
               </li>
               <li className="menu-item">
                 <Link to='/generalsurvey'><MenuItem icon={<TbActivityHeartbeat />}>General Survey Data</MenuItem></Link>
@@ -127,7 +130,34 @@ const Sidebar = () => {
               <li className="menu-item">
                 <Link to='/login'><MenuItem icon={<IoMdLogOut />}>Logout</MenuItem></Link>
               </li>
+              {/* Admin secion End */}
+
+
+              {/* Doctor section Start */}
+              <h3>Doctors</h3>
+              <li className="menu-item">
+                <Link to='/DoctorHome'><MenuItem icon={<IoHomeSharp />}>Home</MenuItem></Link>
+              </li>
+              <li className="menu-item">
+                <Link to="/referred_patient"><MenuItem icon={<LuBellRing />} style={{ color: "black" }}>Referred Patient</MenuItem></Link>
+              </li>
+              <li className="menu-item">
+                <Link to="/petient_view"><MenuItem icon={<FaRegUser />} style={{ color: "black" }}>Patient View</MenuItem></Link>
+              </li>
+              <li className="menu-item">
+                <Link to="/help_doctors"><MenuItem icon={<FaHandsHelping />} style={{ color: "black" }}>Help</MenuItem></Link>
+              </li>
+              <li className="menu-item">
+                <MenuItem icon={<TbActivityHeartbeat />} style={{ color: "black" }}>Insights</MenuItem>
+              </li>
+              <li className="menu-item">
+                <Link to='/login'><MenuItem icon={<IoMdLogOut />}>Logout</MenuItem></Link>
+              </li>
+              
+              {/* Doctor section End */}
+              
             </Menu>
+            {/* Sidebar End */}
           </ul>
         </div>
       </div>

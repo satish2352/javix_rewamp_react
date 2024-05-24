@@ -438,6 +438,7 @@ function Active_users() {
             >
               Deactivate
             </Button>
+            <Button variant='primary' style={{backgroundColor : '#4848d1' ,  color : 'white'}}>Export</Button>
           </Box>
         </Box>
       </Box>

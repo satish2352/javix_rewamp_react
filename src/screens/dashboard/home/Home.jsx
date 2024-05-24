@@ -7,6 +7,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 import Form from 'react-bootstrap/Form';
 import { Dropdown } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 function Home() {
   return (
     <>
@@ -36,9 +37,9 @@ function Home() {
                   <i class="fa-solid fa-user"></i>
                 </Dropdown.Toggle>
                 <Dropdown.Menu className="dropdown-menu-end mt-2">
-                  <Dropdown.Item href="#/action-1"><i className="fa-regular fa-message"></i> Directory</Dropdown.Item>
+                  <Link to='/home/directory'><Dropdown.Item href="#/action-1"><i className="fa-regular fa-message"></i> Directory</Dropdown.Item></Link>
                   <Dropdown.Item href="#/action-2"><i className="fa-regular fa-square-check"></i> My Profile</Dropdown.Item>
-                  <Dropdown.Item href="#/action-3"><i className="fa-solid fa-right-from-bracket"></i> Log out</Dropdown.Item>
+                  <Link to='/login'><Dropdown.Item href="#/action-3"><i className="fa-solid fa-right-from-bracket"></i> Log out</Dropdown.Item></Link>
                 </Dropdown.Menu>
               </Dropdown>
             </Navbar.Text>
