@@ -81,6 +81,8 @@ import Ngo from "./screens/Approved Users/Ngo";
 import Screener from "./screens/Approved Users/Screener";
 import Sevika from "./screens/Approved Users/Sevika";
 import Pharmacy from "./screens/Approved Users/Pharmacy";
+import DoctorProfileDisplay from "./screens/DoctorsProfileDisplay/DoctorProfileDisplay";
+import DoctorProfileEdit from "./screens/DoctorsProfileDisplay/DoctorProfileEdit";
 
 
 function App() {
@@ -99,9 +101,6 @@ function App() {
     <>
       <Router>
         <Routes>
-
-
-
           {/* Login pages */}
           <Route path='/login' element={<LoginPage />} />
           <Route path='/forgot-password' element={<ForgotPassword />} />
@@ -112,9 +111,12 @@ function App() {
             <Route path="/" element={<AdminHome />} />
 
               <Route path='/home/doctots_list' element={<DoctorsCard_table />} />
+              <Route path='/home/doctor_list/doctorprofiledisplay' element={<DoctorProfileDisplay />} />
+              <Route path='/home/doctor_list/doctorprofiledisplay/doctorprofile_edit' element={<DoctorProfileEdit />} />
 
             <Route path="/home/directory" element={<Directory />} />
             <Route path='/adduser' element={<Adduser />} />
+
 
             {/* Approved users */}
             <Route path='/approvedusers/doctors' element={<Doctors />} />
