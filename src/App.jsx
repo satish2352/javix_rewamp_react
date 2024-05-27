@@ -83,6 +83,7 @@ import Sevika from "./screens/Approved Users/Sevika";
 import Pharmacy from "./screens/Approved Users/Pharmacy";
 import DoctorProfileDisplay from "./screens/DoctorsProfileDisplay/DoctorProfileDisplay";
 import DoctorProfileEdit from "./screens/DoctorsProfileDisplay/DoctorProfileEdit";
+import PatientInfoNavbar from "./screens/Doctors_Section/Petient view/PatientInfoNavbar";
 
 
 function App() {
@@ -201,7 +202,7 @@ function App() {
             {/* Doctors Section start */}
             <Route path="/DoctorHome" element={<DoctorHome />} />
             <Route path='/referred_patient' element={<Referred_patient />} />
-            <Route path='/petient_view' element={<Petient_view />} />
+            <Route path='/petient_view' element={<PatientInfoNavbar/>} />
             <Route path='/help_doctors' element={<Help_doctors />} />
             {/* <Route path='/insight_doctors' element={<Insights />} /> */}
           </Route>

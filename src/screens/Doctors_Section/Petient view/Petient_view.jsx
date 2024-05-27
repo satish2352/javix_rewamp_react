@@ -126,7 +126,7 @@ function Petient_view() {
         <>
             <Home />
             <br></br>
-            <h5 style={{ color: "#ea5455" }}><b>Petient View</b></h5>
+            <h5 style={{ color: "#ea5455" }}><b>Patient View</b></h5>
 
 
             <Box
