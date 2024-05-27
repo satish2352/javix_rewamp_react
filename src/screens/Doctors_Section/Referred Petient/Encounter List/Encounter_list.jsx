@@ -1,88 +1,44 @@
 import React, { useMemo } from 'react';
-import './referred_petient.scss';
-import ActivateUserIcon from '../../../assets/images/Activate User.png';
-import { useNavigate } from 'react-router-dom';
+import "./encounter.scss";
+import ActivateUserIcon from '../../../../assets/images/Activate User.png';
 
 import {
     MaterialReactTable,
     useMaterialReactTable,
     MRT_GlobalFilterTextField,
     MRT_ToggleFiltersButton,
-
 } from 'material-react-table';
 import { Box, Button, lighten } from '@mui/material';
-import Home from '../../dashboard/home/Home';
-// import { ButtonGroup } from 'react-bootstrap';
+import Home from '../../../dashboard/home/Home';
+import { useNavigate } from 'react-router-dom';
 
-import 'bootstrap/dist/css/bootstrap.min.css';
 
 const data = [
     {
-        sr: 1,
-        citizenID: "102",
-        citizen_name: "safs",
-        screener_name: "esfsf",
-        mobile: "9564215748",
-        gender: "female",
-        status: "Active",
-        date: "20/2/2021",
+       
+        petient_details: "sdcvs dcsdcds sdvsdvdsv",
+        alert: 'BMI : 20.10  BP:80/140  SPO:2  HEART :98  Temp(F):99',
         action: ActivateUserIcon
 
     },
     {
-        sr: 2,
-        citizenID: "103",
-        citizen_name: "fdfv",
-        screener_name: "rtgbr",
-        mobile: "95612165",
-        gender: "male",
-        status: "Active",
-        date: "22/10/2021",
+        petient_details: "axy dvs  sdv",
+        alert: 'BMI : 20.10  BP:80/140  SPO:2  HEART :98  Temp(F):99',
         action: ActivateUserIcon
     },
 ]
-function Referred_patient() {
-    const navi = useNavigate()
+function Encounter_List() {
+    const Navigate = useNavigate()
     const columns = useMemo(
         () => [
             {
-                accessorKey: 'sr',
-                header: 'Sr No',
+                accessorKey: 'petient_details',
+                header: 'petient_details',
                 size: 150,
             },
             {
-                accessorKey: 'citizenID',
-                header: 'Citizen ID',
-                size: 150,
-            },
-            {
-                accessorKey: 'citizen_name',
-                header: 'Citizen Name',
-                size: 150,
-            },
-            {
-                accessorKey: 'screener_name',
-                header: 'Screener Name',
-                size: 150,
-            },
-            {
-                accessorKey: 'mobile',
-                header: 'Mobile',
-                size: 150,
-            },
-            {
-                accessorKey: 'gender',
-                header: 'Gender',
-                size: 150,
-            },
-            {
-                accessorKey: 'status',
-                header: 'Status',
-                size: 150,
-            },
-            {
-                accessorKey: 'date',
-                header: 'Date',
+                accessorKey: 'alert',
+                header: 'alert',
                 size: 150,
             },
             {
@@ -121,15 +77,13 @@ function Referred_patient() {
 
     const handleActivateUser = (row) => {
         // alert('activating ' + row.getValue('name'));
-        navi('/referred_patient/Encounter_List')
-
+        Navigate('/referred_patient/Encounter_List/Patient_Info')
     };
     return (
         <>
             <Home />
             <br></br>
-            <h5 style={{ color: "#ea5455" }}><b>Referred Petient</b></h5>
-
+            <h5 style={{ color: "#ea5455" }}><b>Encounter User</b></h5>
 
             <Box
                 sx={(theme) => ({
@@ -146,34 +100,31 @@ function Referred_patient() {
                 </Box>
                 <Box>
                     <Box sx={{ display: 'flex', gap: '0.5rem' }}>
-                        <Button
-                            color="success"
-                            disabled={!table.getIsSomeRowsSelected()}
-                            onClick={handleActivate}
-                            variant="contained"
-                        >
-                            Activate
-                        </Button>
-                        <Button
-                            color="error"
-                            disabled={!table.getIsSomeRowsSelected()}
-                            onClick={handleDeactivate}
-                            variant="contained"
-                        >
-                            Deactivate
-                        </Button>
+                        {/* <Button
+                                color="success"
+                                disabled={!table.getIsSomeRowsSelected()}
+                                onClick={handleActivate}
+                                variant="contained"
+                            >
+                                Activate
+                            </Button>
+                            <Button
+                                color="error"
+                                disabled={!table.getIsSomeRowsSelected()}
+                                onClick={handleDeactivate}
+                                variant="contained"
+                            >
+                                Deactivate
+                            </Button> */}
                         <Button variant='primary' style={{ backgroundColor: '#4848d1', color: 'white' }}>Export</Button>
                     </Box>
                 </Box>
             </Box>
-            <br></br>
 
             <MaterialReactTable table={table} />
             <br></br>
         </>
-
-
     )
 }
 
-export default Referred_patient
+export default Encounter_List
