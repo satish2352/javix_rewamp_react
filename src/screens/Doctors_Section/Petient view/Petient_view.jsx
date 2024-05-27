@@ -1,6 +1,8 @@
 import React, { useMemo } from 'react';
 import './petient_view.scss';
 import ActivateUserIcon from '../../../assets/images/Activate User.png';
+import { FaCheck } from "react-icons/fa";
+import { MdAdsClick } from "react-icons/md";
 
 
 import {
@@ -15,6 +17,7 @@ import Home from '../../dashboard/home/Home';
 // import { ButtonGroup } from 'react-bootstrap';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
+import { useNavigate } from 'react-router-dom';
 
 const data = [
     {
@@ -43,6 +46,7 @@ const data = [
 ]
 
 function Petient_view() {
+    const Navigate = useNavigate()
     const columns = useMemo(
         () => [
             {
@@ -91,11 +95,11 @@ function Petient_view() {
                 size: 150,
                 Cell: ({ row }) => (
                     <Box>
-                        <button onClick={() => handleActivateUser(row)} style={{ height: '32px', width: '32px', borderRadius: '50%' }}>
-                            <img src={ActivateUserIcon} alt="" style={{ width: '100%', height: 'auto' }} />
-                        </button>
+                        <FaCheck onClick={() => handleActivateUser1(row)} style={{ fontSize: '20px' }} />
+                        <MdAdsClick onClick={() => handleActivateUser2(row)} style={{ fontSize: '20px', marginLeft: '25px' }} />
                     </Box>
                 ),
+
             },
         ],
         []
@@ -119,8 +123,13 @@ function Petient_view() {
         });
     };
 
-    const handleActivateUser = (row) => {
-        alert('activating ' + row.getValue('name'));
+    const handleActivateUser1 = (row) => {
+        // alert('1');
+        Navigate('/referred_patient/petient_view/citizen_profile')
+    };
+    const handleActivateUser2 = (row) => {
+        // alert('2');
+        Navigate('/referred_patient/petient_view/Encounter_petient_list')
     };
     return (
         <>
