@@ -83,14 +83,11 @@ import Sevika from "./screens/Approved Users/Sevika";
 import Pharmacy from "./screens/Approved Users/Pharmacy";
 import DoctorProfileDisplay from "./screens/DoctorsProfileDisplay/DoctorProfileDisplay";
 import DoctorProfileEdit from "./screens/DoctorsProfileDisplay/DoctorProfileEdit";
-<<<<<<< HEAD
-import PatientInfoNavbar from "./screens/Doctors_Section/Petient view/PatientInfoNavbar";
-=======
 import Encounter_List from "./screens/Doctors_Section/Referred Petient/Encounter List/Encounter_List";
 import Patient_Info from "./screens/Doctors_Section/Referred Petient/Encounter List/Patient_Info";
 import Citizen_profile from "./screens/Doctors_Section/Petient view/Citizen_profile";
 import Encounter_petient_list from "./screens/Doctors_Section/Petient view/Encounter_petient_list";
->>>>>>> 3a08bedc7e8cff977af204a930228391d63e454e
+import ScreenerProfileInfo from "./screens/Approved Users/ScreenerProfileInfo";
 
 
 function App() {
@@ -130,6 +127,7 @@ function App() {
             <Route path='/approvedusers/doctors' element={<Doctors />} />
             <Route path='/approvedusers/ngo' element={<Ngo />} />
             <Route path='/approvedusers/screener' element={<Screener />} />
+            <Route path='/approvedusers/screener/screener-profile' element={<ScreenerProfileInfo />} />
             <Route path='/approvedusers/sevika' element={<Sevika />} />
             <Route path='/approvedusers/pharmacy' element={<Pharmacy />} />
             
@@ -209,9 +207,6 @@ function App() {
             {/* Doctors Section start */}
             <Route path="/DoctorHome" element={<DoctorHome />} />
             <Route path='/referred_patient' element={<Referred_patient />} />
-<<<<<<< HEAD
-            <Route path='/petient_view' element={<PatientInfoNavbar/>} />
-=======
 
               <Route path='/referred_patient/Encounter_List' element={<Encounter_List />} />
               <Route path='/referred_patient/Encounter_List/Patient_Info' element={<Patient_Info />} />
@@ -222,7 +217,6 @@ function App() {
                 <Route path='/referred_patient/petient_view/Encounter_petient_list' element={<Encounter_petient_list />} />
                 
 
->>>>>>> 3a08bedc7e8cff977af204a930228391d63e454e
             <Route path='/help_doctors' element={<Help_doctors />} />
             {/* <Route path='/insight_doctors' element={<Insights />} /> */}
           </Route>
