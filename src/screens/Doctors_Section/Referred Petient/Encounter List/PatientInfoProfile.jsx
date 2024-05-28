@@ -1,5 +1,5 @@
 import { Row, Col, Card } from 'react-bootstrap';
-
+import user from '../../../../assets/images/user.jpg'
 function PatientInfoProfile() {
 
     const mainInfo = [
@@ -32,7 +32,7 @@ function PatientInfoProfile() {
                     <div className="profile-fields">
                         <Row>
                             <Col lg={6} md={6} sm={12} className='d-flex justify-content-center'>
-                                <img src="" alt="Patient's Photo" className="img-fluid" style={{ height: '150px', width: '150px', borderRadius: '50%', border: '1px solid #9188F2' }} />
+                                <img src={user} alt="Patient's Photo" className="img-fluid shadow" style={{ height: '150px', width: '150px', borderRadius: '50%', border: '1px solid #9188F2' }} />
                             </Col>
                             <Col lg={6} md={6} sm={12} className='d-flex align-items-center'>
                                 <div className='w-100'>

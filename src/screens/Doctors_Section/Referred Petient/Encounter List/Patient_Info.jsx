@@ -1,5 +1,7 @@
 import { useState } from 'react';
-import { Navbar, Nav, Container } from 'react-bootstrap';
+import Tabs from '@mui/material/Tabs';
+import Tab from '@mui/material/Tab';
+import Box from '@mui/material/Box';
 import PatientInfoProfile from './PatientInfoProfile';
 import './Patient_Info.css';
 import Encounters from './Encounters';
@@ -10,50 +12,45 @@ import ReproductiveHistory from './ReproductiveHistory';
 import Rx from './Rx';
 import Documents from './Documents';
 
-const PatientInfo = () => {
-  const [activeLink, setActiveLink] = useState('profile');
+export default function ScrollableTabsButtonPrevent() {
+  const [value, setValue] = useState(0);
 
-  const handleSelect = (selectedKey) => {
-    setActiveLink(selectedKey);
+  const handleChange = (event, newValue) => {
+    setValue(newValue);
   };
 
   return (
     <>
-      <Navbar variant="light" expand="lg">
-        <Container>
-          <Navbar.Brand>Patient Info</Navbar.Brand>
-          <Navbar.Toggle aria-controls="basic-navbar-nav" />
-          <Navbar.Collapse id="basic-navbar-nav" className="justify-content-center">
-            <Nav
-              activeKey={activeLink}
-              onSelect={handleSelect}
-              className="mx-auto"
-            >
-              <Nav.Link eventKey="profile" href="#">Profile</Nav.Link>
-              <Nav.Link eventKey="encounters" href="#">Encounters</Nav.Link>
-              <Nav.Link eventKey="personal-history" href="#">Personal History</Nav.Link>
-              <Nav.Link eventKey="allergies" href="#">Allergies</Nav.Link>
-              <Nav.Link eventKey="medical-history" href="#">Medical History</Nav.Link>
-              <Nav.Link eventKey="reproductive-history" href="#">Reproductive History</Nav.Link>
-              <Nav.Link eventKey="rx" href="#">Rx</Nav.Link>
-              <Nav.Link eventKey="documents" href="#">Documents</Nav.Link>
-            </Nav>
-          </Navbar.Collapse>
-        </Container>
-      </Navbar>
+      <Box sx={{ maxWidth: '100%', bgcolor: 'background.paper' }}>
+        <Tabs
+          value={value}
+          onChange={handleChange}
+          variant="scrollable"
+          scrollButtons={false}
+          aria-label="scrollable prevent tabs example"
+          centered
+        >
+          <Tab label="Profile" />
+          <Tab label="Encounters" />
+          <Tab label="Personal History" />
+          <Tab label="Allergies" />
+          <Tab label="Medical History" />
+          <Tab label="Reproductive History" />
+          <Tab label="Rx" />
+          <Tab label="Documents" />
+        </Tabs>
+      </Box>
 
-      <Container>
-        {activeLink === 'profile' && <PatientInfoProfile />}
-        {activeLink === 'encounters' && <Encounters />}
-        {activeLink === 'personal-history' && <PersonalHistory />}
-        {activeLink === 'allergies' && <Allergies />}
-        {activeLink === 'medical-history' && <MedicalHistory />}
-        {activeLink === 'reproductive-history' && <ReproductiveHistory />}
-        {activeLink === 'rx' && <Rx />}
-        {activeLink === 'documents' && <Documents />}
-      </Container>
+      <div>
+        {value === 0 && <PatientInfoProfile />}
+        {value === 1 && <Encounters />}
+        {value === 2 && <PersonalHistory />}
+        {value === 3 && <Allergies />}
+        {value === 4 && <MedicalHistory />}
+        {value === 5 && <ReproductiveHistory />}
+        {value === 6 && <Rx />}
+        {value === 7 && <Documents />}
+      </div>
     </>
   );
-};
-
-export default PatientInfo;
+}
