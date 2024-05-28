@@ -19,6 +19,8 @@ import Home from '../../dashboard/home/Home';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { useNavigate } from 'react-router-dom';
 
+
+
 const data = [
     {
         sr: 1,
@@ -47,6 +49,7 @@ const data = [
 
 function Petient_view() {
     const Navigate = useNavigate()
+   
     const columns = useMemo(
         () => [
             {
@@ -131,6 +134,10 @@ function Petient_view() {
         // alert('2');
         Navigate('/referred_patient/petient_view/Encounter_petient_list')
     };
+
+    // function addCity(){
+    //     alert('Sorry as a Doctor you are not entitled for this.')
+    // }
     return (
         <>
             <Home />
@@ -153,23 +160,8 @@ function Petient_view() {
                 </Box>
                 <Box>
                     <Box sx={{ display: 'flex', gap: '0.5rem' }}>
-                        <Button
-                            color="success"
-                            disabled={!table.getIsSomeRowsSelected()}
-                            onClick={handleActivate}
-                            variant="contained"
-                        >
-                            Activate
-                        </Button>
-                        <Button
-                            color="error"
-                            disabled={!table.getIsSomeRowsSelected()}
-                            onClick={handleDeactivate}
-                            variant="contained"
-                        >
-                            Deactivate
-                        </Button>
                         <Button variant='primary' style={{ backgroundColor: '#4848d1', color: 'white' }}>Export</Button>
+                        <Button variant='primary' style={{ backgroundColor: '#4848d1', color: 'white' }} >Add Citizen</Button>
                     </Box>
                 </Box>
             </Box>

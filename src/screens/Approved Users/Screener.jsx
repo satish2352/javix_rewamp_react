@@ -27,7 +27,7 @@ const data = [
     email: "dvdfv@gmail.com",
     qualification: "BE",
     onboardingdate: "12/02/2021",
-    profile: <RiUserSearchFill style={{ fontSize: "20px" }} />
+    action: <RiUserSearchFill style={{ fontSize: "20px" }} />
   },
   {
     sr: 2,
@@ -37,7 +37,7 @@ const data = [
     email: "dvdfv@gmail.com",
     qualification: "BE",
     onboardingdate: "12/02/2021",
-    profile: <RiUserSearchFill style={{ fontSize: "20px" }} />
+    action: <RiUserSearchFill style={{ fontSize: "20px" }} />
   },
   {
     sr: 3,
@@ -47,7 +47,7 @@ const data = [
     email: "dvdfv@gmail.com",
     qualification: "BE",
     onboardingdate: "12/02/2021",
-    profile: <RiUserSearchFill style={{ fontSize: "20px" }} />
+    action: <RiUserSearchFill style={{ fontSize: "20px" }} />
   },
 
 
@@ -92,8 +92,8 @@ function Screener() {
         size: 150,
       },
       {
-        accessorKey: 'profile',
-        header: 'Profile',
+        accessorKey: 'action',
+        header: 'Action',
         size: 150,
       },
 
@@ -154,22 +154,6 @@ function Screener() {
         </Box>
         <Box>
           <Box sx={{ display: 'flex', gap: '0.5rem' }}>
-            <Button
-              color="success"
-              disabled={!table.getIsSomeRowsSelected()}
-              onClick={handleActivate}
-              variant="contained"
-            >
-              Activate
-            </Button>
-            <Button
-              color="error"
-              disabled={!table.getIsSomeRowsSelected()}
-              onClick={handleDeactivate}
-              variant="contained"
-            >
-              Deactivate
-            </Button>
             <Button variant='primary' style={{ backgroundColor: '#4848d1', color: 'white' }}>Export</Button>
           </Box>
         </Box>

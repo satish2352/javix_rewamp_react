@@ -146,22 +146,6 @@ function Referred_patient() {
                 </Box>
                 <Box>
                     <Box sx={{ display: 'flex', gap: '0.5rem' }}>
-                        <Button
-                            color="success"
-                            disabled={!table.getIsSomeRowsSelected()}
-                            onClick={handleActivate}
-                            variant="contained"
-                        >
-                            Activate
-                        </Button>
-                        <Button
-                            color="error"
-                            disabled={!table.getIsSomeRowsSelected()}
-                            onClick={handleDeactivate}
-                            variant="contained"
-                        >
-                            Deactivate
-                        </Button>
                         <Button variant='primary' style={{ backgroundColor: '#4848d1', color: 'white' }}>Export</Button>
                     </Box>
                 </Box>
