@@ -1,7 +1,6 @@
 import React, { useMemo } from 'react';
 import "./encounter.scss";
 import ActivateUserIcon from '../../../../assets/images/Activate User.png';
-
 import {
     MaterialReactTable,
     useMaterialReactTable,
@@ -12,34 +11,72 @@ import { Box, Button, lighten } from '@mui/material';
 import Home from '../../../dashboard/home/Home';
 import { useNavigate } from 'react-router-dom';
 
-
 const data = [
     {
-       
         petient_details: "sdcvs dcsdcds sdvsdvdsv",
-        alert: 'BMI : 20.10  BP:80/140  SPO:2  HEART :98  Temp(F):99',
+        alert: 'BMI:20.10 BP:80/140 SPO2:2 HEART:98 Temp(F):99',
         action: ActivateUserIcon
-
     },
     {
         petient_details: "axy dvs  sdv",
-        alert: 'BMI : 20.10  BP:80/140  SPO:2  HEART :98  Temp(F):99',
+        alert: 'BMI:20.10 BP:80/140 SPO2:2 HEART:98 Temp(F):99',
         action: ActivateUserIcon
     },
-]
+];
+
+const Pill = ({ text }) => {
+    let bgColor;
+    if (text.startsWith('BMI')) {
+        bgColor = '#008000'; // Green
+    } else if (text.startsWith('BP')) {
+        bgColor = '#008000'; // Green
+    } else if (text.startsWith('SPO2')) {
+        bgColor = '#FFBF00'; // Yellow
+    } else if (text.startsWith('HEART')) {
+        bgColor = '#FFBF00'; // Yellow
+    } else if (text.startsWith('Temp(F)')) {
+        bgColor = '#FF0000'; // Red
+    } else {
+        bgColor = '#FF0000'; // Red
+    }
+
+    return (
+        <span style={{
+            backgroundColor: bgColor,
+            color: 'white',
+            padding: '0.2em 0.6em',
+            margin: '0.2em',
+            display: 'inline-block',
+            fontSize: '0.9em'
+        }}>
+            {text}
+        </span>
+    );
+};
+
 function Encounter_List() {
-    const Navigate = useNavigate()
+    const navigate = useNavigate();
     const columns = useMemo(
         () => [
             {
                 accessorKey: 'petient_details',
-                header: 'petient_details',
+                header: 'Patient Details',
                 size: 150,
             },
             {
                 accessorKey: 'alert',
-                header: 'alert',
+                header: 'Alert',
                 size: 150,
+                Cell: ({ row }) => {
+                    const alertData = row.original.alert.split(' ');
+                    return (
+                        <Box>
+                            {alertData.map((alert, index) => (
+                                <Pill key={index} text={alert} />
+                            ))}
+                        </Box>
+                    );
+                },
             },
             {
                 accessorKey: 'action',
@@ -76,9 +113,9 @@ function Encounter_List() {
     };
 
     const handleActivateUser = (row) => {
-        // alert('activating ' + row.getValue('name'));
-        Navigate('/referred_patient/Encounter_List/Patient_Info')
+        navigate('/referred_patient/Encounter_List/Patient_Info');
     };
+
     return (
         <>
             <Home />
@@ -101,21 +138,21 @@ function Encounter_List() {
                 <Box>
                     <Box sx={{ display: 'flex', gap: '0.5rem' }}>
                         {/* <Button
-                                color="success"
-                                disabled={!table.getIsSomeRowsSelected()}
-                                onClick={handleActivate}
-                                variant="contained"
-                            >
-                                Activate
-                            </Button>
-                            <Button
-                                color="error"
-                                disabled={!table.getIsSomeRowsSelected()}
-                                onClick={handleDeactivate}
-                                variant="contained"
-                            >
-                                Deactivate
-                            </Button> */}
+                            color="success"
+                            disabled={!table.getIsSomeRowsSelected()}
+                            onClick={handleActivate}
+                            variant="contained"
+                        >
+                            Activate
+                        </Button>
+                        <Button
+                            color="error"
+                            disabled={!table.getIsSomeRowsSelected()}
+                            onClick={handleDeactivate}
+                            variant="contained"
+                        >
+                            Deactivate
+                        </Button> */}
                         <Button variant='primary' style={{ backgroundColor: '#4848d1', color: 'white' }}>Export</Button>
                     </Box>
                 </Box>
@@ -124,7 +161,7 @@ function Encounter_List() {
             <MaterialReactTable table={table} />
             <br></br>
         </>
-    )
+    );
 }
 
-export default Encounter_List
+export default Encounter_List;

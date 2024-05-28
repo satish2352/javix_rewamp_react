@@ -1,4 +1,5 @@
 import React, { useMemo } from 'react';
+import { Link } from 'react-router-dom';
 import './approved_users.scss';
 // import ActivateUserIcon from '../../../assets/images/Activate User.png';
 import { RiUserSearchFill } from "react-icons/ri";
@@ -27,7 +28,7 @@ const data = [
     email: "dvdfv@gmail.com",
     qualification: "BE",
     onboardingdate: "12/02/2021",
-    action: <RiUserSearchFill style={{ fontSize: "20px" }} />
+    profile: <Link to="/approvedusers/screener/screener-profile"><RiUserSearchFill style={{ fontSize: "20px" }} /></Link>
   },
   {
     sr: 2,
@@ -37,7 +38,7 @@ const data = [
     email: "dvdfv@gmail.com",
     qualification: "BE",
     onboardingdate: "12/02/2021",
-    action: <RiUserSearchFill style={{ fontSize: "20px" }} />
+    profile: <Link to="/approvedusers/screener/screener-profile"><RiUserSearchFill style={{ fontSize: "20px" }} /></Link>
   },
   {
     sr: 3,
@@ -47,7 +48,7 @@ const data = [
     email: "dvdfv@gmail.com",
     qualification: "BE",
     onboardingdate: "12/02/2021",
-    action: <RiUserSearchFill style={{ fontSize: "20px" }} />
+    profile: <Link to="/approvedusers/screener/screener-profile"><RiUserSearchFill style={{ fontSize: "20px" }} /></Link>
   },
 
 
@@ -78,7 +79,7 @@ function Screener() {
       },
       {
         accessorKey: 'email',
-        header: 'Emial ',
+        header: 'Email ',
         size: 150,
       },
       {

@@ -87,6 +87,7 @@ import Encounter_List from "./screens/Doctors_Section/Referred Petient/Encounter
 import Patient_Info from "./screens/Doctors_Section/Referred Petient/Encounter List/Patient_Info";
 import Citizen_profile from "./screens/Doctors_Section/Petient view/Citizen_profile";
 import Encounter_petient_list from "./screens/Doctors_Section/Petient view/Encounter_petient_list";
+import ScreenerProfileInfo from "./screens/Approved Users/ScreenerProfileInfo";
 
 
 function App() {
@@ -126,6 +127,7 @@ function App() {
             <Route path='/approvedusers/doctors' element={<Doctors />} />
             <Route path='/approvedusers/ngo' element={<Ngo />} />
             <Route path='/approvedusers/screener' element={<Screener />} />
+            <Route path='/approvedusers/screener/screener-profile' element={<ScreenerProfileInfo />} />
             <Route path='/approvedusers/sevika' element={<Sevika />} />
             <Route path='/approvedusers/pharmacy' element={<Pharmacy />} />
             
