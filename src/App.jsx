@@ -113,7 +113,7 @@ function App() {
           {/* Base layout start */}
           <Route element={<BaseLayout />}>
             {/* Admin section start */}
-            <Route path="/" element={<AdminHome />} />
+            <Route path="/dashboard" element={<AdminHome />} />
 
               <Route path='/home/doctots_list' element={<DoctorsCard_table />} />
               <Route path='/home/doctor_list/doctorprofiledisplay' element={<DoctorProfileDisplay />} />

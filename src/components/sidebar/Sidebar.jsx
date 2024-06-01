@@ -4,7 +4,7 @@ import { LIGHT_THEME } from "../../constants/themeConstants";
 import LogoBlue from "../../assets/images/logo_blue.svg";
 import LogoWhite from "../../assets/images/logo_white.svg";
 
-import javixlogo from '../sidebar/logo1.png'
+import javixlogo from '../sidebar/logo1.png';
 import {
   MdOutlineAttachMoney,
   MdOutlineBarChart,
@@ -17,7 +17,7 @@ import {
   MdOutlineSettings,
   MdOutlineShoppingBag,
 } from "react-icons/md";
-// import { Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import "./Sidebar.scss";
 import { SidebarContext } from "../../context/SidebarContext";
 
@@ -31,12 +31,74 @@ import { IoMdCheckboxOutline } from "react-icons/io";
 import { LuBellRing } from "react-icons/lu";
 import { IoMdLogOut } from "react-icons/io";
 import { FaHandsHelping } from "react-icons/fa";
-import { Link } from "react-router-dom";
+
+// Define the menu structure for different roles
+const menuConfig = {
+  doctor: [
+    { label: "Home", icon: <IoHomeSharp />, link: "/dashboard" },
+    { label: "Referred Patient", icon: <LuBellRing />, link: "/referred_patient" },
+    { label: "Patient View", icon: <FaRegUser />, link: "/petient_view" },
+    { label: "Help", icon: <FaHandsHelping />, link: "/help_doctors" },
+    { label: "Insights", icon: <TbActivityHeartbeat />, link: "/admin/insights" },
+  ],
+  system_admin: [
+    { label: "Home", icon: <IoHomeSharp />, link: "/dashboard" },
+    { label: "Add User", icon: <RiUserAddFill />, link: "/adduser" },
+    {
+      label: "Approved User",
+      icon: <MdApproval />,
+      subMenu: [
+        { label: "Doctors", link: "/approvedusers/doctors" },
+        { label: "NGO", link: "/approvedusers/ngo" },
+        { label: "Screener", link: "/approvedusers/screener" },
+        { label: "Sevika", link: "/approvedusers/sevika" },
+        { label: "Pharmacy", link: "/approvedusers/pharmacy" },
+      ],
+    },
+    {
+      label: "Users",
+      icon: <FaRegUser />,
+      subMenu: [
+        { label: "Active Users", link: "/approveduser/activeuser" },
+        { label: "Inactive Users", link: "/approveduser/Inactiveuser" },
+      ],
+    },
+    {
+      label: "Daily and Weekly Reports",
+      icon: <FaRegUser />,
+      subMenu: [
+        { label: "Screening Screener", link: "/dailyandweeklydata/screening_screener" },
+        { label: "Screening Sevika", link: "/dailyandweeklydata/screening_sevika" },
+        { label: "Patient List For Lipid Panel Test", link: "/dailyandweeklydata/patientlist" },
+      ],
+    },
+    { label: "Insights", icon: <TbActivityHeartbeat />, link: "/admin/insights" },
+    { label: "General Survey Data", icon: <TbActivityHeartbeat />, link: "/generalsurvey" },
+    { label: "Health Survey Data", icon: <TbActivityHeartbeat />, link: "/healthsurvey" },
+    { label: "Socieconomic Survey Data", icon: <TbActivityHeartbeat />, link: "/socieconomic_survey" },
+    { label: "Change Request", icon: <IoMdCheckboxOutline />, link: "/changerequest" },
+    {
+      label: "Issue Addressing",
+      icon: <LuBellRing />,
+      subMenu: [
+        { label: "New Issue", link: "/issueaddressing/newissue" },
+        { label: "Update Issue", link: "/issueaddressing/updateissue" },
+      ],
+    },
+  ],
+  sevika: [
+    { label: "Home", icon: <IoHomeSharp />, link: "/" },
+    { label: "Add User", icon: <RiUserAddFill />, link: "/adduser" },
+    { label: "Insights", icon: <TbActivityHeartbeat />, link: "#" },
+  ],
+};
 
 const Sidebar = () => {
-  // const { theme } = useContext(ThemeContext);
   const { isSidebarOpen, closeSidebar } = useContext(SidebarContext);
   const navbarRef = useRef(null);
+
+  // Get the user's role from localStorage
+  const userRole = localStorage.getItem('userRole') || 'doctor';
 
   // closing the navbar when clicked outside the sidebar area
   const handleClickOutside = (event) => {
@@ -63,7 +125,6 @@ const Sidebar = () => {
     >
       <div className="sidebar-top">
         <div className="sidebar-brand">
-          {/* <img src={theme === LIGHT_THEME ? LogoBlue : LogoWhite} alt="" /> */}
           <span className="sidebar-brand-text">
             <img src={javixlogo} alt="" width={'225px'} height={'50px'} />
           </span>
@@ -75,89 +136,27 @@ const Sidebar = () => {
       <div className="sidebar-body">
         <div className="sidebar-menu">
           <ul className="menu-list">
-            {/* Sidebar start */}
             <Menu>
-              {/* Admin secion start */}
-              <li className="menu-item">
-                <Link to="/"><MenuItem icon={<IoHomeSharp />} style={{ color: "black" }}>Home</MenuItem></Link>
-              </li>
-              <li className="menu-item">
-                <Link to="/adduser"><MenuItem icon={<RiUserAddFill />} style={{ color: "black" }}>Add User</MenuItem></Link>
-              </li>
-              <li className="menu-item">
-                <SubMenu label="Approved User" icon={<MdApproval />}>
-                  <Link to='/approvedusers/doctors'><MenuItem>Doctors</MenuItem></Link>
-                  <Link to='/approvedusers/ngo'><MenuItem>NGO</MenuItem></Link>
-                  <Link to='/approvedusers/screener'><MenuItem>Screener</MenuItem></Link>
-                  <Link to='/approvedusers/sevika'><MenuItem>Sevika</MenuItem></Link>
-                  <Link to='/approvedusers/pharmacy'><MenuItem>Pharmacy</MenuItem></Link>
-                </SubMenu>
-              </li>
-              <li className="menu-item">
-                <SubMenu label="Users" icon={<FaRegUser />}>
-                  <Link to="/approveduser/activeuser"><MenuItem>Active Users</MenuItem></Link>
-                  <Link to='/approveduser/Inactiveuser'><MenuItem>Inactive Users</MenuItem></Link>
-                </SubMenu>
-              </li>
-              <li className="menu-item">
-                <SubMenu label="Daily and Weekly Reports" icon={<FaRegUser />}>
-                  <Link to='/dailyandweeklydata/screening_screener'><MenuItem>Screening Screener</MenuItem></Link>
-                  <Link to='/dailyandweeklydata/screening_sevika'><MenuItem>Screening Sevika</MenuItem></Link>
-                  <Link to='/dailyandweeklydata/patientlist'><MenuItem>Patient List For Lipid Panel Test</MenuItem></Link>
-                </SubMenu>
-              </li>
-              <li className="menu-item">
-                <Link to='/admin/insights'><MenuItem icon={<TbActivityHeartbeat />}>Insights</MenuItem></Link>
-              </li>
-              <li className="menu-item">
-                <Link to='/generalsurvey'><MenuItem icon={<TbActivityHeartbeat />}>General Survey Data</MenuItem></Link>
-              </li>
-              <li className="menu-item">
-                <Link to='/healthsurvey'><MenuItem icon={<TbActivityHeartbeat />}>Health Survey Data</MenuItem></Link>
-              </li>
-              <li className="menu-item">
-                <Link to='/socieconomic_survey'><MenuItem icon={<TbActivityHeartbeat />}>Socieconomic Survey Data</MenuItem></Link>
-              </li>
-              <li className="menu-item">
-                <Link to='/changerequest'><MenuItem icon={<IoMdCheckboxOutline />} style={{ color: "black" }}>Change Request</MenuItem></Link>
-              </li>
-              <li className="menu-item">
-                <SubMenu label="Issue Addressing" icon={<LuBellRing />}>
-                  <Link to='/issueaddressing/newissue'><MenuItem>New Issue</MenuItem></Link>
-                  <Link to='/issueaddressing/updateissue'><MenuItem>Update Issue</MenuItem></Link>
-                </SubMenu>
-              </li>
+              {menuConfig[userRole]?.map((menuItem, index) => (
+                menuItem.subMenu ? (
+                  <li className="menu-item" key={index}>
+                    <SubMenu label={menuItem.label} icon={menuItem.icon}>
+                      {menuItem.subMenu.map((subItem, subIndex) => (
+                        <Link to={subItem.link} key={subIndex}><MenuItem>{subItem.label}</MenuItem></Link>
+                      ))}
+                    </SubMenu>
+                  </li>
+                ) : (
+                  <li className="menu-item" key={index}>
+                    <Link to={menuItem.link}><MenuItem icon={menuItem.icon}>{menuItem.label}</MenuItem></Link>
+                  </li>
+                )
+              ))}
+              {/* Logout button always displayed */}
               <li className="menu-item">
                 <Link to='/login'><MenuItem icon={<IoMdLogOut />}>Logout</MenuItem></Link>
               </li>
-              {/* Admin secion End */}
-
-
-              {/* Doctor section Start */}
-              <h3>Doctors</h3>
-              <li className="menu-item">
-                <Link to='/DoctorHome'><MenuItem icon={<IoHomeSharp />}>Home</MenuItem></Link>
-              </li>
-              <li className="menu-item">
-                <Link to="/referred_patient"><MenuItem icon={<LuBellRing />} style={{ color: "black" }}>Referred Patient</MenuItem></Link>
-              </li>
-              <li className="menu-item">
-                <Link to="/petient_view"><MenuItem icon={<FaRegUser />} style={{ color: "black" }}>Patient View</MenuItem></Link>
-              </li>
-              <li className="menu-item">
-                <Link to="/help_doctors"><MenuItem icon={<FaHandsHelping />} style={{ color: "black" }}>Help</MenuItem></Link>
-              </li>
-              <li className="menu-item">
-                <MenuItem icon={<TbActivityHeartbeat />} style={{ color: "black" }}>Insights</MenuItem>
-              </li>
-              <li className="menu-item">
-                <Link to='/login'><MenuItem icon={<IoMdLogOut />}>Logout</MenuItem></Link>
-              </li>
-              
-              {/* Doctor section End */}
-              
             </Menu>
-            {/* Sidebar End */}
           </ul>
         </div>
       </div>
