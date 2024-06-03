@@ -34,7 +34,7 @@ const LoginPage = () => {
         }
 
         try {
-            if (formData.email === "admin@gmail.com" && formData.password === "admin@123") {
+            if (formData.email === "admin@gmail.com" && formData.password === "Admin@123" ) {
                 localStorage.setItem("userRole", "system_admin")
                 nevigate("/dashboard")
             }
