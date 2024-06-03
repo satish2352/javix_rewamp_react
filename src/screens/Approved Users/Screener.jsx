@@ -97,20 +97,6 @@ function Screener() {
         header: 'Action',
         size: 150,
       },
-
-      // {
-      //     accessorKey: 'action',
-      //     header: 'Action',
-      //     size: 150,
-      //     Cell: ({ row }) => (
-      //         <Box>
-      //             <button onClick={() => handleActivateUser(row)} style={{ height: '32px', width: '32px', borderRadius: '50%' }}>
-      //                 {/* <img src={ActivateUserIcon} alt="" style={{ width: '100%', height: 'auto' }} /> */}
-      //                 <IoScanCircle style={{ fontSize: "30px" }} />
-      //             </button>
-      //         </Box>
-      //     ),
-      // },
     ],
     []
   );

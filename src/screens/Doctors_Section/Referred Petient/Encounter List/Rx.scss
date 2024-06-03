@@ -1,0 +1,100 @@
+.content-area-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin-top: 12px;
+    gap: 16px;
+  
+    @media (max-width: 992px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  
+    @media (max-width: 576px) {
+      grid-template-columns: 100%;
+    }
+  
+    .area-card {
+      background-color: var(--secondary-color);
+      display: flex;
+      align-items: center;
+      border-radius: 5px;
+      padding: 20px 16px;
+      justify-content: space-between;
+      box-shadow: var(--light-shadow1);
+  
+      @media (max-width: 768px) {
+        padding: 12px;
+      }
+  
+      .info-title {
+        color: var(--lg-text-color);
+        font-size: 18px;
+        margin-bottom: 8px;
+        font-weight: bold;
+      }
+  
+      .info-value {
+        color: var(--xl-text-color);
+        font-weight: 700;
+        font-size: 24px;
+        margin-bottom: 8px;
+      }
+  
+      .info-text {
+        color: var(--base-text-color);
+        font-weight: 500;
+      }
+    }
+  }
+  
+  // global recharts tooltip customization
+  .recharts-default-tooltip {
+    padding: 4px 8px !important;
+    box-shadow: rgba(0, 0, 0, 0.07) 0px 4px 12px;
+    border-radius: 4px;
+    background-color: var(--secondary-color) !important;
+    border: 1px solid var(--border-color-inverted) !important;
+  }
+  
+  .recharts-tooltip-item-list {
+    * {
+      color: var(--text-color-inverted) !important;
+      font-size: 14px;
+      font-family: inherit !important;
+      opacity: 0.9;
+    }
+  }
+  
+  .pill {
+    display: inline-block;
+    padding: 0.25em 0.75em;
+    font-size: 0.875em;
+    font-weight: 700;
+    border-radius: 20px;
+    &.active {
+      // border: #28c76f 1px solid;
+      color: #28c76f;
+      background-color: #C7F4DB;
+    }
+    &.inactive {
+      // border: #dc3545 1px solid;
+      color: #ea5455;
+      background-color: #FBDCDC;
+      // color: rgb(180, 40, 64);
+    }
+    &.yes {
+      // border: #ea5455 1px solid;
+      color: #ea5455;
+      background-color: #FBDCDC;
+    }
+    &.no {
+      // border: #28c76f 1px solid;
+      color: #28c76f;
+      background-color: #C7F4DB;
+    }
+  }
+  
+
+  #changeimg{
+    align-items: center;
+    padding-left: 100px;
+}

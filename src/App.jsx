@@ -88,6 +88,7 @@ import Patient_Info from "./screens/Doctors_Section/Referred Petient/Encounter L
 import Citizen_profile from "./screens/Doctors_Section/Petient view/Citizen_profile";
 import Encounter_petient_list from "./screens/Doctors_Section/Petient view/Encounter_petient_list";
 import ScreenerProfileInfo from "./screens/Approved Users/ScreenerProfileInfo";
+import Firstpage from "./components/home pages/Firstpage";
 
 
 function App() {
@@ -107,6 +108,8 @@ function App() {
       <Router>
         <Routes>
           {/* Login pages */}
+
+          <Route path='/' element={<Firstpage />} />
           <Route path='/login' element={<LoginPage />} />
           <Route path='/forgot-password' element={<ForgotPassword />} />
 
@@ -115,9 +118,9 @@ function App() {
             {/* Admin section start */}
             <Route path="/dashboard" element={<AdminHome />} />
 
-              <Route path='/home/doctots_list' element={<DoctorsCard_table />} />
-              <Route path='/home/doctor_list/doctorprofiledisplay' element={<DoctorProfileDisplay />} />
-              <Route path='/home/doctor_list/doctorprofiledisplay/doctorprofile_edit' element={<DoctorProfileEdit />} />
+            <Route path='/home/doctots_list' element={<DoctorsCard_table />} />
+            <Route path='/home/doctor_list/doctorprofiledisplay' element={<DoctorProfileDisplay />} />
+            <Route path='/home/doctor_list/doctorprofiledisplay/doctorprofile_edit' element={<DoctorProfileEdit />} />
 
             <Route path="/home/directory" element={<Directory />} />
             <Route path='/adduser' element={<Adduser />} />
@@ -130,7 +133,7 @@ function App() {
             <Route path='/approvedusers/screener/screener-profile' element={<ScreenerProfileInfo />} />
             <Route path='/approvedusers/sevika' element={<Sevika />} />
             <Route path='/approvedusers/pharmacy' element={<Pharmacy />} />
-            
+
 
 
             <Route path='/approveduser/activeuser' element={<Active_users />} />
@@ -208,14 +211,14 @@ function App() {
             <Route path="/DoctorHome" element={<DoctorHome />} />
             <Route path='/referred_patient' element={<Referred_patient />} />
 
-              <Route path='/referred_patient/Encounter_List' element={<Encounter_List />} />
-              <Route path='/referred_patient/Encounter_List/Patient_Info' element={<Patient_Info />} />
+            <Route path='/referred_patient/Encounter_List' element={<Encounter_List />} />
+            <Route path='/referred_patient/Encounter_List/Patient_Info' element={<Patient_Info />} />
 
 
             <Route path='/petient_view' element={<Petient_view />} />
-                <Route path='/referred_patient/petient_view/citizen_profile' element={<Citizen_profile />} />
-                <Route path='/referred_patient/petient_view/Encounter_petient_list' element={<Encounter_petient_list />} />
-                
+            <Route path='/referred_patient/petient_view/citizen_profile' element={<Citizen_profile />} />
+            <Route path='/referred_patient/petient_view/Encounter_petient_list' element={<Encounter_petient_list />} />
+
 
             <Route path='/help_doctors' element={<Help_doctors />} />
             {/* <Route path='/insight_doctors' element={<Insights />} /> */}
@@ -223,7 +226,10 @@ function App() {
           {/* Base layout End */}
 
         </Routes>
-        <Footer />
+        {
+          window.location.href === "/" &&
+          <Footer />
+        }
 
 
         {/* <button
