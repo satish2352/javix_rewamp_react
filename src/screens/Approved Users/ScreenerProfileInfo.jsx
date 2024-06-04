@@ -1,5 +1,5 @@
 import { Row, Col, Card } from 'react-bootstrap';
-
+import Home from '../../screens/dashboard/home/Home'
 function ScreenerProfileInfo() {
 
     const mainInfo = [
@@ -26,7 +26,8 @@ function ScreenerProfileInfo() {
 
     return (
         <>
-            <Card id='CARD_IMG'>
+        <Home/>
+            <Card id='CARD_IMG' className='mt-3'>
                 <Card.Body>
                     <div className="profile-title mb-3">Screener Profile</div>
                     <div className="profile-fields">

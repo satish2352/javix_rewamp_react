@@ -8,9 +8,10 @@ const SquareCards = ({ cardsData }) => {
             <Row className='justify-content-center'>
                 {cardsData.map((card, index) => (
                     <Col key={index} lg={3} className='mt-3'>
-                        <Link to='/home/doctots_list'>
+                        <Link to={card.url}>
                         <Card id='Homepage_card' className='border-0 shadow-sm'>
                             <Card.Body className='Homepage_card'>
+                                
                                 <Card.Title style={{ textAlign: " center" }}>{card.title}</Card.Title>
                                 <Card.Text style={{ textAlign: " center" }}>{card.text}</Card.Text>
                             </Card.Body>

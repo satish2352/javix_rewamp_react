@@ -1,21 +1,9 @@
 import { useContext, useEffect, useRef } from "react";
-import { ThemeContext } from "../../context/ThemeContext";
-import { LIGHT_THEME } from "../../constants/themeConstants";
-import LogoBlue from "../../assets/images/logo_blue.svg";
-import LogoWhite from "../../assets/images/logo_white.svg";
+
 
 import javixlogo from '../sidebar/logo1.png';
 import {
-  MdOutlineAttachMoney,
-  MdOutlineBarChart,
   MdOutlineClose,
-  MdOutlineCurrencyExchange,
-  MdOutlineGridView,
-  MdOutlineLogout,
-  MdOutlineMessage,
-  MdOutlinePeople,
-  MdOutlineSettings,
-  MdOutlineShoppingBag,
 } from "react-icons/md";
 import { Link } from "react-router-dom";
 import "./Sidebar.scss";

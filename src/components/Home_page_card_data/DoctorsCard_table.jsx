@@ -3,6 +3,7 @@ import './DoctorsCard_table.scss';
 // import ActivateUserIcon from '../../assets/images/Activate User.png';
 import { TbHandClick } from "react-icons/tb";
 import 'bootstrap/dist/css/bootstrap.min.css';
+import { FaUserCircle } from "react-icons/fa";
 
 import {
   MaterialReactTable,
@@ -23,7 +24,7 @@ const data = [
     mobile: "95412457845",
     email: "csdv@gmail.com",
     qualification: "dvdsfv",
-    profile: <Button variant="primary"><TbHandClick/></Button>
+    profile: <Button variant="primary"><FaUserCircle /></Button>
   },
   {
     sr_no: 2,
@@ -31,7 +32,7 @@ const data = [
     mobile: "9561246325",
     email: "sefwef@gmail.com",
     qualification: "htyhy",
-    profile: <Button variant="primary"><TbHandClick/></Button>
+    profile: <Button variant="primary"><FaUserCircle /></Button>
   },
   {
     sr_no: 3,
@@ -39,7 +40,7 @@ const data = [
     mobile: "9562111452",
     email: "reger@gmail.com",
     qualification: "erger",
-    profile: <Button variant="primary"><TbHandClick/></Button>
+    profile: <Button variant="primary"><FaUserCircle/></Button>
   },
 ]
 function DoctorsCard_table() {
@@ -53,7 +54,7 @@ function DoctorsCard_table() {
       },
       {
         accessorKey: 'name',
-        header: 'User Role',
+        header: 'Name',
         size: 150,
       },
       {
@@ -88,7 +89,7 @@ function DoctorsCard_table() {
         Cell: ({ row }) => (
           <Box>
             <button onClick={() => handleActivateUser(row)} style={{ height: '32px', width: '32px', borderRadius: '50%' }}>
-              <TbHandClick style={{ fontSize: '25px' }} />
+              <FaUserCircle style={{ fontSize: '25px' }} />
             </button>
           </Box>
         ),

@@ -8,6 +8,7 @@ const RectangleCards = ({ cardsData }) => {
                     <Col key={index} lg={4}>
                         <Card className="custom-card shadow">
                             <Card.Body>
+                                <h5>Pai Charts</h5>
                                 <Card.Title>{item.title}</Card.Title>
                                 <Card.Text>{item.text}</Card.Text>
                             </Card.Body>

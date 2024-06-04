@@ -88,6 +88,7 @@ import Footer from "../screens/dashboard/Footer";
 // import ScreenerProfileInfo from "../screens/Approved Users/ScreenerProfileInfo";
 // import Firstpage from "../components/home pages/Firstpage";
 import Loadable from "./Loadable";
+// import Advanced_Screnning_total_Cases from "../components/home pages/Advanced Screnning Total Cases/Advanced_Screnning_total_Cases";
 
 //LOADEER
 const Firstpage = Loadable(lazy(() => import('../components/home pages/Firstpage')));
@@ -194,6 +195,10 @@ const Petient_view = Loadable(lazy(() => import('../screens/Doctors_Section/Peti
 const Citizen_profile = Loadable(lazy(() => import('../screens/Doctors_Section/Petient view/Citizen_profile')));
 const Encounter_petient_list = Loadable(lazy(() => import('../screens/Doctors_Section/Petient view/Encounter_petient_list')));
 const Help_doctors = Loadable(lazy(() => import('../screens/Doctors_Section/Help section/Help_doctors')));
+const Prescribed = Loadable(lazy(() => import('../components/home pages/Prescrided/Prescrided')));
+const Non_Prescribed= Loadable(lazy(() => import('../components/home pages/Non-Prescrided/Non_prescrided')));
+const Advanced_screnning_pendding_Case= Loadable(lazy(() => import('../components/home pages/Advanced Screnning Pending Cases/Advanced_screnning_pendding_Case')));
+const Advanced_Screnning_total_Cases= Loadable(lazy(() => import('../components/home pages/Advanced Screnning Total Cases/Advanced_Screnning_total_Cases')));
 
 
 
@@ -214,6 +219,7 @@ function RouterComponent() {
       <Router>
         <Routes>
           {/* Login pages */}
+          
 
           <Route path='/' element={<Firstpage />} />
           <Route path='/login' element={<LoginPage />} />
@@ -311,6 +317,11 @@ function RouterComponent() {
             <Route path='/issueaddressing/newissue' element={<New_issue />} />
             <Route path='/issueaddressing/updateissue' element={<Update_issue />} />
             <Route path='/changerequest' element={<Change_request />} />
+
+            <Route path='/prescrided' element={<Prescribed />} />
+            <Route path='/non-prescrided' element={<Non_Prescribed />} />
+            <Route path='/advanced-pending-cases' element={<Advanced_screnning_pendding_Case />} />
+            <Route path='/advanced-total-cases' element={<Advanced_Screnning_total_Cases />} />
             {/* Admin section End */}
 
             {/* Doctors Section start */}
@@ -333,7 +344,7 @@ function RouterComponent() {
 
         </Routes>
         {
-          window.location.href === "/" &&
+          window.location.href != "/" &&
           <Footer />
         }
       </Router>

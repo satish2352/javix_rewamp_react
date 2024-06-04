@@ -16,6 +16,8 @@ import Home from '../../screens/dashboard/home/Home';
 // import { ButtonGroup } from 'react-bootstrap';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
+import { FaUserCircle } from "react-icons/fa";
+
 
 
 const data = [
@@ -25,7 +27,7 @@ const data = [
     mobile: "9561245157",
     email: "124",
     qualification: "efere",
-    profile: <FaRegUser style={{ fontSize: "20px" }} />
+    profile: <FaUserCircle style={{ fontSize: "20px" }} />
   },
   {
     sr: 2,
@@ -33,7 +35,7 @@ const data = [
     mobile: "9561245157",
     email: "dfsdf@gmail.com",
     qualification: "dsd",
-    profile: <FaRegUser style={{ fontSize: "20px" }} />
+    profile: <FaUserCircle style={{ fontSize: "20px" }} />
   },
   {
     sr: 3,
@@ -41,7 +43,7 @@ const data = [
     mobile: "9561245157",
     email: "dfsdf@gmail.com",
     qualification: "rrdgb",
-    profile: <FaRegUser style={{ fontSize: "20px" }} />
+    profile: <FaUserCircle style={{ fontSize: "20px" }} />
   },
 
 

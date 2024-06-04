@@ -5,19 +5,20 @@ import BarAndPie from './home page components/BarAndPie';
 import './AdminHome.css'
 import { Card } from 'react-bootstrap';
 import Home from '../../screens/dashboard/home/Home'
+// import xyz from '../../screens/Doctors_Section/Petient view/Petient_view'
 
 const squareCardsData = [
-    { title: 'Doctors', text: '0' },
-    { title: 'NGOs', text: '0' },
-    { title: 'Screeners', text: '0' },
-    { title: 'Sevikas', text: '0' },
-    { title: 'Citizens Screened', text: '0' },
-    { title: 'Screening', text: '0' },
-    { title: 'Pharmacies', text: '0' },
-    { title: 'Prescribed', text: '0' },
-    { title: 'Non-Prescribed', text: '0' },
-    { title: 'Advanced Screening Pending Cases', text: '0' },
-    { title: 'Advanced Screening Total Cases', text: '0' },
+    { title: 'Doctors', text: '0', url : '/home/doctots_list' },
+    { title: 'NGO', text: '0' , url : '/approvedusers/ngo' },
+    { title: 'Screeners', text: '0', url : '/approvedusers/screener' },
+    { title: 'Sevikas', text: '0', url : '/approvedusers/sevika' },
+    { title: 'Citizen ', text: '0', url : '/petient_view' },
+    { title: 'Screening', text: '0', url : '/approvedusers/screener' },
+    { title: 'Pharmacies', text: '0', url : '/approvedusers/pharmacy' },
+    { title: 'Prescribed', text: '0', url : '/prescrided' },
+    { title: 'Non-Prescribed', text: '0', url : '/non-prescrided' },
+    { title: 'Advanced Screening Pending Cases', text: '0', url : '/advanced-pending-cases' },
+    { title: 'Advanced Screening Total Cases', text: '0', url : '/advanced-total-cases' },
 ];
 
 const barAndPieData = [

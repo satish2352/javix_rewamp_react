@@ -10,15 +10,16 @@ const BarAndPie = ({ data, colors }) => {
                 <Col lg={6} md={6} sm={12}>
                     <Card id='Homepage_card_graph'>
                         <Card.Body>
-                            <CustomBarGraph data={data} xAxisKey="name" barKey="value" colors={colors} />
+                            <h5 className='my-3'>Pai Charts</h5>
+                            <CustomPieChart data={data} xAxisKey="name" barKey="value" colors={colors} />
                         </Card.Body>
                     </Card>
-                    <br></br>
                 </Col>
                 <Col lg={6} md={6} sm={12}>
                     <Card id='Homepage_card_graph'>
                         <Card.Body>
-                            <CustomPieChart data={data} xAxisKey="name" barKey="value" colors={colors} />
+                            <h5 className='my-3'>Bar Charts</h5>
+                            <CustomBarGraph data={data} xAxisKey="name" barKey="value" colors={colors} />
                         </Card.Body>
                     </Card>
                 </Col>
