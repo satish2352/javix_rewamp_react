@@ -26,7 +26,7 @@ function PatientInfoProfile() {
 
     return (
         <>
-            <Card id='CARD_IMG'>
+            <Card>
                 <Card.Body>
                     <div className="profile-title mb-3">Patient Profile</div>
                     <div className="profile-fields">
