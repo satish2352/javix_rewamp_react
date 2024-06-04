@@ -1,11 +1,12 @@
 import React, { useState } from 'react';
 import { Form, Button, Container, Row, Col } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import JavixLogo from '../assets/images/Login/Javix Logo.png';
 import LoginClipart from '../assets/images/Login/Login Clipart.png';
 import '../assets/css/LoginPage.css'
 
 const LoginPage = () => {
+    const nevigate = useNavigate()
     const [formData, setFormData] = useState({
         email: '',
         password: '',
@@ -23,6 +24,23 @@ const LoginPage = () => {
     const handleSubmit = (e) => {
         e.preventDefault();
         console.log(formData);
+        try {
+            if (formData.email === "doctor@gmail.com" && formData.password === "Doctor@123") {
+                localStorage.setItem("userRole", "doctor")
+                nevigate("/dashboard")
+            }
+        } catch (error) {
+            console.log("error", error);
+        }
+
+        try {
+            if (formData.email === "admin@gmail.com" && formData.password === "Admin@123" ) {
+                localStorage.setItem("userRole", "system_admin")
+                nevigate("/dashboard")
+            }
+        } catch (error) {
+            console.log("error", error);
+        }
     };
 
     const { email, password, rememberMe } = formData;

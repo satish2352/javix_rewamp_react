@@ -28,10 +28,21 @@ const barAndPieData = [
 const barAndPieColors = ['#28C76F', '#FFBF00', '#EA5455'];
 
 const AdminHome = () => {
+    let role = localStorage.getItem("userRole")
+
+    try {
+        if (role === "system_admin") {
+            role = role.split("_")
+            role = role[0] + " " + role[1]
+            console.log("role", role);
+        }
+    } catch (error) {
+        console.log("error", error);
+    }
     return (
         <div className="home-container">
             <div className="welcome-message">
-                <h2>Welcome, System Admin!</h2>
+                <h2 className='text-capitalize'>Welcome, {role} !</h2>
             </div>
             <SquareCards cardsData={squareCardsData} />
             <BarAndPie data={barAndPieData} colors={barAndPieColors} />
