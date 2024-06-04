@@ -93,8 +93,8 @@ function Screener() {
         size: 150,
       },
       {
-        accessorKey: 'action',
-        header: 'Action',
+        accessorKey: 'profile',
+        header: 'Profile',
         size: 150,
       },
     ],

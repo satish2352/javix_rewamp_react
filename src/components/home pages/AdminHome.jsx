@@ -4,6 +4,7 @@ import SquareCards from './home page components/SqaureCards';
 import BarAndPie from './home page components/BarAndPie';
 import './AdminHome.css'
 import { Card } from 'react-bootstrap';
+import Home from '../../screens/dashboard/home/Home'
 
 const squareCardsData = [
     { title: 'Doctors', text: '0' },
@@ -40,16 +41,19 @@ const AdminHome = () => {
         console.log("error", error);
     }
     return (
-        <div className="home-container">
-            <div className="welcome-message">
-                <h2 className='text-capitalize'>Welcome, {role} !</h2>
+        <>
+            <Home />
+            <div className="home-container">
+                <div className="welcome-message">
+                    <h2 className='text-capitalize'>Welcome, {role} !</h2>
+                </div>
+                <SquareCards cardsData={squareCardsData} />
+                <BarAndPie data={barAndPieData} colors={barAndPieColors} />
+                {/* <PieAndBar data={pieAndBarData} colors={pieAndBarColors} /> */}
+
+
             </div>
-            <SquareCards cardsData={squareCardsData} />
-            <BarAndPie data={barAndPieData} colors={barAndPieColors} />
-            {/* <PieAndBar data={pieAndBarData} colors={pieAndBarColors} /> */}
-
-
-        </div>
+        </>
     );
 };
 
