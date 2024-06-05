@@ -11,7 +11,7 @@ import MedicalHistory from './MedicalHistory';
 import ReproductiveHistory from './ReproductiveHistory';
 import Rx from './Rx';
 import Documents from './Documents';
-
+import Home from '../../../../screens/dashboard/home/Home'
 export default function ScrollableTabsButtonPrevent() {
   const [value, setValue] = useState(0);
 
@@ -21,7 +21,9 @@ export default function ScrollableTabsButtonPrevent() {
 
   return (
     <>
-      <Box sx={{ maxWidth: '100%', bgcolor: 'background.paper' }}>
+    <Home/>
+    <br></br>
+      <Box sx={{ maxWidth: '100%', bgcolor: 'background.paper' }} >
         <Tabs
           value={value}
           onChange={handleChange}

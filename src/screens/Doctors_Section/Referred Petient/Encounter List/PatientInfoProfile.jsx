@@ -1,5 +1,10 @@
 import { Row, Col, Card } from 'react-bootstrap';
 import user from '../../../../assets/images/user.jpg'
+
+import Button from 'react-bootstrap/Button';
+// import Card from 'react-bootstrap/Card';
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 function PatientInfoProfile() {
 
     const mainInfo = [
@@ -26,7 +31,52 @@ function PatientInfoProfile() {
 
     return (
         <>
-            <Card>
+            <Card className='mt-4'>
+                <Card.Header>Patient Profile</Card.Header>
+                <Card.Body>
+                    <Card.Text>
+                        <div className="profile-fields">
+                            <Row>
+                                <Col lg={6} md={6} sm={12} className='d-flex justify-content-center'>
+                                    <img src={user} alt="Patient's Photo" className="img-fluid shadow" style={{ height: '150px', width: '150px', borderRadius: '50%', border: '1px solid #9188F2' }} />
+                                </Col>
+                                <Col lg={6} md={6} sm={12} className='d-flex align-items-center'>
+                                    <div className='w-100'>
+                                        {mainInfo.map((field, index) => (
+                                            <Row className="field" key={`main-${index}`}>
+                                                <Col><span>{field.label}:</span></Col>
+                                                <Col><p>{field.value}</p></Col>
+                                            </Row>
+                                        ))}
+                                    </div>
+                                </Col>
+                            </Row>
+                            <Row className='mt-5'>
+                                <Col md={6}>
+                                    <h5 style={{ fontFamily: 'montserrat', fontSize: '18px', color: '#CD098E' }}>Personal Information</h5>
+                                    {personalInfo.map((field, index) => (
+                                        <Row className="field" key={`personal-${index}`}>
+                                            <Col md={6}><span>{field.label}:</span></Col>
+                                            <Col md={6}><p>{field.value}</p></Col>
+                                        </Row>
+                                    ))}
+                                </Col>
+                                <Col md={6}>
+                                    <h5 style={{ fontFamily: 'montserrat', fontSize: '18px', color: '#CD098E' }}>Address Information</h5>
+                                    {addressInfo.map((field, index) => (
+                                        <Row className="field" key={`address-${index}`}>
+                                            <Col md={6}><span>{field.label}:</span></Col>
+                                            <Col md={6}><p>{field.value}</p></Col>
+                                        </Row>
+                                    ))}
+                                </Col>
+                            </Row>
+                        </div>
+                    </Card.Text>
+                </Card.Body>
+            </Card>
+            {/* <h1>Hii</h1> */}
+            {/* <Card>
                 <Card.Body>
                     <div className="profile-title mb-3">Patient Profile</div>
                     <div className="profile-fields">
@@ -47,7 +97,7 @@ function PatientInfoProfile() {
                         </Row>
                         <Row className='mt-5'>
                             <Col md={6}>
-                                <h5 style={{fontFamily: 'montserrat', fontSize: '18px', color: '#CD098E'}}>Personal Information</h5>
+                                <h5 style={{ fontFamily: 'montserrat', fontSize: '18px', color: '#CD098E' }}>Personal Information</h5>
                                 {personalInfo.map((field, index) => (
                                     <Row className="field" key={`personal-${index}`}>
                                         <Col md={6}><span>{field.label}:</span></Col>
@@ -56,7 +106,7 @@ function PatientInfoProfile() {
                                 ))}
                             </Col>
                             <Col md={6}>
-                                <h5 style={{fontFamily: 'montserrat', fontSize: '18px', color: '#CD098E'}}>Address Information</h5>
+                                <h5 style={{ fontFamily: 'montserrat', fontSize: '18px', color: '#CD098E' }}>Address Information</h5>
                                 {addressInfo.map((field, index) => (
                                     <Row className="field" key={`address-${index}`}>
                                         <Col md={6}><span>{field.label}:</span></Col>
@@ -67,7 +117,9 @@ function PatientInfoProfile() {
                         </Row>
                     </div>
                 </Card.Body >
-            </Card >
+            </Card > */}
+
+
         </>
     );
 }

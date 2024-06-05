@@ -105,8 +105,7 @@ function Rx() {
     };
     return (
         <>
-            <br></br>
-            <Card>
+            <Card className='mt-4'>
                 <Card.Header>Medication List</Card.Header>
                 <Card.Body>
                     <p className='text-md-end text-sm-end'>

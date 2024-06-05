@@ -13,7 +13,7 @@ function Documents() {
 
   return (
     <>
-      <Card>
+      <Card className='mt-4'>
         <Card.Header>Document Lists</Card.Header>
         <Card.Body>
           <Card.Text>

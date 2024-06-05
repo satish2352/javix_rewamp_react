@@ -13,8 +13,7 @@ function MedicalHistory() {
   const handleShow = () => setShow(true);
   return (
     <>
-      <br></br>
-      <Card>
+      <Card className='mt-4'>
         <Card.Header>Medical History List</Card.Header>
         <Card.Body>
           <Card.Text>

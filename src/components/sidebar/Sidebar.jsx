@@ -19,6 +19,10 @@ import { IoMdCheckboxOutline } from "react-icons/io";
 import { LuBellRing } from "react-icons/lu";
 import { IoMdLogOut } from "react-icons/io";
 import { FaHandsHelping } from "react-icons/fa";
+import { element } from "prop-types";
+// import { ProtectedRoutes_admin } from "../../routes/ProtectedRoutes";
+// import AdminHome from "../home pages/AdminHome";
+// import AddUser from "../../screens/adduser/Adduser";
 
 // Define the menu structure for different roles
 const menuConfig = {
@@ -27,10 +31,10 @@ const menuConfig = {
     { label: "Referred Patient", icon: <LuBellRing />, link: "/referred_patient" },
     { label: "Patient View", icon: <FaRegUser />, link: "/petient_view" },
     { label: "Help", icon: <FaHandsHelping />, link: "/help_doctors" },
-    { label: "Insights", icon: <TbActivityHeartbeat />, link: "/admin/insights" },
+    { label: "Insights", icon: <TbActivityHeartbeat />, link: "/insights" },
   ],
   system_admin: [
-    { label: "Home", icon: <IoHomeSharp />, link: "/dashboard" },
+    { label: "Home", icon: <IoHomeSharp />, link: "/dashboard", },
     { label: "Add User", icon: <RiUserAddFill />, link: "/adduser" },
     {
       label: "Approved User",
@@ -60,7 +64,7 @@ const menuConfig = {
         { label: "Patient List For Lipid Panel Test", link: "/dailyandweeklydata/patientlist" },
       ],
     },
-    { label: "Insights", icon: <TbActivityHeartbeat />, link: "/admin/insights" },
+    { label: "Insights", icon: <TbActivityHeartbeat />, link: "/insights" },
     { label: "General Survey Data", icon: <TbActivityHeartbeat />, link: "/generalsurvey" },
     { label: "Health Survey Data", icon: <TbActivityHeartbeat />, link: "/healthsurvey" },
     { label: "Socieconomic Survey Data", icon: <TbActivityHeartbeat />, link: "/socieconomic_survey" },
@@ -77,7 +81,7 @@ const menuConfig = {
   sevika: [
     { label: "Home", icon: <IoHomeSharp />, link: "/" },
     { label: "Add User", icon: <RiUserAddFill />, link: "/adduser" },
-    { label: "Insights", icon: <TbActivityHeartbeat />, link: "#" },
+    { label: "Insights", icon: <TbActivityHeartbeat />, link: "/insights" },
   ],
 };
 
@@ -88,6 +92,10 @@ const Sidebar = () => {
   // Get the user's role from localStorage
   const userRole = localStorage.getItem('userRole') || 'doctor';
 
+  function logoutBtn() {
+    localStorage.removeItem('login');
+    localStorage.removeItem('userRole');
+  }
   // closing the navbar when clicked outside the sidebar area
   const handleClickOutside = (event) => {
     if (
@@ -142,7 +150,7 @@ const Sidebar = () => {
               ))}
               {/* Logout button always displayed */}
               <li className="menu-item">
-                <Link to='/login'><MenuItem icon={<IoMdLogOut />}>Logout</MenuItem></Link>
+                <Link onClick={logoutBtn} to='/login'><MenuItem icon={<IoMdLogOut />}>Logout</MenuItem></Link>
               </li>
             </Menu>
           </ul>

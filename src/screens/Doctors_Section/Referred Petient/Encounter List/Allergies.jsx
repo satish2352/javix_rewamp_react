@@ -15,8 +15,7 @@ function Allergies() {
   const handleShow = () => setShow(true);
   return (
     <>
-      <br></br>
-      <Card>
+      <Card className='mt-4'>
         <Card.Header>Allergies List</Card.Header>
         <Card.Body>
           <Card.Title></Card.Title>

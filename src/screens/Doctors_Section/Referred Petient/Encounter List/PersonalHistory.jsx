@@ -19,8 +19,7 @@ function PersonalHistory() {
   const handleShow = () => setShow(true);
   return (
     <>
-      <br></br>
-      <Card>
+      <Card className='mt-4'>
         <Card.Header>Personal History List</Card.Header>
         <Card.Body>
           <blockquote className="blockquote mb-0">

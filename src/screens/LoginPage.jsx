@@ -1,18 +1,24 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Form, Button, Container, Row, Col } from 'react-bootstrap';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link, Navigate, useNavigate } from 'react-router-dom';
+
 import JavixLogo from '../assets/images/Login/Javix Logo.png';
 import LoginClipart from '../assets/images/Login/Login Clipart.png';
 import '../assets/css/LoginPage.css'
 
 const LoginPage = () => {
     const nevigate = useNavigate()
+
     const [formData, setFormData] = useState({
         email: '',
         password: '',
         rememberMe: false,
     });
 
+    useEffect(() => {
+        localStorage.removeItem('login');
+        localStorage.removeItem('userRole');
+    }, [])
     const handleChange = (e) => {
         const { name, value, type, checked } = e.target;
         setFormData(prevData => ({
@@ -24,9 +30,11 @@ const LoginPage = () => {
     const handleSubmit = (e) => {
         e.preventDefault();
         console.log(formData);
+
         try {
             if (formData.email === "doctor@gmail.com" && formData.password === "Doctor@123") {
                 localStorage.setItem("userRole", "doctor")
+                localStorage.setItem('login', true)
                 nevigate("/dashboard")
             }
         } catch (error) {
@@ -34,8 +42,9 @@ const LoginPage = () => {
         }
 
         try {
-            if (formData.email === "admin@gmail.com" && formData.password === "Admin@123" ) {
+            if (formData.email === "admin@gmail.com" && formData.password === "Admin@123") {
                 localStorage.setItem("userRole", "system_admin")
+                localStorage.setItem('login', true)
                 nevigate("/dashboard")
             }
         } catch (error) {
@@ -45,7 +54,10 @@ const LoginPage = () => {
 
     const { email, password, rememberMe } = formData;
 
+
+
     return (
+
         <Container className='loginPage'>
             <Row className="justify-content-center align-items-center" style={{ height: '100vh' }}>
                 <Col xs={10} md={6}>
