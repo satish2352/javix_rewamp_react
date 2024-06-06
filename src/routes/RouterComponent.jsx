@@ -2,6 +2,7 @@ import { lazy, useContext, useEffect } from "react";
 import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom";
 import Footer from "../screens/dashboard/Footer";
 import Loadable from "./Loadable";
+import ChangePasswordDoctor from "../screens/DoctorsProfileDisplay/ChangePasswordDoctor";
 
 // import AddUser from "../screens/adduser/Adduser";
 //LOADEER
@@ -256,6 +257,7 @@ function RouterComponent() {
               <Route path='/home/doctots_list' element={<DoctorsCard_table />} />
               <Route path='/home/doctor_list/doctorprofiledisplay' element={<DoctorProfileDisplay />} />
               <Route path='/home/doctor_list/doctorprofiledisplay/doctorprofile_edit' element={<DoctorProfileEdit />} />
+              <Route path='/home/doctor_list/doctorprofiledisplay/doctor_change_password' element={<ChangePasswordDoctor />} />
 
               <Route path='/petient_view' element={<Petient_view />} />
               <Route path='/referred_patient/petient_view/citizen_profile' element={<Citizen_profile />} />
