@@ -156,9 +156,9 @@ function RouterComponent() {
               <Route path="/home/directory" element={<Directory />} />
               <Route path='/adduser' element={<AddUser />} />
 
-
+              
               {/* Approved users */}
-              <Route path='/approvedusers/doctors' element={<Doctors />} />
+                <Route path='/approvedusers/doctors' element={<Doctors />} />
               <Route path='/approvedusers/ngo' element={<Ngo />} />
               <Route path='/approvedusers/screener' element={<Screener />} />
               <Route path='/approvedusers/screener/screener-profile' element={<ScreenerProfileInfo />} />
@@ -245,26 +245,26 @@ function RouterComponent() {
 
           }
           {/* Doctors Section start */}
-          
-          
-              <Route path="/DoctorHome" element={<DoctorHome />} />
-              <Route path='/referred_patient' element={<Referred_patient />} />
-
-              <Route path='/referred_patient/Encounter_List' element={<Encounter_List />} />
-              <Route path='/referred_patient/Encounter_List/Patient_Info' element={<Patient_Info />} />
-
-              <Route path='/home/doctots_list' element={<DoctorsCard_table />} />
-              <Route path='/home/doctor_list/doctorprofiledisplay' element={<DoctorProfileDisplay />} />
-              <Route path='/home/doctor_list/doctorprofiledisplay/doctorprofile_edit' element={<DoctorProfileEdit />} />
-
-              <Route path='/petient_view' element={<Petient_view />} />
-              <Route path='/referred_patient/petient_view/citizen_profile' element={<Citizen_profile />} />
-              <Route path='/referred_patient/petient_view/Encounter_petient_list' element={<Encounter_petient_list />} />
 
 
-              <Route path='/help_doctors' element={<Help_doctors />} />
-        
-         
+          <Route path="/DoctorHome" element={<DoctorHome />} />
+          <Route path='/referred_patient' element={<Referred_patient />} />
+
+          <Route path='/referred_patient/Encounter_List' element={<Encounter_List />} />
+          <Route path='/referred_patient/Encounter_List/Patient_Info' element={<Patient_Info />} />
+
+          <Route path='/home/doctots_list' element={<DoctorsCard_table />} />
+          <Route path='/home/doctor_list/doctorprofiledisplay' element={<DoctorProfileDisplay />} />
+          <Route path='/home/doctor_list/doctorprofiledisplay/doctorprofile_edit' element={<DoctorProfileEdit />} />
+
+          <Route path='/petient_view' element={<Petient_view />} />
+          <Route path='/referred_patient/petient_view/citizen_profile' element={<Citizen_profile />} />
+          <Route path='/referred_patient/petient_view/Encounter_petient_list' element={<Encounter_petient_list />} />
+
+
+          <Route path='/help_doctors' element={<Help_doctors />} />
+
+
         </Route>
         {/* Base layout End */}
 
