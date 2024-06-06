@@ -20,6 +20,8 @@ import { LuBellRing } from "react-icons/lu";
 import { IoMdLogOut } from "react-icons/io";
 import { FaHandsHelping } from "react-icons/fa";
 import { element } from "prop-types";
+import { FaArrowRight } from "react-icons/fa6";
+
 // import { ProtectedRoutes_admin } from "../../routes/ProtectedRoutes";
 // import AdminHome from "../home pages/AdminHome";
 // import AddUser from "../../screens/adduser/Adduser";
@@ -40,28 +42,28 @@ const menuConfig = {
       label: "Approved User",
       icon: <MdApproval />,
       subMenu: [
-        { label: "Doctors", link: "/approvedusers/doctors" },
-        { label: "NGO", link: "/approvedusers/ngo" },
-        { label: "Screener", link: "/approvedusers/screener" },
-        { label: "Sevika", link: "/approvedusers/sevika" },
-        { label: "Pharmacy", link: "/approvedusers/pharmacy" },
+        { label: "Doctors", link: "/approvedusers/doctors", icon: <FaArrowRight /> },
+        { label: "NGO", link: "/approvedusers/ngo", icon: <FaArrowRight /> },
+        { label: "Screener", link: "/approvedusers/screener" ,icon: <FaArrowRight />},
+        { label: "Sevika", link: "/approvedusers/sevika" ,icon: <FaArrowRight />},
+        { label: "Pharmacy", link: "/approvedusers/pharmacy",icon: <FaArrowRight /> },
       ],
     },
     {
       label: "Users",
       icon: <FaRegUser />,
       subMenu: [
-        { label: "Active Users", link: "/approveduser/activeuser" },
-        { label: "Inactive Users", link: "/approveduser/Inactiveuser" },
+        { label: "Active Users", link: "/approveduser/activeuser",icon: <FaArrowRight /> },
+        { label: "Inactive Users", link: "/approveduser/Inactiveuser" ,icon: <FaArrowRight />},
       ],
     },
     {
       label: "Daily and Weekly Reports",
       icon: <FaRegUser />,
       subMenu: [
-        { label: "Screening Screener", link: "/dailyandweeklydata/screening_screener" },
-        { label: "Screening Sevika", link: "/dailyandweeklydata/screening_sevika" },
-        { label: "Patient List For Lipid Panel Test", link: "/dailyandweeklydata/patientlist" },
+        { label: "Screening Screener", link: "/dailyandweeklydata/screening_screener" ,icon: <FaArrowRight /> },
+        { label: "Screening Sevika", link: "/dailyandweeklydata/screening_sevika" ,icon: <FaArrowRight /> },
+        { label: "Patient List For Lipid Panel Test", link: "/dailyandweeklydata/patientlist", icon: <FaArrowRight /> },
       ],
     },
     { label: "Insights", icon: <TbActivityHeartbeat />, link: "/insights" },
@@ -73,8 +75,8 @@ const menuConfig = {
       label: "Issue Addressing",
       icon: <LuBellRing />,
       subMenu: [
-        { label: "New Issue", link: "/issueaddressing/newissue" },
-        { label: "Update Issue", link: "/issueaddressing/updateissue" },
+        { label: "New Issue", link: "/issueaddressing/newissue" , icon: <FaArrowRight />},
+        { label: "Update Issue", link: "/issueaddressing/updateissue", icon: <FaArrowRight /> },
       ],
     },
   ],
@@ -138,7 +140,7 @@ const Sidebar = () => {
                   <li className="menu-item" key={index}>
                     <SubMenu label={menuItem.label} icon={menuItem.icon}>
                       {menuItem.subMenu.map((subItem, subIndex) => (
-                        <Link to={subItem.link} key={subIndex}><MenuItem>{subItem.label}</MenuItem></Link>
+                        <Link to={subItem.link} key={subIndex}><MenuItem icon={subItem.icon}>{subItem.label}</MenuItem></Link>
                       ))}
                     </SubMenu>
                   </li>

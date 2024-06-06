@@ -35,13 +35,13 @@ function ReproductiveHistory() {
             <Row>
               <Col lg={6} md={12} sm={12}>
                 <Form.Group className="mb-3" controlId="formGroupEmail">
-                  <Form.Label>Age of First Period</Form.Label>
+                  <Form.Label style={{fontSize : '14px'}}>Age of First Period</Form.Label>
                   <Form.Control type="text" placeholder="Input Value" />
                 </Form.Group>
               </Col>
               <Col lg={6} md={12} sm={12}>
                 <Form.Group className="mb-3" controlId="formGroupEmail">
-                  <Form.Label>Number of Pregnancies</Form.Label>
+                  <Form.Label style={{fontSize : '14px'}}>Number of Pregnancies</Form.Label>
                   <Form.Control type="text" placeholder="Input Value" />
                 </Form.Group>
               </Col>
@@ -49,16 +49,16 @@ function ReproductiveHistory() {
             <hr></hr>
 
             <Form.Group className="mb-3" controlId="formGroupEmail">
-              <Form.Label>Number of Miscarriages or Abortions</Form.Label>
+              <Form.Label style={{fontSize : '14px'}}>Number of Miscarriages or Abortions</Form.Label>
               <Form.Control type="text" placeholder="Input Value" />
             </Form.Group>
 
             <Form.Group className="mb-3" controlId="formGroupEmail">
-              <Form.Label>Number of Children</Form.Label>
+              <Form.Label style={{fontSize : '14px'}}>Number of Children</Form.Label>
               <Form.Control type="text" placeholder="Input Value" />
             </Form.Group>
             <Form.Group className="mb-3" controlId="formGroupEmail">
-              <Form.Label>Have you reached menopause ? If so what age?</Form.Label>
+              <Form.Label style={{fontSize : '14px'}}>Have you reached menopause ? If so what age?</Form.Label>
               <Form.Control type="text" placeholder="Input Value" />
             </Form.Group>
             <br></br>
@@ -68,29 +68,29 @@ function ReproductiveHistory() {
             <Row>
               <Col lg={6} md={12} sm={12}>
                 <Form.Group className="mb-3" controlId="formGroupEmail">
-                  <Form.Label>Last menstrual period?</Form.Label>
+                  <Form.Label style={{fontSize : '14px'}}>Last menstrual period?</Form.Label>
                   <Form.Control type="text" placeholder="Input Value" />
                 </Form.Group>
               </Col>
               <Col lg={6} md={12} sm={12}>
                 <Form.Group className="mb-3" controlId="formGroupEmail">
-                  <Form.Label>Number of days bleeding?</Form.Label>
+                  <Form.Label style={{fontSize : '14px'}}>Number of days bleeding?</Form.Label>
                   <Form.Control type="text" placeholder="Input Value" />
                 </Form.Group>
               </Col>
             </Row>
             <Form.Group className="mb-3" controlId="formGroupEmail">
-              <Form.Label>Interval between periods?</Form.Label>
+              <Form.Label style={{fontSize : '14px'}}>Interval between periods?</Form.Label>
               <Form.Control type="text" placeholder="Input Value" />
             </Form.Group>
-            <Form.Label>Regular or irregular ?</Form.Label>
-            <Form.Check
+            <Form.Label style={{fontSize : '14px'}}>Regular or irregular ?</Form.Label>
+            <Form.Check style={{fontSize : '14px'}}
               type="radio"
               label="Yes"
               name="formHorizontalRadios"
               id="formHorizontalRadios1"
             />
-            <Form.Check
+            <Form.Check style={{fontSize : '14px'}}
               type="radio"
               label="No"
               name="formHorizontalRadios"
@@ -101,24 +101,24 @@ function ReproductiveHistory() {
             <Row>
               <Col lg={6} md={12} sm={12}>
                 <Form.Group className="mb-3" controlId="formGroupEmail">
-                  <Form.Label>• Flow- low/normal/high ?</Form.Label>
+                  <Form.Label style={{fontSize : '14px'}}>• Flow- low/normal/high ?</Form.Label>
                   <Form.Control type="text" placeholder="Input Value" />
                 </Form.Group>
               </Col>
               <Col lg={6} md={12} sm={12}>
                 <Form.Group className="mb-3" controlId="formGroupEmail">
-                  <Form.Label>Pain with menstruation ?</Form.Label>
+                  <Form.Label style={{fontSize : '14px'}}>Pain with menstruation ?</Form.Label>
                   <Form.Control type="text" placeholder="Input Value" />
                 </Form.Group>
               </Col>
             </Row>
             <Form.Group className="mb-3" controlId="formGroupEmail">
-              <Form.Label>Use of medication for pain ?</Form.Label>
+              <Form.Label style={{fontSize : '14px'}}>Use of medication for pain ?</Form.Label>
               <Form.Control type="text" placeholder="Input Value" />
             </Form.Group>
 
             <Form.Group className="mb-3" controlId="formGroupEmail">
-              <Form.Label>Missed days of school or work due to period ?</Form.Label>
+              <Form.Label style={{fontSize : '14px'}}>Missed days of school or work due to period ?</Form.Label>
               <Form.Control type="text" placeholder="Input Value" />
             </Form.Group>
           </Form>

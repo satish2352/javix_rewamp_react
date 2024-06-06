@@ -7,15 +7,15 @@ import {
   useMaterialReactTable,
   MRT_GlobalFilterTextField,
   MRT_ToggleFiltersButton,
-  
+
 } from 'material-react-table';
 import { Box, Button, lighten } from '@mui/material';
 import Home from '../dashboard/home/Home';
 
 const data = [
   {
-    sr:1,
-    citizenID :"abc",
+    sr: 1,
+    citizenID: "abc",
     caseID: "axy",
     screenerID: "Doctors",
     citizen_name: "Inactive",
@@ -76,8 +76,8 @@ const data = [
 
   },
   {
-    sr:2,
-    citizenID :"xyzz",
+    sr: 2,
+    citizenID: "xyzz",
     caseID: "axffefwy",
     screenerID: "Doctors",
     citizen_name: "Inactive",
@@ -138,8 +138,8 @@ const data = [
 
   },
   {
-    sr:3,
-    citizenID :"rerr",
+    sr: 3,
+    citizenID: "rerr",
     caseID: "regerver",
     screenerID: "Doctors",
     citizen_name: "Inactive",
@@ -200,8 +200,8 @@ const data = [
 
   },
   {
-    sr:4,
-    citizenID :"jmhjhgh",
+    sr: 4,
+    citizenID: "jmhjhgh",
     caseID: "fdgfgdfg",
     screenerID: "Doctors",
     citizen_name: "Inactive",
@@ -262,8 +262,8 @@ const data = [
 
   },
   {
-    sr:5,
-    citizenID :"vfdvvf",
+    sr: 5,
+    citizenID: "vfdvvf",
     caseID: "ujkyuym",
     screenerID: "Doctors",
     citizen_name: "Inactive",
@@ -323,7 +323,7 @@ const data = [
     action: ActivateUserIcon
 
   },
-  
+
 ]
 
 function Screening_screener() {
@@ -514,7 +514,7 @@ function Screening_screener() {
         accessorKey: 'fvcpredicted',
         header: 'FVC Predicated',
         size: 150,
-        
+
       },
       {
         accessorKey: 'fvcactual',
@@ -660,11 +660,11 @@ function Screening_screener() {
     alert('activating ' + row.getValue('name'));
   };
   return (
-   <>
-   <Home/>
-    <br></br>
-    
-    <h5 style={{color : "#ea5455"}}><b>Screening_screener</b></h5>
+    <>
+      <Home />
+      <br></br>
+
+      <h5 style={{ color: "#ea5455" }}><b>Screening_screener</b></h5>
       <Box
         sx={(theme) => ({
           backgroundColor: lighten(theme.palette.background.default, 0.05),
@@ -680,7 +680,7 @@ function Screening_screener() {
         </Box>
         <Box>
           <Box sx={{ display: 'flex', gap: '0.5rem' }}>
-            <Button
+            {/* <Button
               color="success"
               disabled={!table.getIsSomeRowsSelected()}
               onClick={handleActivate}
@@ -695,16 +695,16 @@ function Screening_screener() {
               variant="contained"
             >
               Deactivate
-            </Button>
-            <Button variant='primary' style={{backgroundColor : '#4848d1' ,  color : 'white'}}>Export</Button>
+            </Button> */}
+            <Button variant='primary' style={{ backgroundColor: '#4848d1', color: 'white' }}>Export</Button>
           </Box>
         </Box>
       </Box>
 
       <MaterialReactTable table={table} />
       <br></br>
-   
-   </>
+
+    </>
   )
 }
 

@@ -8,17 +8,17 @@ import Home from '../../screens/dashboard/home/Home'
 // import xyz from '../../screens/Doctors_Section/Petient view/Petient_view'
 
 const squareCardsData = [
-    { title: 'Doctors', text: '0', url : '/home/doctots_list' },
-    { title: 'NGO', text: '0' , url : '/approvedusers/ngo' },
-    { title: 'Screeners', text: '0', url : '/approvedusers/screener' },
-    { title: 'Sevikas', text: '0', url : '/approvedusers/sevika' },
-    { title: 'Citizen ', text: '0', url : '/petient_view' },
-    { title: 'Screening', text: '0', url : '/approvedusers/screener' },
-    { title: 'Pharmacies', text: '0', url : '/approvedusers/pharmacy' },
-    { title: 'Prescribed', text: '0', url : '/prescrided' },
-    { title: 'Non-Prescribed', text: '0', url : '/non-prescrided' },
-    { title: 'Advanced Screening Pending Cases', text: '0', url : '/advanced-pending-cases' },
-    { title: 'Advanced Screening Total Cases', text: '0', url : '/advanced-total-cases' },
+    { title: 'Doctors', text: '0', url: '/home/doctots_list' },
+    { title: 'NGO', text: '0', url: '/approvedusers/ngo' },
+    { title: 'Screeners', text: '0', url: '/approvedusers/screener' },
+    { title: 'Sevikas', text: '0', url: '/approvedusers/sevika' },
+    { title: 'Citizen ', text: '0', url: '/petient_view' },
+    { title: 'Screening', text: '0', url: '/approvedusers/screener' },
+    { title: 'Pharmacies', text: '0', url: '/approvedusers/pharmacy' },
+    { title: 'Prescribed', text: '0', url: '/prescrided' },
+    { title: 'Non-Prescribed', text: '0', url: '/non-prescrided' },
+    { title: 'Advanced Screening Pending Cases', text: '0', url: '/advanced-pending-cases' },
+    { title: 'Advanced Screening Total Cases', text: '0', url: '/advanced-total-cases' },
 ];
 
 const barAndPieData = [
@@ -48,11 +48,9 @@ const AdminHome = () => {
                 <div className="welcome-message">
                     <h2 className='text-capitalize'>Welcome, {role} !</h2>
                 </div>
-                <SquareCards cardsData={squareCardsData} />
+                <SquareCards cardsData={squareCardsData}/>
                 <BarAndPie data={barAndPieData} colors={barAndPieColors} />
                 {/* <PieAndBar data={pieAndBarData} colors={pieAndBarColors} /> */}
-
-
             </div>
         </>
     );

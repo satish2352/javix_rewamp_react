@@ -162,19 +162,19 @@ const Insights2 = () => {
         data,
         enableRowSelection: true,
     });
-    
+
     const handleDeactivate = () => {
         table.getSelectedRowModel().flatRows.forEach((row) => {
             alert('deactivating ' + row.getValue('name'));
         });
     };
-    
+
     const handleActivate = () => {
         table.getSelectedRowModel().flatRows.forEach((row) => {
             alert('activating ' + row.getValue('name'));
         });
     };
-    
+
     const handleActivateUser = (row) => {
         alert('activating ' + row.getValue('name'));
     };
@@ -279,7 +279,7 @@ const Insights2 = () => {
                             />
                             <div className='d-flex justify-content-around align-items-center text-center mt-3'>
                                 <Link to='/admin/insights/BMI/BMI_Green_Cases'><p>BMI Green Cases</p></Link>
-                                <Link  to='/admin/insights/BMI/BMI_Amber_Cases'><p>BMI Amber Cases</p></Link>
+                                <Link to='/admin/insights/BMI/BMI_Amber_Cases'><p>BMI Amber Cases</p></Link>
                                 <Link to='/admin/insights/BMI/BMI_Red_Cases'><p>BMI Red Cases</p></Link>
                             </div>
                         </Card.Body>
@@ -389,9 +389,9 @@ const Insights2 = () => {
                 </Col>
             </Row>
             <Row>
-                <Col>
-                    <div className='shadow p-lg-5 mt-5'>
-                        <div>
+                <Col lg={6} md={6} sm={12}>
+                    <Card id='CARD_IMG'>
+                        <Card.Body>
                             <h5>Right Eye Tests</h5>
                             <CustomPieChart
                                 data={data1}
@@ -399,16 +399,17 @@ const Insights2 = () => {
                                 barKeys={['Green', 'Amber', 'Red']}
                                 colors={colors}
                             />
-                        </div>
-                        <div className='d-flex justify-content-around align-items-center text-center mt-3'>
-                            <Link to='/admin/insights/Right_Eye_Tests/Right_Eye_Tests_Green_case'><p>Right Eye Tests Green Cases</p></Link>
-                            <Link to='/admin/insights/Right_Eye_Tests/Right_Eye_Tests_Amber_case'><p>Right Eye Tests Amber Cases</p></Link>
-                            <Link to='/admin/insights/Right_Eye_Tests/Right_Eye_Tests_Red_case'><p>Right Eye Tests Red Cases</p></Link>
-                        </div>
-                    </div>
-
-                    <div className='shadow p-lg-5 mt-5'>
-                        <div>
+                            <div className='d-flex justify-content-around align-items-center text-center mt-3'>
+                                <Link to='/admin/insights/Right_Eye_Tests/Right_Eye_Tests_Green_case'><p>Right Eye Tests Green Cases</p></Link>
+                                <Link to='/admin/insights/Right_Eye_Tests/Right_Eye_Tests_Amber_case'><p>Right Eye Tests Amber Cases</p></Link>
+                                <Link to='/admin/insights/Right_Eye_Tests/Right_Eye_Tests_Red_case'><p>Right Eye Tests Red Cases</p></Link>
+                            </div>
+                        </Card.Body>
+                    </Card>
+                </Col>
+                <Col lg={6} md={6} sm={12}>
+                    <Card id='CARD_IMG'>
+                        <Card.Body>
                             <h5>Left Eye Tests</h5>
                             <CustomPieChart
                                 data={data2}
@@ -416,37 +417,38 @@ const Insights2 = () => {
                                 barKeys={['Green', 'Amber', 'Red']}
                                 colors={colors}
                             />
-                        </div>
-                        <div className='d-flex justify-content-around align-items-center text-center mt-3'>
-                            <Link to='/admin/insights/Left_Eye_Tests/Left_Eye_Tests_Green_Tests'><p>Left Eye Tests Green Cases</p></Link>
-                            <Link to='/admin/insights/Left_Eye_Tests/Left_Eye_Tests_Amber_Tests'><p>Left Eye Tests Amber Cases</p></Link>
-                            <Link to='/admin/insights/Left_Eye_Tests/Left_Eye_Tests_Red_Tests'><p>Left Eye Tests Red Cases</p></Link>
-                        </div>
-                    </div>
-
-                    <div className='shadow p-lg-5 mt-5'>
-                        <div>
-                            <h5>Haemoglobin</h5>
-                            <CustomPieChart
-                                data={data1}
-                                xAxisKey="name"
-                                barKeys={['Green', 'Amber', 'Red']}
-                                colors={colors}
-                            />
-                        </div>
-                        <div className='d-flex justify-content-around align-items-center text-center mt-3'>
-                            <Link to='/admin/insights/Haemoglobin/Haemoglobin_green_case'><p>Haemoglobin Green Cases</p></Link>
-                            <Link to='/admin/insights/Haemoglobin/Haemoglobin_amber_case'><p>Haemoglobin Amber Cases</p></Link>
-                            <Link to='/admin/insights/Haemoglobin/Haemoglobin_red_case'><p>Haemoglobin Red Cases</p></Link>
-                        </div>
-                    </div>
+                            <div className='d-flex justify-content-around align-items-center text-center mt-3'>
+                                <Link to='/admin/insights/Left_Eye_Tests/Left_Eye_Tests_Green_Tests'><p>Left Eye Tests Green Cases</p></Link>
+                                <Link to='/admin/insights/Left_Eye_Tests/Left_Eye_Tests_Amber_Tests'><p>Left Eye Tests Amber Cases</p></Link>
+                                <Link to='/admin/insights/Left_Eye_Tests/Left_Eye_Tests_Red_Tests'><p>Left Eye Tests Red Cases</p></Link>
+                            </div>
+                        </Card.Body>
+                    </Card>
                 </Col>
             </Row>
+            <Row>
+                <div className='shadow p-lg-5 mt-5'>
+                    <div>
+                        <h5>Haemoglobin</h5>
+                        <CustomPieChart
+                            data={data1}
+                            xAxisKey="name"
+                            barKeys={['Green', 'Amber', 'Red']}
+                            colors={colors}
+                        />
+                    </div>
+                    <div className='d-flex justify-content-around align-items-center text-center mt-3'>
+                        <Link to='/admin/insights/Haemoglobin/Haemoglobin_green_case'><p>Haemoglobin Green Cases</p></Link>
+                        <Link to='/admin/insights/Haemoglobin/Haemoglobin_amber_case'><p>Haemoglobin Amber Cases</p></Link>
+                        <Link to='/admin/insights/Haemoglobin/Haemoglobin_red_case'><p>Haemoglobin Red Cases</p></Link>
+                    </div>
+                </div>
+            </Row>
             <br></br>
-            
+
             <Card id='CARD_IMG'>
                 <Card.Body>
-                    <h4 style={{textAlign:"center" ,  color : 'rgb(196, 83, 102)'}}><b>Sevika And Screnner Report</b></h4>
+                    <h4 style={{ textAlign: "center", color: 'rgb(196, 83, 102)' }}><b>Sevika And Screnner Report</b></h4>
                 </Card.Body>
             </Card>
             {/* <h5 style={{ color: "#ea5455" }}><b>Heart Rate Amber Cases</b></h5> */}
@@ -488,7 +490,7 @@ const Insights2 = () => {
             <br></br>
 
             <MaterialReactTable table={table} />
-            
+
         </>
     );
 }
