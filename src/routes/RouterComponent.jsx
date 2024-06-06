@@ -2,6 +2,7 @@ import { lazy, useContext, useEffect } from "react";
 import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom";
 import Footer from "../screens/dashboard/Footer";
 import Loadable from "./Loadable";
+import ChangePasswordDoctor from "../screens/DoctorsProfileDisplay/ChangePasswordDoctor";
 
 // import AddUser from "../screens/adduser/Adduser";
 //LOADEER

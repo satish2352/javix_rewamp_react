@@ -29,11 +29,16 @@ function DoctorProfileDisplay() {
     function editdoctor() {
         navigate('/home/doctor_list/doctorprofiledisplay/doctorprofile_edit')
     }
+
+    function changepassworddoctor() {
+        navigate('/home/doctor_list/doctorprofiledisplay/doctor_change_password')
+    }
+
     return (
         <>
             <Home />
             <br></br>
-            <Card id='CARD_IMG'>
+            <Card>
                 <Card.Body>
                     <div className="profile-title">Doctor Profile</div>
                     <div className="profile-fields">
@@ -66,9 +71,8 @@ function DoctorProfileDisplay() {
                             </Col>
                             <Col lg={6} md={6} sm={6}>
                                 <br></br>
-                                <Button variant="primary" >Change Password</Button>
+                                <Button  variant="primary" onClick={() => changepassworddoctor()} >Change Password</Button>
                             </Col>
-
                         </Row>
                     </div>
                 </Card.Body>
