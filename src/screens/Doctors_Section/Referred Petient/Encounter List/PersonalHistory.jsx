@@ -37,17 +37,18 @@ function PersonalHistory() {
         <Modal.Body>
           <Form>
             <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
-              <Form.Label>Birth History</Form.Label>
+              <Form.Label style={{fontSize : '14px'}}>Birth History</Form.Label>
               <Form.Control as="textarea" rows={3} />
             </Form.Group>
             <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
-              <Form.Label>Where were born and raised ?</Form.Label>
+              <Form.Label style={{fontSize : '15px'}}>Where were born and raised ?</Form.Label>
               <Form.Control as="textarea" rows={3} />
             </Form.Group>
-            <Form.Label >What is your highest education ?</Form.Label>
+            <hr></hr>
+            <Form.Label style={{fontSize : '14px'}}>What is your highest education ?</Form.Label>
             <Row>
               <Col lg={4} sm={4} md={4}>
-              <Form.Check
+              <Form.Check style={{fontSize : '14px'}}
               type="radio"
               label="first radio"
               name="formHorizontalRadios"
@@ -55,7 +56,7 @@ function PersonalHistory() {
             />
               </Col>
               <Col lg={4} sm={4} md={4}>
-                <Form.Check
+                <Form.Check style={{fontSize : '14px'}}
                   type="radio"
                   label="Masters"
                   name="formHorizontalRadios"
@@ -64,7 +65,7 @@ function PersonalHistory() {
 
               </Col>
               <Col lg={4} sm={4} md={4}>
-                <Form.Check
+                <Form.Check style={{fontSize : '14px'}}
                   type="radio"
                   label="College Graduate"
                   name="formHorizontalRadios"
@@ -72,11 +73,11 @@ function PersonalHistory() {
                 />
               </Col>
             </Row>
-
-            <Form.Label >Marital Status ?</Form.Label>
+            <hr></hr>
+            <Form.Label style={{fontSize : '14px'}}>Marital Status ?</Form.Label>
             <Row>
               <Col lg={3} sm={3} md={3}>
-                <Form.Check
+                <Form.Check style={{fontSize : '14px'}}
                   type="radio"
                   label="Never Married"
                   name="formHorizontalRadios"
@@ -84,7 +85,7 @@ function PersonalHistory() {
                 />
               </Col>
               <Col lg={3} sm={3} md={3}>
-                <Form.Check
+                <Form.Check style={{fontSize : '14px'}}
                   type="radio"
                   label="Married"
                   name="formHorizontalRadios"
@@ -93,7 +94,7 @@ function PersonalHistory() {
 
               </Col>
               <Col lg={3} sm={3} md={3}>
-                <Form.Check
+                <Form.Check style={{fontSize : '14px'}}
                   type="radio"
                   label="Divorced"
                   name="formHorizontalRadios"
@@ -101,7 +102,7 @@ function PersonalHistory() {
                 />
               </Col>
               <Col lg={3} sm={3} md={3}>
-                <Form.Check
+                <Form.Check style={{fontSize : '14px'}}
                   type="radio"
                   label="Seperated"
                   name="formHorizontalRadios"
@@ -109,7 +110,7 @@ function PersonalHistory() {
                 />
               </Col>
               <Col lg={3} sm={3} md={3}>
-                <Form.Check
+                <Form.Check style={{fontSize : '14px'}}
                   type="radio"
                   label="Widowed"
                   name="formHorizontalRadios"
@@ -117,7 +118,7 @@ function PersonalHistory() {
                 />
               </Col>
               <Col lg={3} sm={3} md={3}>
-                <Form.Check
+                <Form.Check style={{fontSize : '14px'}}
                   type="radio"
                   label="Partnered/Significant other"
                   name="formHorizontalRadios"
@@ -125,14 +126,16 @@ function PersonalHistory() {
                 />
               </Col>
             </Row>
+            <hr></hr>
             <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
-              <Form.Label>What is your current or past occupation ?</Form.Label>
+              <Form.Label style={{fontSize : '14px'}}>What is your current or past occupation ?</Form.Label>
               <Form.Control as="textarea" rows={3} />
             </Form.Group>
-            <Form.Label >Are you currently working ?</Form.Label>
+            <hr></hr>
+            <Form.Label style={{fontSize : '14px'}}>Are you currently working ?</Form.Label>
             <Row>
               <Col lg={4} sm={4} md={4}>
-                <Form.Check
+                <Form.Check style={{fontSize : '14px'}}
                   type="radio"
                   label="Yes"
                   name="formHorizontalRadios"
@@ -140,7 +143,7 @@ function PersonalHistory() {
                 />
               </Col>
               <Col lg={4} sm={4} md={4}>
-                <Form.Check
+                <Form.Check style={{fontSize : '14px'}}
                   type="radio"
                   label="No"
                   name="formHorizontalRadios"
@@ -149,11 +152,13 @@ function PersonalHistory() {
 
               </Col>
             </Row>
+            <hr></hr>
             <Form.Group className="mb-3" controlId="formGroupPassword">
-              <Form.Label>Have you had legal problems ?</Form.Label>
+              <Form.Label style={{fontSize : '14px'}}>Have you had legal problems ?</Form.Label>
               <Form.Control type="text" placeholder="Input Value" />
             </Form.Group>
           </Form>
+          
         </Modal.Body>
         <Modal.Footer>
           <Button variant="secondary" onClick={handleClose}>

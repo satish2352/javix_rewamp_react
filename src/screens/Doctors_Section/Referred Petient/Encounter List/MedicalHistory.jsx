@@ -31,55 +31,55 @@ function MedicalHistory() {
         <Modal.Body>
           <Row>
             <Col lg={3} md={3} sm={12}>
-              <Form.Label>Diabetes</Form.Label>
+              <Form.Label style={{fontSize : '14px'}}>Diabetes</Form.Label>
             </Col>
             <Col lg={3} md={3} sm={12}>
-              <Form.Label>High Blood Pressure</Form.Label>
+              <Form.Label style={{fontSize : '14px'}}>High Blood Pressure</Form.Label>
             </Col>
             <Col lg={3} md={3} sm={12}>
-              <Form.Label>High Cholesterol</Form.Label>
+              <Form.Label style={{fontSize : '14px'}}>High Cholesterol</Form.Label>
             </Col>
             <Col lg={3} md={3} sm={12}>
-              <Form.Label>Goiter</Form.Label>
-            </Col>
-          </Row>
-          <Row>
-            <Col lg={3} md={3} sm={12}>
-              <Form.Check
-                type="radio"
-                label="Yes"
-                name="formHorizontalRadios"
-                id="formHorizontalRadios1"
-              />
-            </Col>
-            <Col lg={3} md={3} sm={12}>
-              <Form.Check
-                type="radio"
-                label="Yes"
-                name="formHorizontalRadios"
-                id="formHorizontalRadios1"
-              />
-            </Col>
-            <Col lg={3} md={3} sm={12}>
-              <Form.Check
-                type="radio"
-                label="Yes"
-                name="formHorizontalRadios"
-                id="formHorizontalRadios1"
-              />
-            </Col>
-            <Col lg={3} md={3} sm={12}>
-              <Form.Check
-                type="radio"
-                label="Yes"
-                name="formHorizontalRadios"
-                id="formHorizontalRadios1"
-              />
+              <Form.Label style={{fontSize : '14px'}}>Goiter</Form.Label>
             </Col>
           </Row>
           <Row>
             <Col lg={3} md={3} sm={12}>
-              <Form.Check
+              <Form.Check style={{fontSize : '14px'}}
+                type="radio"
+                label="Yes"
+                name="formHorizontalRadios"
+                id="formHorizontalRadios1"
+              />
+            </Col>
+            <Col lg={3} md={3} sm={12}>
+              <Form.Check style={{fontSize : '14px'}}
+                type="radio"
+                label="Yes"
+                name="formHorizontalRadios"
+                id="formHorizontalRadios1"
+              />
+            </Col>
+            <Col lg={3} md={3} sm={12}>
+              <Form.Check style={{fontSize : '14px'}}
+                type="radio"
+                label="Yes"
+                name="formHorizontalRadios"
+                id="formHorizontalRadios1"
+              />
+            </Col>
+            <Col lg={3} md={3} sm={12}>
+              <Form.Check style={{fontSize : '14px'}}
+                type="radio"
+                label="Yes"
+                name="formHorizontalRadios"
+                id="formHorizontalRadios1"
+              />
+            </Col>
+          </Row>
+          <Row>
+            <Col lg={3} md={3} sm={12}>
+              <Form.Check style={{fontSize : '14px'}}
                 type="radio"
                 label="No"
                 name="formHorizontalRadios"
@@ -87,7 +87,7 @@ function MedicalHistory() {
               />
             </Col>
             <Col lg={3} md={3} sm={12}>
-              <Form.Check
+              <Form.Check style={{fontSize : '14px'}}
                 type="radio"
                 label="No"
                 name="formHorizontalRadios"
@@ -95,7 +95,7 @@ function MedicalHistory() {
               />
             </Col>
             <Col lg={3} md={3} sm={12}>
-              <Form.Check
+              <Form.Check style={{fontSize : '14px'}}
                 type="radio"
                 label="No"
                 name="formHorizontalRadios"
@@ -103,7 +103,7 @@ function MedicalHistory() {
               />
             </Col>
             <Col lg={3} md={3} sm={12}>
-              <Form.Check
+              <Form.Check style={{fontSize : '14px'}}
                 type="radio"
                 label="No"
                 name="formHorizontalRadios"
@@ -115,105 +115,21 @@ function MedicalHistory() {
          <hr></hr>
           <Row>
             <Col lg={3} md={3} sm={12}>
-              <Form.Label>Cancer</Form.Label>
+              <Form.Label style={{fontSize : '14px'}}>Cancer</Form.Label>
             </Col>
             <Col lg={3} md={3} sm={12}>
-              <Form.Label>Leukemia</Form.Label>
+              <Form.Label style={{fontSize : '14px'}}>Leukemia</Form.Label>
             </Col>
             <Col lg={3} md={3} sm={12}>
-              <Form.Label>Psoriasis</Form.Label>
+              <Form.Label style={{fontSize : '14px'}}>Psoriasis</Form.Label>
             </Col>
             <Col lg={3} md={3} sm={12}>
-              <Form.Label>Angina</Form.Label>
-            </Col>
-          </Row>
-          <Row>
-            <Col lg={3} md={3} sm={12}>
-              <Form.Check
-                type="radio"
-                label="Yes"
-                name="formHorizontalRadios"
-                id="formHorizontalRadios1"
-              />
-            </Col>
-            <Col lg={3} md={3} sm={12}>
-              <Form.Check
-                type="radio"
-                label="Yes"
-                name="formHorizontalRadios"
-                id="formHorizontalRadios1"
-              />
-            </Col>
-            <Col lg={3} md={3} sm={12}>
-              <Form.Check
-                type="radio"
-                label="Yes"
-                name="formHorizontalRadios"
-                id="formHorizontalRadios1"
-              />
-            </Col>
-            <Col lg={3} md={3} sm={12}>
-              <Form.Check
-                type="radio"
-                label="Yes"
-                name="formHorizontalRadios"
-                id="formHorizontalRadios1"
-              />
+              <Form.Label style={{fontSize : '14px'}}>Angina</Form.Label>
             </Col>
           </Row>
           <Row>
             <Col lg={3} md={3} sm={12}>
-              <Form.Check
-                type="radio"
-                label="No"
-                name="formHorizontalRadios"
-                id="formHorizontalRadios1"
-              />
-            </Col>
-            <Col lg={3} md={3} sm={12}>
-              <Form.Check
-                type="radio"
-                label="No"
-                name="formHorizontalRadios"
-                id="formHorizontalRadios1"
-              />
-            </Col>
-            <Col lg={3} md={3} sm={12}>
-              <Form.Check
-                type="radio"
-                label="No"
-                name="formHorizontalRadios"
-                id="formHorizontalRadios1"
-              />
-            </Col>
-            <Col lg={3} md={3} sm={12}>
-              <Form.Check
-                type="radio"
-                label="No"
-                name="formHorizontalRadios"
-                id="formHorizontalRadios1"
-              />
-            </Col>
-          </Row>
-
-          <hr></hr>
-          <Row>
-            <Col lg={3} md={3} sm={12}>
-              <Form.Label>Heart Problem</Form.Label>
-            </Col>
-            <Col lg={3} md={3} sm={12}>
-              <Form.Label>Heart Murmur</Form.Label>
-            </Col>
-            <Col lg={3} md={3} sm={12}>
-              <Form.Label>Pneumonia</Form.Label>
-            </Col>
-            <Col lg={3} md={3} sm={12}>
-              <Form.Label>Pulmonary Embolism</Form.Label>
-            </Col>
-          </Row>
-          <Row>
-            <Col lg={3} md={3} sm={12}>
-              <Form.Check
+              <Form.Check style={{fontSize : '14px'}}
                 type="radio"
                 label="Yes"
                 name="formHorizontalRadios"
@@ -221,7 +137,7 @@ function MedicalHistory() {
               />
             </Col>
             <Col lg={3} md={3} sm={12}>
-              <Form.Check
+              <Form.Check style={{fontSize : '14px'}}
                 type="radio"
                 label="Yes"
                 name="formHorizontalRadios"
@@ -229,7 +145,7 @@ function MedicalHistory() {
               />
             </Col>
             <Col lg={3} md={3} sm={12}>
-              <Form.Check
+              <Form.Check style={{fontSize : '14px'}}
                 type="radio"
                 label="Yes"
                 name="formHorizontalRadios"
@@ -237,7 +153,7 @@ function MedicalHistory() {
               />
             </Col>
             <Col lg={3} md={3} sm={12}>
-              <Form.Check
+              <Form.Check style={{fontSize : '14px'}}
                 type="radio"
                 label="Yes"
                 name="formHorizontalRadios"
@@ -247,7 +163,7 @@ function MedicalHistory() {
           </Row>
           <Row>
             <Col lg={3} md={3} sm={12}>
-              <Form.Check
+              <Form.Check style={{fontSize : '14px'}}
                 type="radio"
                 label="No"
                 name="formHorizontalRadios"
@@ -255,7 +171,7 @@ function MedicalHistory() {
               />
             </Col>
             <Col lg={3} md={3} sm={12}>
-              <Form.Check
+              <Form.Check style={{fontSize : '14px'}}
                 type="radio"
                 label="No"
                 name="formHorizontalRadios"
@@ -263,7 +179,7 @@ function MedicalHistory() {
               />
             </Col>
             <Col lg={3} md={3} sm={12}>
-              <Form.Check
+              <Form.Check style={{fontSize : '14px'}}
                 type="radio"
                 label="No"
                 name="formHorizontalRadios"
@@ -271,7 +187,7 @@ function MedicalHistory() {
               />
             </Col>
             <Col lg={3} md={3} sm={12}>
-              <Form.Check
+              <Form.Check style={{fontSize : '14px'}}
                 type="radio"
                 label="No"
                 name="formHorizontalRadios"
@@ -283,105 +199,21 @@ function MedicalHistory() {
           <hr></hr>
           <Row>
             <Col lg={3} md={3} sm={12}>
-              <Form.Label>Asthma</Form.Label>
+              <Form.Label style={{fontSize : '14px'}}>Heart Problem</Form.Label>
             </Col>
             <Col lg={3} md={3} sm={12}>
-              <Form.Label>Emphysema</Form.Label>
+              <Form.Label style={{fontSize : '14px'}}>Heart Murmur</Form.Label>
             </Col>
             <Col lg={3} md={3} sm={12}>
-              <Form.Label>Stroke</Form.Label>
+              <Form.Label style={{fontSize : '14px'}}>Pneumonia</Form.Label>
             </Col>
             <Col lg={3} md={3} sm={12}>
-              <Form.Label>Epilepsy</Form.Label>
-            </Col>
-          </Row>
-          <Row>
-            <Col lg={3} md={3} sm={12}>
-              <Form.Check
-                type="radio"
-                label="Yes"
-                name="formHorizontalRadios"
-                id="formHorizontalRadios1"
-              />
-            </Col>
-            <Col lg={3} md={3} sm={12}>
-              <Form.Check
-                type="radio"
-                label="Yes"
-                name="formHorizontalRadios"
-                id="formHorizontalRadios1"
-              />
-            </Col>
-            <Col lg={3} md={3} sm={12}>
-              <Form.Check
-                type="radio"
-                label="Yes"
-                name="formHorizontalRadios"
-                id="formHorizontalRadios1"
-              />
-            </Col>
-            <Col lg={3} md={3} sm={12}>
-              <Form.Check
-                type="radio"
-                label="Yes"
-                name="formHorizontalRadios"
-                id="formHorizontalRadios1"
-              />
+              <Form.Label style={{fontSize : '14px'}}>Pulmonary Embolism</Form.Label>
             </Col>
           </Row>
           <Row>
             <Col lg={3} md={3} sm={12}>
-              <Form.Check
-                type="radio"
-                label="No"
-                name="formHorizontalRadios"
-                id="formHorizontalRadios1"
-              />
-            </Col>
-            <Col lg={3} md={3} sm={12}>
-              <Form.Check
-                type="radio"
-                label="No"
-                name="formHorizontalRadios"
-                id="formHorizontalRadios1"
-              />
-            </Col>
-            <Col lg={3} md={3} sm={12}>
-              <Form.Check
-                type="radio"
-                label="No"
-                name="formHorizontalRadios"
-                id="formHorizontalRadios1"
-              />
-            </Col>
-            <Col lg={3} md={3} sm={12}>
-              <Form.Check
-                type="radio"
-                label="No"
-                name="formHorizontalRadios"
-                id="formHorizontalRadios1"
-              />
-            </Col>
-          </Row>
-
-          <hr></hr>
-          <Row>
-            <Col lg={3} md={3} sm={12}>
-              <Form.Label>Cataract</Form.Label>
-            </Col>
-            <Col lg={3} md={3} sm={12}>
-              <Form.Label>Kidney Disease</Form.Label>
-            </Col>
-            <Col lg={3} md={3} sm={12}>
-              <Form.Label>Kidney Stone</Form.Label>
-            </Col>
-            <Col lg={3} md={3} sm={12}>
-              <Form.Label>Crohn’s Disease</Form.Label>
-            </Col>
-          </Row>
-          <Row>
-            <Col lg={3} md={3} sm={12}>
-              <Form.Check
+              <Form.Check style={{fontSize : '14px'}}
                 type="radio"
                 label="Yes"
                 name="formHorizontalRadios"
@@ -389,7 +221,7 @@ function MedicalHistory() {
               />
             </Col>
             <Col lg={3} md={3} sm={12}>
-              <Form.Check
+              <Form.Check style={{fontSize : '14px'}}
                 type="radio"
                 label="Yes"
                 name="formHorizontalRadios"
@@ -397,7 +229,7 @@ function MedicalHistory() {
               />
             </Col>
             <Col lg={3} md={3} sm={12}>
-              <Form.Check
+              <Form.Check style={{fontSize : '14px'}}
                 type="radio"
                 label="Yes"
                 name="formHorizontalRadios"
@@ -405,7 +237,7 @@ function MedicalHistory() {
               />
             </Col>
             <Col lg={3} md={3} sm={12}>
-              <Form.Check
+              <Form.Check style={{fontSize : '14px'}}
                 type="radio"
                 label="Yes"
                 name="formHorizontalRadios"
@@ -415,7 +247,7 @@ function MedicalHistory() {
           </Row>
           <Row>
             <Col lg={3} md={3} sm={12}>
-              <Form.Check
+              <Form.Check style={{fontSize : '14px'}}
                 type="radio"
                 label="No"
                 name="formHorizontalRadios"
@@ -423,7 +255,7 @@ function MedicalHistory() {
               />
             </Col>
             <Col lg={3} md={3} sm={12}>
-              <Form.Check
+              <Form.Check style={{fontSize : '14px'}}
                 type="radio"
                 label="No"
                 name="formHorizontalRadios"
@@ -431,7 +263,7 @@ function MedicalHistory() {
               />
             </Col>
             <Col lg={3} md={3} sm={12}>
-              <Form.Check
+              <Form.Check style={{fontSize : '14px'}}
                 type="radio"
                 label="No"
                 name="formHorizontalRadios"
@@ -439,7 +271,7 @@ function MedicalHistory() {
               />
             </Col>
             <Col lg={3} md={3} sm={12}>
-              <Form.Check
+              <Form.Check style={{fontSize : '14px'}}
                 type="radio"
                 label="No"
                 name="formHorizontalRadios"
@@ -451,55 +283,55 @@ function MedicalHistory() {
           <hr></hr>
           <Row>
             <Col lg={3} md={3} sm={12}>
-              <Form.Label>Colitis</Form.Label>
+              <Form.Label style={{fontSize : '14px'}}>Asthma</Form.Label>
             </Col>
             <Col lg={3} md={3} sm={12}>
-              <Form.Label>Anemia</Form.Label>
+              <Form.Label style={{fontSize : '14px'}}>Emphysema</Form.Label>
             </Col>
             <Col lg={3} md={3} sm={12}>
-              <Form.Label>Jaundice</Form.Label>
+              <Form.Label style={{fontSize : '14px'}}>Stroke</Form.Label>
             </Col>
             <Col lg={3} md={3} sm={12}>
-              <Form.Label>Hepatitis</Form.Label>
-            </Col>
-          </Row>
-          <Row>
-            <Col lg={3} md={3} sm={12}>
-              <Form.Check
-                type="radio"
-                label="Yes"
-                name="formHorizontalRadios"
-                id="formHorizontalRadios1"
-              />
-            </Col>
-            <Col lg={3} md={3} sm={12}>
-              <Form.Check
-                type="radio"
-                label="Yes"
-                name="formHorizontalRadios"
-                id="formHorizontalRadios1"
-              />
-            </Col>
-            <Col lg={3} md={3} sm={12}>
-              <Form.Check
-                type="radio"
-                label="Yes"
-                name="formHorizontalRadios"
-                id="formHorizontalRadios1"
-              />
-            </Col>
-            <Col lg={3} md={3} sm={12}>
-              <Form.Check
-                type="radio"
-                label="Yes"
-                name="formHorizontalRadios"
-                id="formHorizontalRadios1"
-              />
+              <Form.Label style={{fontSize : '14px'}}>Epilepsy</Form.Label>
             </Col>
           </Row>
           <Row>
             <Col lg={3} md={3} sm={12}>
-              <Form.Check
+              <Form.Check style={{fontSize : '14px'}}
+                type="radio"
+                label="Yes"
+                name="formHorizontalRadios"
+                id="formHorizontalRadios1"
+              />
+            </Col>
+            <Col lg={3} md={3} sm={12}>
+              <Form.Check style={{fontSize : '14px'}}
+                type="radio"
+                label="Yes"
+                name="formHorizontalRadios"
+                id="formHorizontalRadios1"
+              />
+            </Col>
+            <Col lg={3} md={3} sm={12}>
+              <Form.Check style={{fontSize : '14px'}}
+                type="radio"
+                label="Yes"
+                name="formHorizontalRadios"
+                id="formHorizontalRadios1"
+              />
+            </Col>
+            <Col lg={3} md={3} sm={12}>
+              <Form.Check style={{fontSize : '14px'}}
+                type="radio"
+                label="Yes"
+                name="formHorizontalRadios"
+                id="formHorizontalRadios1"
+              />
+            </Col>
+          </Row>
+          <Row>
+            <Col lg={3} md={3} sm={12}>
+              <Form.Check style={{fontSize : '14px'}}
                 type="radio"
                 label="No"
                 name="formHorizontalRadios"
@@ -507,7 +339,7 @@ function MedicalHistory() {
               />
             </Col>
             <Col lg={3} md={3} sm={12}>
-              <Form.Check
+              <Form.Check style={{fontSize : '14px'}}
                 type="radio"
                 label="No"
                 name="formHorizontalRadios"
@@ -515,7 +347,7 @@ function MedicalHistory() {
               />
             </Col>
             <Col lg={3} md={3} sm={12}>
-              <Form.Check
+              <Form.Check style={{fontSize : '14px'}}
                 type="radio"
                 label="No"
                 name="formHorizontalRadios"
@@ -523,7 +355,7 @@ function MedicalHistory() {
               />
             </Col>
             <Col lg={3} md={3} sm={12}>
-              <Form.Check
+              <Form.Check style={{fontSize : '14px'}}
                 type="radio"
                 label="No"
                 name="formHorizontalRadios"
@@ -535,55 +367,55 @@ function MedicalHistory() {
           <hr></hr>
           <Row>
             <Col lg={3} md={3} sm={12}>
-              <Form.Label>Stomach</Form.Label>
+              <Form.Label style={{fontSize : '14px'}}>Cataract</Form.Label>
             </Col>
             <Col lg={3} md={3} sm={12}>
-              <Form.Label>Rheumatic Fever</Form.Label>
+              <Form.Label style={{fontSize : '14px'}}>Kidney Disease</Form.Label>
             </Col>
             <Col lg={3} md={3} sm={12}>
-              <Form.Label>Tuberculosis</Form.Label>
+              <Form.Label style={{fontSize : '14px'}}>Kidney Stone</Form.Label>
             </Col>
             <Col lg={3} md={3} sm={12}>
-              <Form.Label>HIV/AIDS</Form.Label>
-            </Col>
-          </Row>
-          <Row>
-            <Col lg={3} md={3} sm={12}>
-              <Form.Check
-                type="radio"
-                label="Yes"
-                name="formHorizontalRadios"
-                id="formHorizontalRadios1"
-              />
-            </Col>
-            <Col lg={3} md={3} sm={12}>
-              <Form.Check
-                type="radio"
-                label="Yes"
-                name="formHorizontalRadios"
-                id="formHorizontalRadios1"
-              />
-            </Col>
-            <Col lg={3} md={3} sm={12}>
-              <Form.Check
-                type="radio"
-                label="Yes"
-                name="formHorizontalRadios"
-                id="formHorizontalRadios1"
-              />
-            </Col>
-            <Col lg={3} md={3} sm={12}>
-              <Form.Check
-                type="radio"
-                label="Yes"
-                name="formHorizontalRadios"
-                id="formHorizontalRadios1"
-              />
+              <Form.Label style={{fontSize : '14px'}}>Crohn’s Disease</Form.Label>
             </Col>
           </Row>
           <Row>
             <Col lg={3} md={3} sm={12}>
-              <Form.Check
+              <Form.Check style={{fontSize : '14px'}}
+                type="radio"
+                label="Yes"
+                name="formHorizontalRadios"
+                id="formHorizontalRadios1"
+              />
+            </Col>
+            <Col lg={3} md={3} sm={12}>
+              <Form.Check style={{fontSize : '14px'}}
+                type="radio"
+                label="Yes"
+                name="formHorizontalRadios"
+                id="formHorizontalRadios1"
+              />
+            </Col>
+            <Col lg={3} md={3} sm={12}>
+              <Form.Check style={{fontSize : '14px'}}
+                type="radio"
+                label="Yes"
+                name="formHorizontalRadios"
+                id="formHorizontalRadios1"
+              />
+            </Col>
+            <Col lg={3} md={3} sm={12}>
+              <Form.Check style={{fontSize : '14px'}}
+                type="radio"
+                label="Yes"
+                name="formHorizontalRadios"
+                id="formHorizontalRadios1"
+              />
+            </Col>
+          </Row>
+          <Row>
+            <Col lg={3} md={3} sm={12}>
+              <Form.Check style={{fontSize : '14px'}}
                 type="radio"
                 label="No"
                 name="formHorizontalRadios"
@@ -591,7 +423,7 @@ function MedicalHistory() {
               />
             </Col>
             <Col lg={3} md={3} sm={12}>
-              <Form.Check
+              <Form.Check style={{fontSize : '14px'}}
                 type="radio"
                 label="No"
                 name="formHorizontalRadios"
@@ -599,7 +431,7 @@ function MedicalHistory() {
               />
             </Col>
             <Col lg={3} md={3} sm={12}>
-              <Form.Check
+              <Form.Check style={{fontSize : '14px'}}
                 type="radio"
                 label="No"
                 name="formHorizontalRadios"
@@ -607,7 +439,175 @@ function MedicalHistory() {
               />
             </Col>
             <Col lg={3} md={3} sm={12}>
-              <Form.Check
+              <Form.Check style={{fontSize : '14px'}}
+                type="radio"
+                label="No"
+                name="formHorizontalRadios"
+                id="formHorizontalRadios1"
+              />
+            </Col>
+          </Row>
+
+          <hr></hr>
+          <Row>
+            <Col lg={3} md={3} sm={12}>
+              <Form.Label style={{fontSize : '14px'}}>Colitis</Form.Label>
+            </Col>
+            <Col lg={3} md={3} sm={12}>
+              <Form.Label style={{fontSize : '14px'}}>Anemia</Form.Label>
+            </Col>
+            <Col lg={3} md={3} sm={12}>
+              <Form.Label style={{fontSize : '14px'}}>Jaundice</Form.Label>
+            </Col>
+            <Col lg={3} md={3} sm={12}>
+              <Form.Label style={{fontSize : '14px'}}>Hepatitis</Form.Label>
+            </Col>
+          </Row>
+          <Row>
+            <Col lg={3} md={3} sm={12}>
+              <Form.Check style={{fontSize : '14px'}}
+                type="radio"
+                label="Yes"
+                name="formHorizontalRadios"
+                id="formHorizontalRadios1"
+              />
+            </Col>
+            <Col lg={3} md={3} sm={12}>
+              <Form.Check style={{fontSize : '14px'}}
+                type="radio"
+                label="Yes"
+                name="formHorizontalRadios"
+                id="formHorizontalRadios1"
+              />
+            </Col>
+            <Col lg={3} md={3} sm={12}>
+              <Form.Check style={{fontSize : '14px'}}
+                type="radio"
+                label="Yes"
+                name="formHorizontalRadios"
+                id="formHorizontalRadios1"
+              />
+            </Col>
+            <Col lg={3} md={3} sm={12}>
+              <Form.Check style={{fontSize : '14px'}}
+                type="radio"
+                label="Yes"
+                name="formHorizontalRadios"
+                id="formHorizontalRadios1"
+              />
+            </Col>
+          </Row>
+          <Row>
+            <Col lg={3} md={3} sm={12}>
+              <Form.Check style={{fontSize : '14px'}}
+                type="radio"
+                label="No"
+                name="formHorizontalRadios"
+                id="formHorizontalRadios1"
+              />
+            </Col>
+            <Col lg={3} md={3} sm={12}>
+              <Form.Check style={{fontSize : '14px'}}
+                type="radio"
+                label="No"
+                name="formHorizontalRadios"
+                id="formHorizontalRadios1"
+              />
+            </Col>
+            <Col lg={3} md={3} sm={12}>
+              <Form.Check style={{fontSize : '14px'}}
+                type="radio"
+                label="No"
+                name="formHorizontalRadios"
+                id="formHorizontalRadios1"
+              />
+            </Col>
+            <Col lg={3} md={3} sm={12}>
+              <Form.Check style={{fontSize : '14px'}}
+                type="radio"
+                label="No"
+                name="formHorizontalRadios"
+                id="formHorizontalRadios1"
+              />
+            </Col>
+          </Row>
+
+          <hr></hr>
+          <Row>
+            <Col lg={3} md={3} sm={12}>
+              <Form.Label style={{fontSize : '14px'}}>Stomach</Form.Label>
+            </Col>
+            <Col lg={3} md={3} sm={12}>
+              <Form.Label style={{fontSize : '14px'}}>Rheumatic Fever</Form.Label>
+            </Col>
+            <Col lg={3} md={3} sm={12}>
+              <Form.Label style={{fontSize : '14px'}}>Tuberculosis</Form.Label>
+            </Col>
+            <Col lg={3} md={3} sm={12}>
+              <Form.Label style={{fontSize : '14px'}}>HIV/AIDS</Form.Label>
+            </Col>
+          </Row>
+          <Row>
+            <Col lg={3} md={3} sm={12}>
+              <Form.Check style={{fontSize : '14px'}}
+                type="radio"
+                label="Yes"
+                name="formHorizontalRadios"
+                id="formHorizontalRadios1"
+              />
+            </Col>
+            <Col lg={3} md={3} sm={12}>
+              <Form.Check style={{fontSize : '14px'}}
+                type="radio"
+                label="Yes"
+                name="formHorizontalRadios"
+                id="formHorizontalRadios1"
+              />
+            </Col>
+            <Col lg={3} md={3} sm={12}>
+              <Form.Check style={{fontSize : '14px'}}
+                type="radio"
+                label="Yes"
+                name="formHorizontalRadios"
+                id="formHorizontalRadios1"
+              />
+            </Col>
+            <Col lg={3} md={3} sm={12}>
+              <Form.Check style={{fontSize : '14px'}}
+                type="radio"
+                label="Yes"
+                name="formHorizontalRadios"
+                id="formHorizontalRadios1"
+              />
+            </Col>
+          </Row>
+          <Row>
+            <Col lg={3} md={3} sm={12}>
+              <Form.Check style={{fontSize : '14px'}}
+                type="radio"
+                label="No"
+                name="formHorizontalRadios"
+                id="formHorizontalRadios1"
+              />
+            </Col>
+            <Col lg={3} md={3} sm={12}>
+              <Form.Check style={{fontSize : '14px'}}
+                type="radio"
+                label="No"
+                name="formHorizontalRadios"
+                id="formHorizontalRadios1"
+              />
+            </Col>
+            <Col lg={3} md={3} sm={12}>
+              <Form.Check style={{fontSize : '14px'}}
+                type="radio"
+                label="No"
+                name="formHorizontalRadios"
+                id="formHorizontalRadios1"
+              />
+            </Col>
+            <Col lg={3} md={3} sm={12}>
+              <Form.Check style={{fontSize : '14px'}}
                 type="radio"
                 label="No"
                 name="formHorizontalRadios"
@@ -617,7 +617,7 @@ function MedicalHistory() {
           </Row>
           <hr></hr>
           <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
-              <Form.Label>Other</Form.Label>
+              <Form.Label style={{fontSize : '14px'}}>Other</Form.Label>
               <Form.Control as="textarea" rows={3} />
             </Form.Group>
 

@@ -132,7 +132,7 @@ function Health_survey() {
                 </Box>
                 <Box>
                     <Box sx={{ display: 'flex', gap: '0.5rem' }}>
-                        <Button
+                        {/* <Button
                             color="success"
                             disabled={!table.getIsSomeRowsSelected()}
                             onClick={handleActivate}
@@ -147,7 +147,7 @@ function Health_survey() {
                             variant="contained"
                         >
                             Deactivate
-                        </Button>
+                        </Button> */}
                         <Button variant='primary' style={{backgroundColor : '#4848d1' ,  color : 'white'}}>Export</Button>
                     </Box>
                 </Box>

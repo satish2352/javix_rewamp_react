@@ -247,7 +247,7 @@ function RouterComponent() {
           }
           {/* Doctors Section start */}
           
-           
+          
               <Route path="/DoctorHome" element={<DoctorHome />} />
               <Route path='/referred_patient' element={<Referred_patient />} />
 

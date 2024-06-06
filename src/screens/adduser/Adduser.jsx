@@ -49,13 +49,12 @@ const AddUser = () => {
 
     const isRegisterButtonDisabled = !acceptTerms || !passwordsMatch;
 
-    
+
 
     return (
         <div >
             <Home />
-            <br></br>
-            <Card>
+            <Card className='mt-5'>
                 <Card.Body>
                     <Card.Title style={{ textAlign: "center", color: 'rgb(205, 9, 142)', fontWeight: 'bold', fontFamily: 'Montserrat', fontSize: '24px' }}>User Registration Form</Card.Title>
                     <Card.Text>
@@ -101,27 +100,35 @@ const AddUser = () => {
                                     </Form.Group>
                                 </Col>
                             </Row>
-                            <Form.Group controlId="mobileNumber" className='mt-2'>
-                                <Form.Label>Mobile Number:</Form.Label>
-                                <Form.Control type="tel" name="mobileNumber" value={mobileNumber} onChange={handleChange} required />
-                            </Form.Group>
-                            <Form.Group controlId="email" className='mt-2'>
-                                <Form.Label>Email:</Form.Label>
-                                <Form.Control type="email" name="email" value={email} onChange={handleChange} required />
-                            </Form.Group>
-                            <Form.Group controlId="username" className='mt-2'>
-                                <Form.Label>Username:</Form.Label>
-                                <Form.Control type="text" name="username" value={username} onChange={handleChange} required />
-                            </Form.Group>
-                            <Row className='mt-2'>
+                            <Row>
                                 <Col lg={6} md={6} sm={12}>
-                                    <Form.Group controlId="password">
+                                    <Form.Group controlId="mobileNumber" className='mt-2'>
+                                        <Form.Label>Mobile Number:</Form.Label>
+                                        <Form.Control type="tel" name="mobileNumber" value={mobileNumber} onChange={handleChange} required />
+                                    </Form.Group>
+                                </Col>
+                                <Col lg={6} md={6} sm={12}>
+                                    <Form.Group controlId="email" className='mt-2'>
+                                        <Form.Label>Email:</Form.Label>
+                                        <Form.Control type="email" name="email" value={email} onChange={handleChange} required />
+                                    </Form.Group>
+                                </Col>
+                            </Row>
+                            <Row>
+                                <Col lg={4} md={4} sm={12}>
+                                    <Form.Group controlId="username" className='mt-2'>
+                                        <Form.Label>Username:</Form.Label>
+                                        <Form.Control type="text" name="username" value={username} onChange={handleChange} required />
+                                    </Form.Group>
+                                </Col>
+                                <Col lg={4} md={4} sm={12}>
+                                    <Form.Group controlId="password" className='mt-2'>
                                         <Form.Label>Password:</Form.Label>
                                         <Form.Control type="password" name="password" value={password} onChange={handleChange} required />
                                     </Form.Group>
                                 </Col>
-                                <Col lg={6} md={6} sm={12}>
-                                    <Form.Group controlId="confirmPassword">
+                                <Col lg={4} md={4} sm={12}>
+                                    <Form.Group controlId="confirmPassword" className='mt-2'>
                                         <Form.Label>Confirm Password:</Form.Label>
                                         <Form.Control type="password" name="confirmPassword" value={confirmPassword} onChange={handleChange} required />
                                         {!passwordsMatch && confirmPassword && <Form.Text style={{ color: 'red' }}>Passwords do not match</Form.Text>}
@@ -136,9 +143,8 @@ const AddUser = () => {
                     </Card.Text>
                 </Card.Body>
             </Card>
-            
         </div>
-        
+
     );
 };
 

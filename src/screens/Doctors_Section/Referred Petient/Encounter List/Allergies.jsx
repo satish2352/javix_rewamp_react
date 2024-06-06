@@ -34,17 +34,17 @@ function Allergies() {
         <Modal.Body>
           <Form>
             <Form.Group className="mb-3" controlId="formGroupEmail">
-              <Form.Label>Added On</Form.Label>
+              <Form.Label style={{fontSize : '14px'}}>Added On</Form.Label>
               <Form.Control type="email" placeholder="Enter email" />
             </Form.Group>
-            <Form.Label>Allergy Type</Form.Label>
+            <Form.Label style={{fontSize : '14px'}}>Allergy Type</Form.Label>
             <Form.Select aria-label="Default select example">
-              <option value="1">Drug Allergy</option>
-              <option value="2">Food Allergy</option>
-              <option value="3">Other Allergy</option>
+              <option value="1" style={{fontSize : '14px'}}>Drug Allergy</option>
+              <option value="2" style={{fontSize : '14px'}}>Food Allergy</option>
+              <option value="3" style={{fontSize : '14px'}}>Other Allergy</option>
             </Form.Select>
             <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
-              <Form.Label>Allergy Name</Form.Label>
+              <Form.Label style={{fontSize : '14px'}}>Allergy Name</Form.Label>
               <Form.Control as="textarea" rows={3} />
             </Form.Group>
           </Form>
