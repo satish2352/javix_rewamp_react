@@ -1,5 +1,4 @@
 import { Row, Col, Card } from 'react-bootstrap';
-import Home from '../../screens/dashboard/home/Home';
 import user from '../../assets/images/user.jpg';
 function ScreenerProfileInfo() {
 
