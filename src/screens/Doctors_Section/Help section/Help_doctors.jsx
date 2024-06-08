@@ -15,6 +15,7 @@ import Home from '../../dashboard/home/Home';
 // import { ButtonGroup } from 'react-bootstrap';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
+import { Card } from 'react-bootstrap';
 
 
 const data = [
@@ -123,36 +124,41 @@ function Help_doctors() {
     const handleActivateUser = (row) => {
         alert('activating ' + row.getValue('name'));
     };
+
+    function raise() {
+        // prompt('Do you what Raise and Issues...')
+    }
     return (
         <>
             <Home />
-            <br></br>
-            <h5 style={{ color: "#ea5455" }}><b>Help</b></h5>
-
-
-            <Box
-                sx={(theme) => ({
-                    backgroundColor: lighten(theme.palette.background.default, 0.05),
-                    display: 'flex',
-                    gap: '0.5rem',
-                    p: '8px',
-                    justifyContent: 'space-between',
-                })}
-            >
-                <Box sx={{ display: 'flex', gap: '0.5rem', alignItems: 'center' }}>
-                    <MRT_GlobalFilterTextField table={table} />
-                    <MRT_ToggleFiltersButton table={table} />
-                </Box>
-                <Box>
-                    <Box sx={{ display: 'flex', gap: '0.5rem' }}>
-                        <Button variant='primary' style={{ backgroundColor: '#4848d1', color: 'white' }}>Export</Button>
+            <Card className='mt-3'>
+                <Card.Body>
+                    <p style={{ color: "black", fontSize: '20px' }}>Help</p>
+                    <Box
+                        sx={(theme) => ({
+                            backgroundColor: lighten(theme.palette.background.default, 0.05),
+                            display: 'flex',
+                            gap: '0.5rem',
+                            p: '8px',
+                            justifyContent: 'space-between',
+                        })}
+                    >
+                        <Box sx={{ display: 'flex', gap: '0.5rem', alignItems: 'center' }}>
+                            <MRT_GlobalFilterTextField table={table} />
+                            <MRT_ToggleFiltersButton table={table} />
+                        </Box>
+                        <Box>
+                            <Box sx={{ display: 'flex', gap: '0.5rem' }}>
+                                <Button variant='primary' style={{ backgroundColor: '#4848d1', color: 'white' }} onClick={raise()}>Raise an Issues</Button>
+                            </Box>
+                        </Box>
                     </Box>
-                </Box>
-            </Box>
-            <br></br>
+                    <MaterialReactTable table={table} />
+                </Card.Body>
+            </Card>
 
-            <MaterialReactTable table={table} />
-            <br></br>
+
+
         </>
     )
 }

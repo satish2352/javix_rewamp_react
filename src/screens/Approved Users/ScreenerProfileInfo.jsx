@@ -1,8 +1,10 @@
-import { Row, Col, Card } from 'react-bootstrap';
+import { Row, Col, Card, Button } from 'react-bootstrap';
 import user from '../../assets/images/user.jpg';
 import Home from '../../screens/dashboard/home/Home'
+import { Navigate, useNavigate } from 'react-router-dom';
 function ScreenerProfileInfo() {
 
+    const Navigate = useNavigate()
     const mainInfo = [
         { label: "Screener ID", value: "987654321" },
         { label: "Name", value: "Jane Doe" },
@@ -11,7 +13,7 @@ function ScreenerProfileInfo() {
     const personalInfo = [
         { label: "Mobile Number", value: "9876543210" },
         { label: "Email", value: "janedoe@gmail.com" },
-        { label: "Gender", value: "Female" },
+        { label: "Sex", value: "Female" },
         { label: "DOB", value: "02/02/2002" },
         { label: "Qualification", value: "BE" },
         { label: "Specialization", value: "Comp" },
@@ -24,6 +26,10 @@ function ScreenerProfileInfo() {
         { label: "PIN code", value: "400001" },
         { label: "Address", value: "1234, Marine Drive" }
     ];
+    function setback (){
+        alert('Are you Sure you want to go back..??')
+        Navigate('/approvedusers/ngo')
+    }
 
     return (
         <>
@@ -86,6 +92,7 @@ function ScreenerProfileInfo() {
                     </Card.Text>
                 </Card.Body>
             </Card>
+            <Button variant='primary' onClick={()=>setback()} className='mt-3'>Back</Button>
             {/* <h1>Hii</h1> */}
             {/* <Card>
                 <Card.Body>

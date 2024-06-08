@@ -10,6 +10,7 @@ import {
 import { Box, Button, lighten } from '@mui/material';
 import Home from '../../../dashboard/home/Home';
 import { useNavigate } from 'react-router-dom';
+import { Card } from 'react-bootstrap';
 
 const data = [
     {
@@ -119,25 +120,25 @@ function Encounter_List() {
     return (
         <>
             <Home />
-            <br></br>
-            <h5 style={{ color: "#ea5455" }}><b>Encounter User</b></h5>
-
-            <Box
-                sx={(theme) => ({
-                    backgroundColor: lighten(theme.palette.background.default, 0.05),
-                    display: 'flex',
-                    gap: '0.5rem',
-                    p: '8px',
-                    justifyContent: 'space-between',
-                })}
-            >
-                <Box sx={{ display: 'flex', gap: '0.5rem', alignItems: 'center' }}>
-                    <MRT_GlobalFilterTextField table={table} />
-                    <MRT_ToggleFiltersButton table={table} />
-                </Box>
-                <Box>
-                    <Box sx={{ display: 'flex', gap: '0.5rem' }}>
-                        {/* <Button
+            <Card className='mt-3'>
+                <Card.Body>
+                    <p style={{ color: "black", fontSize: '20px' }}>Encounter User</p>
+                    <Box
+                        sx={(theme) => ({
+                            backgroundColor: lighten(theme.palette.background.default, 0.05),
+                            display: 'flex',
+                            gap: '0.5rem',
+                            p: '8px',
+                            justifyContent: 'space-between',
+                        })}
+                    >
+                        <Box sx={{ display: 'flex', gap: '0.5rem', alignItems: 'center' }}>
+                            <MRT_GlobalFilterTextField table={table} />
+                            <MRT_ToggleFiltersButton table={table} />
+                        </Box>
+                        <Box>
+                            <Box sx={{ display: 'flex', gap: '0.5rem' }}>
+                                {/* <Button
                             color="success"
                             disabled={!table.getIsSomeRowsSelected()}
                             onClick={handleActivate}
@@ -153,13 +154,15 @@ function Encounter_List() {
                         >
                             Deactivate
                         </Button> */}
-                        <Button variant='primary' style={{ backgroundColor: '#4848d1', color: 'white' }}>Export</Button>
+                                {/* <Button variant='primary' style={{ backgroundColor: '#4848d1', color: 'white' }}>Export</Button> */}
+                            </Box>
+                        </Box>
                     </Box>
-                </Box>
-            </Box>
+                    <MaterialReactTable table={table} />
 
-            <MaterialReactTable table={table} />
-            <br></br>
+                </Card.Body>
+            </Card>
+
         </>
     );
 }

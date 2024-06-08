@@ -1,11 +1,11 @@
 import React, { useMemo } from 'react';
-import './non_prescribed.scss';
-
+import './screnneings.scss';
+import ActivateUserIcon from '../../../../assets/images/Activate User.png';
 import { FaCheck } from "react-icons/fa";
 import { MdAdsClick } from "react-icons/md";
 // import avtar from '../../../../assets/images/user.jpg'
 
-import Button from 'react-bootstrap/Button';
+
 import {
   MaterialReactTable,
   useMaterialReactTable,
@@ -13,8 +13,8 @@ import {
   MRT_ToggleFiltersButton,
 
 } from 'material-react-table';
-import { Avatar, Box, lighten } from '@mui/material';
-import Home from '../../../screens/dashboard/home/Home';
+import { Avatar, Box, Button, lighten } from '@mui/material';
+import Home from '../../../../screens/dashboard/home/Home';
 // import { ButtonGroup } from 'react-bootstrap';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -28,29 +28,31 @@ const data = [
   {
     sr: 1,
     // photo: <Avatar alt="Remy Sharp" src={avtar} />,
-    citizen_name: "rahul dscs",
-    scrennerid: "1234",
+    petient_details: "rahul dscs",
     mobile: "9564215748",
-    scrennername: "rahul dcvs borse",
-    email: "sasffde dsvsd@gmail.com ",
-    date: '12/04/2012',
-    action: <FaUserCheck />
+    citizenid: "1234",
+    caseid: "1254695874",
+    scrennerfullname: "rahul borse",
+    address: "dfds sdvsdds sdvsdv ",
+    date: '12/04/2012'
 
   },
   {
     sr: 2,
     // photo: <Avatar alt="Remy Sharp" src={avtar} />,
-    citizen_name: "dsvf fvfgd",
-    scrennerid: "4581254",
-    mobile: "8547156254",
-    scrennername: "scs dcvsvcds borse",
-    email: "sasffde dsvsd@gmail.com ",
-    date: '12/04/2012',
-    action: <FaUserCheck />
+    petient_details: "dsdv dscs",
+    mobile: "9561412547",
+    citizenid: "63251",
+    caseid: "956471584",
+    scrennerfullname: "dscvsd vvsdv",
+    address: "dfds sdvsdds sdvsdv ",
+    date: '12/04/2022'
   },
 ]
 
-function Non_prescrided() {
+
+
+function Scrennering() {
   const Navigate = useNavigate()
 
   const columns = useMemo(
@@ -66,13 +68,8 @@ function Non_prescrided() {
       //   size: 150,
       // },
       {
-        accessorKey: 'citizen_name',
-        header: 'Citizen Name',
-        size: 150,
-      },
-      {
-        accessorKey: 'scrennerid',
-        header: 'Scrnner ID',
+        accessorKey: 'petient_details',
+        header: 'Petient Details',
         size: 150,
       },
       {
@@ -81,13 +78,23 @@ function Non_prescrided() {
         size: 150,
       },
       {
-        accessorKey: 'scrennername',
-        header: 'Screnner Name',
+        accessorKey: 'citizenid',
+        header: 'Citizen ID',
         size: 150,
       },
       {
-        accessorKey: 'email',
-        header: 'Email',
+        accessorKey: 'caseid',
+        header: 'Case ID',
+        size: 150,
+      },
+      {
+        accessorKey: 'scrennerfullname',
+        header: 'Screener Full Name',
+        size: 150,
+      },
+      {
+        accessorKey: 'address',
+        header: 'Address',
         size: 150,
       },
       {
@@ -95,17 +102,18 @@ function Non_prescrided() {
         header: 'Date',
         size: 150,
       },
-      {
-        accessorKey: 'action',
-        header: 'Action',
-        size: 150,
-        Cell: ({ row }) => (
-          <Box>
-            <Button variant="outline-success" onClick={() => handleActivateUser1(row)}  size="sm" >Pick And Prescribed</Button>
-          </Box>
-        ),
+      // {
+      //   accessorKey: 'action',
+      //   header: 'Action',
+      //   size: 150,
+      //   Cell: ({ row }) => (
+      //     <Box>
+      //       <FaUserCheck onClick={() => handleActivateUser1(row)} style={{ fontSize: '20px' }} />
+      //       <TbHandClick onClick={() => handleActivateUser2(row)} style={{ fontSize: '20px', marginLeft: '25px' }} />
+      //     </Box>
+      //   ),
 
-      },
+      // },
     ],
     []
   );
@@ -129,12 +137,12 @@ function Non_prescrided() {
   };
 
   const handleActivateUser1 = (row) => {
-    //alert('1');
-    Navigate('/referred_patient/Encounter_List')
+    // alert('1');
+    Navigate('/citizen-form')
   };
   const handleActivateUser2 = (row) => {
-    alert('are you sure..??');
-    Navigate('/referred_patient/Encounter_List')
+    alert('Cuurenty this page is not visiable....');
+    //Navigate('/referred_patient/petient_view/Encounter_petient_list')
   };
 
   // function addCity(){
@@ -145,7 +153,7 @@ function Non_prescrided() {
       <Home />
       <Card className='mt-3'>
         <Card.Body>
-          <p style={{ color: "black", fontSize: '16px' }}>Non Prescibed List</p>
+          <p style={{ color: "black", fontSize: '16px' }}>Screening Case List</p>
           <Box
             sx={(theme) => ({
               backgroundColor: lighten(theme.palette.background.default, 0.05),
@@ -161,7 +169,7 @@ function Non_prescrided() {
             </Box>
             <Box>
               <Box sx={{ display: 'flex', gap: '0.5rem' }}>
-                <Button variant='primary' style={{ backgroundColor: '#4848d1', color: 'white' }}>Export</Button>
+                 <Button variant='primary' style={{ backgroundColor: '#4848d1', color: 'white' }}>Export</Button>
                 {/* //<Link to='/add-citizen'><Button variant='primary' style={{ backgroundColor: '#4848d1', color: 'white' }} >Add Citizen</Button></Link>  */}
               </Box>
             </Box>
@@ -170,9 +178,7 @@ function Non_prescrided() {
         </Card.Body>
       </Card>
     </>
-
-
   )
 }
 
-export default Non_prescrided
+export default Scrennering

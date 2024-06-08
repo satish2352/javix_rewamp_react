@@ -30,6 +30,17 @@ const data = [
     aadhar_number: "No",
     mobile: "Active",
     address: "No",
+    height: "Active",
+    weight: "No",
+    bmi: "Active",
+    bpsys: "No",
+    bpdia: "Active",
+    spo2: "Active",
+    pulse: "Active",
+    temperature: "Active",
+    arm: "Active",
+    createat: "createat",
+
     action: ActivateUserIcon
 
   },
@@ -117,17 +128,67 @@ function Screening_sevika() {
         size: 150,
       },
       {
-        accessorKey: 'action',
-        header: 'Action',
+        accessorKey: 'height',
+        header: 'Height',
         size: 150,
-        Cell: ({ row }) => (
-          <Box>
-            <button onClick={() => handleActivateUser(row)} style={{ height: '32px', width: '32px', borderRadius: '50%' }}>
-              <img src={ActivateUserIcon} alt="" style={{ width: '100%', height: 'auto' }} />
-            </button>
-          </Box>
-        ),
       },
+      {
+        accessorKey: 'weight',
+        header: 'Weight',
+        size: 150,
+      },
+      {
+        accessorKey: 'bmi',
+        header: 'BMI',
+        size: 150,
+      },
+      {
+        accessorKey: 'bpsys',
+        header: 'BPSYS',
+        size: 150,
+      },
+      {
+        accessorKey: 'bpdia',
+        header: 'BPDIA',
+        size: 150,
+      },
+      {
+        accessorKey: 'spo2',
+        header: 'SPO2',
+        size: 150,
+      },
+      {
+        accessorKey: 'pulse',
+        header: 'Pulse',
+        size: 150,
+      },
+      {
+        accessorKey: 'temperature',
+        header: 'Temperature',
+        size: 150,
+      },
+      {
+        accessorKey: 'arm',
+        header: 'Arm',
+        size: 150,
+      },
+      {
+        accessorKey: 'createdat',
+        header: 'Create At',
+        size: 150,
+      },
+      // {
+      //   accessorKey: 'action',
+      //   header: 'Action',
+      //   size: 150,
+      //   Cell: ({ row }) => (
+      //     <Box>
+      //       <button onClick={() => handleActivateUser(row)} style={{ height: '32px', width: '32px', borderRadius: '50%' }}>
+      //         <img src={ActivateUserIcon} alt="" style={{ width: '100%', height: 'auto' }} />
+      //       </button>
+      //     </Box>
+      //   ),
+      // },
     ],
     []
   );
@@ -157,7 +218,7 @@ function Screening_sevika() {
     <>
     <Home/>
     <br></br>
-    <h5 style={{color : "#ea5455"}}><b>Screening sevika</b></h5>
+    <h5 style={{color : "#ea5455"}}><b>Daily And Weekly Screening Sevika Report</b></h5>
 
     
       <Box

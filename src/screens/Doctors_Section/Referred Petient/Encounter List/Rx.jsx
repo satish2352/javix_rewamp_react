@@ -24,6 +24,8 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { Box, lighten } from '@mui/material';
 import { useState } from 'react';
 import Modal from 'react-bootstrap/Modal';
+import Form from 'react-bootstrap/Form';
+import { Col, Row } from 'react-bootstrap';
 
 
 const data = [
@@ -48,6 +50,88 @@ function Rx() {
 
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
+
+    const [Medicinename, setMedicinename] = useState('');
+    const [Strenght, setStrenght] = useState('');
+    const [doages, setdoages] = useState('');
+    const [unit , setunit] = useState('');
+    const [preparation , setprepation] = useState('');
+    const [duration , setduration] = useState('');
+    const [frq , setfeq] = useState('');
+    const [direaction , setdirection] = useState('');
+    const [qty , setqty] = useState('');
+    const [otherinstruction , setotherinstruction] = useState('');
+    const [addtests , setaddtests] = useState('');
+    const [addcauses , setaddcauses] = useState('');
+    const [errors, setErrors] = useState({})
+
+    const validateForm = () => {
+        let errors = {};
+        let isValid = true;
+
+        if (!Medicinename.trim()) {
+            errors.Medicinename = 'Medicine name is required';
+            isValid = false;
+        }
+        if (!Strenght.trim()) {
+            errors.Strenght = 'Strenght is required';
+            isValid = false;
+        }
+        if (!doages.trim()) {
+            errors.doages = 'doages is required';
+            isValid = false;
+        }
+        if (!unit.trim()) {
+            errors.unit = 'unit is required';
+            isValid = false;
+        }
+        if (!preparation.trim()) {
+            errors.preparation = 'preparation is required';
+            isValid = false;
+        }
+        if (!duration.trim()) {
+            errors.duration = 'duration is required';
+            isValid = false;
+        }
+        if (!frq.trim()) {
+            errors.frq = 'frq is required';
+            isValid = false;
+        }
+
+        if (!direaction.trim()) {
+            errors.direaction = 'direaction is required';
+            isValid = false;
+        }
+        if (!qty.trim()) {
+            errors.qty = 'qty is required';
+            isValid = false;
+        }
+        if (!otherinstruction.trim()) {
+            errors.otherinstruction = 'other instruction is required';
+            isValid = false;
+        }
+        if (!addtests.trim()) {
+            errors.addtests = 'add tests is required';
+            isValid = false;
+        }
+        if (!addcauses.trim()) {
+            errors.addcauses = 'add causes is required';
+            isValid = false;
+        }
+
+        setErrors(errors);
+        return isValid;
+    }
+    console.log("errors", errors);
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+        if (validateForm()) {
+            let newData = {
+                Medicinename, Strenght
+            }
+            console.log("newData", newData);
+        };
+    }
 
     const columns = useMemo(
         () => [
@@ -137,16 +221,148 @@ function Rx() {
 
             <Modal show={show} onHide={handleClose}>
                 <Modal.Header closeButton>
-                    <Modal.Title>Modal heading</Modal.Title>
+                    <Modal.Title>Add Medication</Modal.Title>
                 </Modal.Header>
-                <Modal.Body>Woohoo, you are reading this text in a modal!</Modal.Body>
+                <Modal.Body>
+                    <Form onSubmit={handleSubmit}>
+                        <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
+                            <Form.Control type='text' rows={3} placeholder='Medicine name' value={Medicinename} onChange={(e) => setMedicinename(e.target.value)} />
+                            {errors.Medicinename && <span className="error text-danger">{errors.Medicinename}</span>}
+                        </Form.Group>
+                        <Row>
+                            <Col lg={6} md={6} sm={12}>
+                                <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
+                                    <Form.Control type='text' rows={3} placeholder='Strenght' value={Strenght} onChange={(e) => setStrenght(e.target.value)} />
+                                    {errors.Strenght && <span className="error text-danger">{errors.Strenght}</span>}
+                                </Form.Group>
+                            </Col>
+                            <Col lg={6} md={6} sm={12}>
+                                <Form.Select aria-label="Default select example" value={unit} onChange={(e) => setunit(e.target.value)}>
+                                    <option>Unit</option>
+                                    <option value="1">One</option>
+                                    <option value="2">Two</option>
+                                    <option value="3">Three</option>
+                                </Form.Select>
+                                {errors.unit && <span className="error text-danger">{errors.unit}</span>}
+                            </Col>
+                        </Row>
+                        <Row>
+                            <Col lg={6} md={6} sm={12}>
+                                <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
+                                    <Form.Control type='text' rows={3} placeholder='Dosage' value={doages} onChange={(e) => setdoages(e.target.value)} />
+                                    {errors.doages && <span className="error text-danger">{errors.doages}</span>}
+                                </Form.Group>
+                            </Col>
+                            <Col lg={6} md={6} sm={12}>
+                                <Form.Select aria-label="Default select example" value={unit} onChange={(e) => setunit(e.target.value)}>
+                                    <option>Unit</option>
+                                    <option value="1">One</option>
+                                    <option value="2">Two</option>
+                                    <option value="3">Three</option>
+                                </Form.Select>
+                                {errors.unit && <span className="error text-danger">{errors.unit}</span>}
+                            </Col>
+                        </Row>
+                        <Row>
+                            <Col lg={6} md={6} sm={12}>
+                                <Form.Select aria-label="Default select example" value={preparation} onChange={(e) => setprepation(e.target.value)}>
+                                    <option>Preparation</option>
+                                    <option value="1">One</option>
+                                    <option value="2">Two</option>
+                                    <option value="3">Three</option>
+                                </Form.Select>
+                                {errors.preparation && <span className="error text-danger">{errors.preparation}</span>}
+                            </Col>
+                            <Col lg={6} md={6} sm={12}>
+                                <Form.Select aria-label="Default select example" value={unit} onChange={(e) => setunit(e.target.value)}>
+                                    <option>Unit</option>
+                                    <option value="1">One</option>
+                                    <option value="2">Two</option>
+                                    <option value="3">Three</option>
+                                </Form.Select>
+                                {errors.unit && <span className="error text-danger">{errors.unit}</span>}
+                            </Col>
+                        </Row>
+                        <br></br>
+                        <Row>
+                            <Col lg={6} md={6} sm={12}>
+                                <Form.Select aria-label="Default select example" value={direaction} onChange={(e) => setdirection(e.target.value)}>
+                                    <option>Direction</option>
+                                    <option value="1">One</option>
+                                    <option value="2">Two</option>
+                                    <option value="3">Three</option>
+                                </Form.Select>
+                                {errors.direaction && <span className="error text-danger">{errors.direaction}</span>}
+                            </Col>
+                            <Col lg={6} md={6} sm={12}>
+                                <Form.Select aria-label="Default select example" value={frq} onChange={(e) => setfeq(e.target.value)}>
+                                    <option>Frequency</option>
+                                    <option value="1">One</option>
+                                    <option value="2">Two</option>
+                                    <option value="3">Three</option>
+                                </Form.Select>
+                                {errors.frq && <span className="error text-danger">{errors.frq}</span>}
+                            </Col>
+                        </Row>
+                        <br></br>
+                        <Row>
+                            <Col lg={6} md={6} sm={12}>
+                                <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
+                                    <Form.Control type='text' rows={3} placeholder='Duration' value={duration} onChange={(e) => setduration(e.target.value)} />
+                                    {errors.duration && <span className="error text-danger">{errors.duration}</span>}
+                                </Form.Group>
+                            </Col>
+                            <Col lg={3} md={3} sm={12}>
+                                <Form.Select aria-label="Default select example" value={unit} onChange={(e) => setunit(e.target.value)}>
+                                    <option>Unit</option>
+                                    <option value="1">One</option>
+                                    <option value="2">Two</option>
+                                    <option value="3">Three</option>
+                                </Form.Select>
+                                {errors.unit && <span className="error text-danger">{errors.unit}</span>}
+                                
+                            </Col>
+                            <Col lg={3} md={3} sm={12}>
+                                <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
+                                    <Form.Control type='text' rows={3} placeholder='Qty' value={qty} onChange={(e) => setqty(e.target.value)} />
+                                    {errors.qty && <span className="error text-danger">{errors.qty}</span>}
+                                </Form.Group>
+                            </Col>
+                        </Row>
+                        <hr></hr>
+                        <Row>
+                            <Col lg={8} md={8} sm={12}>
+                                <p style={{ textAlign: 'center' }}>Medcine Name</p>
+                            </Col>
+                            <Col lg={4} md={4} sm={12}>
+                                <p style={{ textAlign: 'center' }}>Action</p>
+                            </Col>
+                        </Row>
+                        <hr></hr>
+                        <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
+                            <Form.Label>Other Instruction</Form.Label>
+                            <Form.Control as="textarea" rows={3} placeholder='Other Instruction' value={otherinstruction} onChange={(e)=>setotherinstruction(e.target.value)}/>
+                            {errors.otherinstruction && <span className="error text-danger">{errors.otherinstruction}</span>}
+                        </Form.Group>
+                        <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
+                            <Form.Label>Add Tests</Form.Label>
+                            <Form.Control as="textarea" rows={3} placeholder='Add Tests' value={addtests} onChange={(e)=>setaddtests(e.target.value)}/>
+                            {errors.addtests && <span className="error text-danger">{errors.addtests}</span>}
+                        </Form.Group>
+                        <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
+                            <Form.Label>Add Cause</Form.Label>
+                            <Form.Control as="textarea" rows={3} placeholder='Add Causes' value={addcauses} onChange={(e)=>setaddcauses(e.target.value)}/>
+                            {errors.addcauses && <span className="error text-danger">{errors.addcauses}</span>}
+                        </Form.Group>
+                        <Button variant="primary" type='submit'>
+                            Submit
+                        </Button>
+
+                    </Form>
+
+                </Modal.Body>
                 <Modal.Footer>
-                    <Button variant="secondary" onClick={handleClose}>
-                       Reset
-                    </Button>
-                    <Button variant="primary" onClick={handleClose}>
-                        Submit
-                    </Button>
+
                 </Modal.Footer>
             </Modal>
 

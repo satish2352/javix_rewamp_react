@@ -15,6 +15,8 @@ import Home from '../../dashboard/home/Home';
 // import { ButtonGroup } from 'react-bootstrap';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
+import { Card } from 'react-bootstrap';
+import Export_Button from '../../dashboard/Exportbuttoncomponents/Export_Button';
 
 const data = [
     {
@@ -127,33 +129,31 @@ function Referred_patient() {
     return (
         <>
             <Home />
-            <br></br>
-            <h5 style={{ color: "#ea5455" }}><b>Referred Petient</b></h5>
-
-
-            <Box
-                sx={(theme) => ({
-                    backgroundColor: lighten(theme.palette.background.default, 0.05),
-                    display: 'flex',
-                    gap: '0.5rem',
-                    p: '8px',
-                    justifyContent: 'space-between',
-                })}
-            >
-                <Box sx={{ display: 'flex', gap: '0.5rem', alignItems: 'center' }}>
-                    <MRT_GlobalFilterTextField table={table} />
-                    <MRT_ToggleFiltersButton table={table} />
-                </Box>
-                <Box>
-                    <Box sx={{ display: 'flex', gap: '0.5rem' }}>
-                        <Button variant='primary' style={{ backgroundColor: '#4848d1', color: 'white' }}>Export</Button>
+            <Card className='mt-3'>
+                <Card.Body>
+                    <p style={{ color: "black", fontSize: '20px' }}>Referred Petient</p>
+                    <Box
+                        sx={(theme) => ({
+                            backgroundColor: lighten(theme.palette.background.default, 0.05),
+                            display: 'flex',
+                            gap: '0.5rem',
+                            p: '8px',
+                            justifyContent: 'space-between',
+                        })}
+                    >
+                        <Box sx={{ display: 'flex', gap: '0.5rem', alignItems: 'center' }}>
+                            <MRT_GlobalFilterTextField table={table} />
+                            <MRT_ToggleFiltersButton table={table} />
+                        </Box>
+                        <Box>
+                            <Box sx={{ display: 'flex', gap: '0.5rem' }}>
+                                <Export_Button data={data} name={"Referred Petient"} />
+                            </Box>
+                        </Box>
                     </Box>
-                </Box>
-            </Box>
-            <br></br>
-
-            <MaterialReactTable table={table} />
-            <br></br>
+                    <MaterialReactTable table={table} />
+                </Card.Body>
+            </Card>
         </>
 
 

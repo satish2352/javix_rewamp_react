@@ -1,8 +1,7 @@
 import React, { useMemo } from 'react';
 import './Newissue.scss';
 import ActivateUserIcon from '../../assets/images/Activate User.png';
-import { IoScanCircle } from "react-icons/io5";
-
+import { MdPlaylistAddCheckCircle } from "react-icons/md";
 
 import {
     MaterialReactTable,
@@ -16,6 +15,8 @@ import Home from '../dashboard/home/Home';
 // import { ButtonGroup } from 'react-bootstrap';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
+import { Card } from 'react-bootstrap';
+import { Navigate, useNavigate } from 'react-router-dom';
 
 const data = [
     {
@@ -66,6 +67,7 @@ const data = [
 
 ]
 function New_issue() {
+    const Navigate = useNavigate();
     const columns = useMemo(
         () => [
             {
@@ -111,7 +113,7 @@ function New_issue() {
                     <Box>
                         <button onClick={() => handleActivateUser(row)} style={{ height: '32px', width: '32px', borderRadius: '50%' }}>
                             {/* <img src={ActivateUserIcon} alt="" style={{ width: '100%', height: 'auto' }} /> */}
-                            <IoScanCircle style={{fontSize : "30px"}}/>
+                            <MdPlaylistAddCheckCircle style={{ fontSize: "30px" }} />
                         </button>
                     </Box>
                 ),
@@ -139,29 +141,30 @@ function New_issue() {
     };
 
     const handleActivateUser = (row) => {
-        alert('activating ' + row.getValue('name'));
+        Navigate('/new-issue-form')
     };
     return (
         <>
             <Home />
-            <br></br>
-            <h5 style={{color : "#ea5455"}}>New Issue</h5>
-            <Box
-                sx={(theme) => ({
-                    backgroundColor: lighten(theme.palette.background.default, 0.05),
-                    display: 'flex',
-                    gap: '0.5rem',
-                    p: '8px',
-                    justifyContent: 'space-between',
-                })}
-            >
-                <Box sx={{ display: 'flex', gap: '0.5rem', alignItems: 'center' }}>
-                    <MRT_GlobalFilterTextField table={table} />
-                    <MRT_ToggleFiltersButton table={table} />
-                </Box>
-                <Box>
-                    <Box sx={{ display: 'flex', gap: '0.5rem' }}>
-                        {/* <Button
+            <Card className='mt-3'>
+                <Card.Body>
+                    <p style={{ color: "black", fontSize: '20px' }}>New Issue</p>
+                    <Box
+                        sx={(theme) => ({
+                            backgroundColor: lighten(theme.palette.background.default, 0.05),
+                            display: 'flex',
+                            gap: '0.5rem',
+                            p: '8px',
+                            justifyContent: 'space-between',
+                        })}
+                    >
+                        <Box sx={{ display: 'flex', gap: '0.5rem', alignItems: 'center' }}>
+                            <MRT_GlobalFilterTextField table={table} />
+                            <MRT_ToggleFiltersButton table={table} />
+                        </Box>
+                        <Box>
+                            <Box sx={{ display: 'flex', gap: '0.5rem' }}>
+                                {/* <Button
                             color="success"
                             disabled={!table.getIsSomeRowsSelected()}
                             onClick={handleActivate}
@@ -177,15 +180,13 @@ function New_issue() {
                         >
                             Deactivate
                         </Button> */}
-                        <Button variant='primary' style={{backgroundColor : '#4848d1' ,  color : 'white'}}>Export</Button>
+                                {/* <Button variant='primary' style={{ backgroundColor: '#4848d1', color: 'white' }}>Export</Button> */}
+                            </Box>
+                        </Box>
                     </Box>
-                </Box>
-            </Box>
-            <br></br>
-
-            <MaterialReactTable table={table} />
-            <br></br>
-
+                    <MaterialReactTable table={table} />
+                </Card.Body>
+            </Card>
 
         </>
 

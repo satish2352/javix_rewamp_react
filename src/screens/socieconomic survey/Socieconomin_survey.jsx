@@ -16,6 +16,8 @@ import Home from '../dashboard/home/Home';
 // import { ButtonGroup } from 'react-bootstrap';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
+import { Card } from 'react-bootstrap';
+import Export_Button from '../dashboard/Exportbuttoncomponents/Export_Button';
 
 const data = [
     {
@@ -30,7 +32,7 @@ const data = [
         action: ActivateUserIcon
 
     },
-    
+
 ]
 
 function Socieconomin_survey() {
@@ -77,18 +79,102 @@ function Socieconomin_survey() {
                 size: 150,
             },
             {
-                accessorKey: 'action',
-                header: 'Action',
+                accessorKey: 'family_member_name',
+                header: 'No Of Earnners',
                 size: 150,
-                Cell: ({ row }) => (
-                    <Box>
-                        <button onClick={() => handleActivateUser(row)} style={{ height: '32px', width: '32px', borderRadius: '50%' }}>
-                            {/* <img src={ActivateUserIcon} alt="" style={{ width: '100%', height: 'auto' }} /> */}
-                            <IoScanCircle style={{fontSize : "30px"}}/>
-                        </button>
-                    </Box>
-                ),
             },
+            {
+                accessorKey: 'family_member_name',
+                header: 'Name Of Earnners',
+                size: 150,
+            },
+            {
+                accessorKey: 'family_member_name',
+                header: 'Age Of Earnners',
+                size: 150,
+            },
+
+            {
+                accessorKey: 'family_member_name',
+                header: 'Occupation Of Earnners',
+                size: 150,
+            },
+            {
+                accessorKey: 'family_member_name',
+                header: 'Is Bank Account',
+                size: 150,
+            },
+            {
+                accessorKey: 'family_member_name',
+                header: 'State of House',
+                size: 150,
+            },
+            {
+                accessorKey: 'family_member_name',
+                header: 'Total Income',
+                size: 150,
+            },
+
+            {
+                accessorKey: 'family_member_name',
+                header: 'Food Expense',
+                size: 150,
+            },
+            {
+                accessorKey: 'family_member_name',
+                header: 'Health Expense',
+                size: 150,
+            },
+            {
+                accessorKey: 'family_member_name',
+                header: 'Education Expense',
+                size: 150,
+            },
+
+            {
+                accessorKey: 'family_member_name',
+                header: 'Intoxication Expense',
+                size: 150,
+            },
+            {
+                accessorKey: 'family_member_name',
+                header: 'Conveyance Expense',
+                size: 150,
+            },
+            {
+                accessorKey: 'family_member_name',
+                header: 'Cultiveable Land',
+                size: 150,
+            },
+            {
+                accessorKey: 'family_member_name',
+                header: 'Survey Date',
+                size: 150,
+            },
+
+            // {
+            //     accessorKey: 'family_member_name',
+            //     header: 'Family Member Name',
+            //     size: 150,
+            // },
+            // {
+            //     accessorKey: 'family_member_name',
+            //     header: 'Family Member Name',
+            //     size: 150,
+            // },
+            // {
+            //     accessorKey: 'action',
+            //     header: 'Action',
+            //     size: 150,
+            //     Cell: ({ row }) => (
+            //         <Box>
+            //             <button onClick={() => handleActivateUser(row)} style={{ height: '32px', width: '32px', borderRadius: '50%' }}>
+            //                 {/* <img src={ActivateUserIcon} alt="" style={{ width: '100%', height: 'auto' }} /> */}
+            //                 <IoScanCircle style={{fontSize : "30px"}}/>
+            //             </button>
+            //         </Box>
+            //     ),
+            // },
         ],
         []
     );
@@ -114,53 +200,55 @@ function Socieconomin_survey() {
     const handleActivateUser = (row) => {
         alert('activating ' + row.getValue('name'));
     };
-  return (
-    <>
-     <Home />
-            <br></br>
-            <h5 style={{color : "#ea5455"}}>Socieconomic Survey Data</h5>
-            <Box
-                sx={(theme) => ({
-                    backgroundColor: lighten(theme.palette.background.default, 0.05),
-                    display: 'flex',
-                    gap: '0.5rem',
-                    p: '8px',
-                    justifyContent: 'space-between',
-                })}
-            >
-                <Box sx={{ display: 'flex', gap: '0.5rem', alignItems: 'center' }}>
-                    <MRT_GlobalFilterTextField table={table} />
-                    <MRT_ToggleFiltersButton table={table} />
-                </Box>
-                <Box>
-                    <Box sx={{ display: 'flex', gap: '0.5rem' }}>
-                        <Button
-                            color="success"
-                            disabled={!table.getIsSomeRowsSelected()}
-                            onClick={handleActivate}
-                            variant="contained"
-                        >
-                            Activate
-                        </Button>
-                        <Button
-                            color="error"
-                            disabled={!table.getIsSomeRowsSelected()}
-                            onClick={handleDeactivate}
-                            variant="contained"
-                        >
-                            Deactivate
-                        </Button>
-                        <Button variant='primary' style={{backgroundColor : '#4848d1' ,  color : 'white'}}>Export</Button>
+    return (
+        <>
+            <Home />
+            <Card className='mt-3'>
+                <Card.Body>
+                    <p style={{ color: "black", fontSize: '20px' }}>Socieconomic Survey Data</p>
+                    <Box
+                        sx={(theme) => ({
+                            backgroundColor: lighten(theme.palette.background.default, 0.05),
+                            display: 'flex',
+                            gap: '0.5rem',
+                            p: '8px',
+                            justifyContent: 'space-between',
+                        })}
+                    >
+                        <Box sx={{ display: 'flex', gap: '0.5rem', alignItems: 'center' }}>
+                            <MRT_GlobalFilterTextField table={table} />
+                            <MRT_ToggleFiltersButton table={table} />
+                        </Box>
+                        <Box>
+                            {/* <Box sx={{ display: 'flex', gap: '0.5rem' }}>
+                                <Button
+                                    color="success"
+                                    disabled={!table.getIsSomeRowsSelected()}
+                                    onClick={handleActivate}
+                                    variant="contained"
+                                >
+                                    Activate
+                                </Button>
+                                <Button
+                                    color="error"
+                                    disabled={!table.getIsSomeRowsSelected()}
+                                    onClick={handleDeactivate}
+                                    variant="contained"
+                                >
+                                    Deactivate
+                                </Button>
+                                
+                            </Box> */}
+                            <Export_Button data={data} name={"Socieconomic Survey"}/>
+                        </Box>
                     </Box>
-                </Box>
-            </Box>
-            <br></br>
+                    <MaterialReactTable table={table} />
 
-            <MaterialReactTable table={table} />
-            <br></br>
+                </Card.Body>
+            </Card>
 
-    </>
-  )
+        </>
+    )
 }
 
 export default Socieconomin_survey

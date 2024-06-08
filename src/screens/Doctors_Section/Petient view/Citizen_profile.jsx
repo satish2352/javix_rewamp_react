@@ -5,7 +5,6 @@ function Citizen_profile() {
     <div>
         <h1>Hii Citizen_profile From </h1>
         <p> Sahil bhai citizen profile form yaha pe chahi ye</p>
-      
     </div>
   )
 }

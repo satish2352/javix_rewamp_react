@@ -2,6 +2,7 @@ import React, { useMemo } from 'react';
 import './approved_users.scss';
 // import ActivateUserIcon from '../../../assets/images/Activate User.png';
 import { FaRegUser } from "react-icons/fa";
+import ActivateUserIcon from '../../assets/images/Activate User.png';
 
 
 import {
@@ -16,6 +17,9 @@ import Home from '../../screens/dashboard/home/Home';
 // import { ButtonGroup } from 'react-bootstrap';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
+import { Card } from 'react-bootstrap';
+import { IoMdCheckmarkCircleOutline } from "react-icons/io";
+import { Navigate, useNavigate } from 'react-router-dom';
 
 
 const data = [
@@ -28,12 +32,14 @@ const data = [
     mobile: "9561254187",
     email: "dvfvdf@gmail.com",
     regdate: "21-01-2021",
-    Action: <FaRegUser style={{ fontSize: "20px" }} />
+    Action: <FaRegUser />
   },
- 
+
 ]
 
 function Ngo() {
+  const navigate = useNavigate()
+
   const columns = useMemo(
     () => [
       {
@@ -80,6 +86,12 @@ function Ngo() {
         accessorKey: 'Action',
         header: 'Action',
         size: 150,
+        Cell: ({ row }) => (
+          <Box>
+            <FaRegUser onClick={() => handleActivateUser1(row)} style={{ fontSize: '20px' }} />
+            <IoMdCheckmarkCircleOutline onClick={() => handleActivateUser2(row)} style={{ fontSize: '20px', marginLeft: '25px' }} />
+          </Box>
+        ),
       },
 
       // {
@@ -104,41 +116,51 @@ function Ngo() {
     enableRowSelection: true,
   });
 
-  const handleDeactivate = () => {
-    table.getSelectedRowModel().flatRows.forEach((row) => {
-      alert('deactivating ' + row.getValue('name'));
-    });
-  };
+  // const handleDeactivate = () => {
+  //   table.getSelectedRowModel().flatRows.forEach((row) => {
+  //     alert('deactivating ' + row.getValue('name'));
+  //   });
+  // };
 
-  const handleActivate = () => {
-    table.getSelectedRowModel().flatRows.forEach((row) => {
-      alert('activating ' + row.getValue('name'));
-    });
-  };
+  // const handleActivate = () => {
+  //   table.getSelectedRowModel().flatRows.forEach((row) => {
+  //     alert('activating ' + row.getValue('name'));
+  //   });
+  // };
 
-  const handleActivateUser = (row) => {
-    alert('activating ' + row.getValue('name'));
+  // const handleActivateUser = (row) => {
+  //   alert('activating ' + row.getValue('name'));
+  // };
+
+  const handleActivateUser1 = (row) => {
+    // alert('1');
+    navigate('/ngo-profile')
+  };
+  const handleActivateUser2 = (row) => {
+     //alert('2');
+     navigate('/approvedusers/screener')
   };
   return (
     <>
       <Home />
-      <br></br>
-      <h5 style={{ color: "#ea5455" }}><b>Enrolled NGO List</b></h5>
-      <Box
-        sx={(theme) => ({
-          backgroundColor: lighten(theme.palette.background.default, 0.05),
-          display: 'flex',
-          gap: '0.5rem',
-          p: '8px',
-          justifyContent: 'space-between',
-        })}
-      >
-        <Box sx={{ display: 'flex', gap: '0.5rem', alignItems: 'center' }}>
-          <MRT_GlobalFilterTextField table={table} />
-          <MRT_ToggleFiltersButton table={table} />
-        </Box>
-        <Box>
-          <Box sx={{ display: 'flex', gap: '0.5rem' }}>
+      <Card className='mt-3'>
+        <Card.Body>
+          <p style={{ color: "black", fontSize: '20px' }}>Enrolled NGO List</p>
+          <Box
+            sx={(theme) => ({
+              backgroundColor: lighten(theme.palette.background.default, 0.05),
+              display: 'flex',
+              gap: '0.5rem',
+              p: '8px',
+              justifyContent: 'space-between',
+            })}
+          >
+            <Box sx={{ display: 'flex', gap: '0.5rem', alignItems: 'center' }}>
+              <MRT_GlobalFilterTextField table={table} />
+              <MRT_ToggleFiltersButton table={table} />
+            </Box>
+            {/* <Box>
+              <Box sx={{ display: 'flex', gap: '0.5rem' }}> */}
             {/* <Button
               color="success"
               disabled={!table.getIsSomeRowsSelected()}
@@ -155,14 +177,16 @@ function Ngo() {
             >
               Deactivate
             </Button> */}
-            <Button variant='primary' style={{ backgroundColor: '#4848d1', color: 'white' }}>Export</Button>
+            {/* <Button variant='primary' style={{ backgroundColor: '#4848d1', color: 'white' }}>Export</Button> */}
+            {/* </Box> */}
+            {/* </Box> */}
           </Box>
-        </Box>
-      </Box>
-      <br></br>
 
-      <MaterialReactTable table={table} />
-      <br></br>
+
+          <MaterialReactTable table={table} />
+        </Card.Body>
+      </Card>
+
     </>
   )
 }

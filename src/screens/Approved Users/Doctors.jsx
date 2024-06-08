@@ -17,6 +17,8 @@ import Home from '../../screens/dashboard/home/Home';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { FaUserCircle } from "react-icons/fa";
+import { Link, Navigate, useNavigate } from 'react-router-dom';
+import { Card } from 'react-bootstrap';
 
 
 
@@ -27,7 +29,8 @@ const data = [
     mobile: "9561245157",
     email: "124",
     qualification: "efere",
-    profile: <FaUserCircle style={{ fontSize: "20px" }} />
+    profile: <Button variant="primary"><FaUserCircle /></Button>
+    // <Link to='/home/doctor_list/doctorprofiledisplay'><FaUserCircle style={{ fontSize: "20px" }} /></Link>
   },
   {
     sr: 2,
@@ -35,7 +38,8 @@ const data = [
     mobile: "9561245157",
     email: "dfsdf@gmail.com",
     qualification: "dsd",
-    profile: <FaUserCircle style={{ fontSize: "20px" }} />
+    profile: <Button variant="primary"><FaUserCircle /></Button>
+
   },
   {
     sr: 3,
@@ -43,7 +47,7 @@ const data = [
     mobile: "9561245157",
     email: "dfsdf@gmail.com",
     qualification: "rrdgb",
-    profile: <FaUserCircle style={{ fontSize: "20px" }} />
+    profile: <Button variant="primary"><FaUserCircle /></Button>
   },
 
 
@@ -51,6 +55,7 @@ const data = [
 
 
 function Doctors() {
+  const Navigate = useNavigate();
   const columns = useMemo(
     () => [
       {
@@ -82,6 +87,13 @@ function Doctors() {
         accessorKey: 'profile',
         header: 'Profile',
         size: 150,
+        Cell: ({ row }) => (
+          <Box>
+            <button onClick={() => handleActivateUser(row)} style={{ height: '32px', width: '32px', borderRadius: '50%' }}>
+              <FaUserCircle style={{ fontSize: '25px' }} />
+            </button>
+          </Box>
+        ),
       },
 
       // {
@@ -119,29 +131,31 @@ function Doctors() {
   };
 
   const handleActivateUser = (row) => {
-    alert('activating ' + row.getValue('name'));
+    alert('hii');
+    Navigate('/home/doctor_list/doctorprofiledisplay')
   };
   return (
     <>
       <Home />
-      <br></br>
-      <h5 style={{ color: "#ea5455" }}><b>Doctors Lists</b></h5>
-      <Box
-        sx={(theme) => ({
-          backgroundColor: lighten(theme.palette.background.default, 0.05),
-          display: 'flex',
-          gap: '0.5rem',
-          p: '8px',
-          justifyContent: 'space-between',
-        })}
-      >
-        <Box sx={{ display: 'flex', gap: '0.5rem', alignItems: 'center' }}>
-          <MRT_GlobalFilterTextField table={table} />
-          <MRT_ToggleFiltersButton table={table} />
-        </Box>
-        <Box>
-          <Box sx={{ display: 'flex', gap: '0.5rem' }}>
-            {/* <Button
+      <Card className='mt-3'>
+        <Card.Body>
+          <p style={{ color: "black", fontSize: '20px' }}>Doctors List </p>
+          <Box
+            sx={(theme) => ({
+              backgroundColor: lighten(theme.palette.background.default, 0.05),
+              display: 'flex',
+              gap: '0.5rem',
+              p: '8px',
+              justifyContent: 'space-between',
+            })}
+          >
+            <Box sx={{ display: 'flex', gap: '0.5rem', alignItems: 'center' }}>
+              <MRT_GlobalFilterTextField table={table} />
+              <MRT_ToggleFiltersButton table={table} />
+            </Box>
+            <Box>
+              <Box sx={{ display: 'flex', gap: '0.5rem' }}>
+                {/* <Button
               color="success"
               disabled={!table.getIsSomeRowsSelected()}
               onClick={handleActivate}
@@ -157,14 +171,15 @@ function Doctors() {
             >
               Deactivate
             </Button> */}
-            <Button variant='primary' style={{ backgroundColor: '#4848d1', color: 'white' }}>Export</Button>
+                {/* <Button variant='primary' style={{ backgroundColor: '#4848d1', color: 'white' }}>Export</Button> */}
+              </Box>
+            </Box>
           </Box>
-        </Box>
-      </Box>
-      <br></br>
+          <MaterialReactTable table={table} />
 
-      <MaterialReactTable table={table} />
-      <br></br>
+        </Card.Body>
+      </Card>
+
 
     </>
   )

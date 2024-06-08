@@ -1,8 +1,9 @@
 import React, { useMemo } from 'react';
-import './petient_view.scss';
-import ActivateUserIcon from '../../../assets/images/Activate User.png';
+import './Citizenprofile.scss';
+import ActivateUserIcon from '../../../../assets/images/Activate User.png';
 import { FaCheck } from "react-icons/fa";
 import { MdAdsClick } from "react-icons/md";
+import avtar from '../../../../assets/images/user.jpg'
 
 
 import {
@@ -12,21 +13,21 @@ import {
     MRT_ToggleFiltersButton,
 
 } from 'material-react-table';
-import { Box, Button, lighten } from '@mui/material';
-import Home from '../../dashboard/home/Home';
+import { Avatar, Box, Button, lighten } from '@mui/material';
+import Home from '../../../../screens/dashboard/home/Home';
 // import { ButtonGroup } from 'react-bootstrap';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { useNavigate } from 'react-router-dom';
-import Export_Button from '../../dashboard/Exportbuttoncomponents/Export_Button';
+import { Link, useNavigate } from 'react-router-dom';
 import { Card } from 'react-bootstrap';
-
+import { FaUserCheck } from "react-icons/fa6";
+import { TbHandClick } from "react-icons/tb";
 
 
 const data = [
     {
         sr: 1,
-        photo: "abc",
+        photo: <Avatar alt="Remy Sharp" src={avtar} />,
         citizen_name: "rahul",
         citizenid: "1234",
         mobile: "9564215748",
@@ -38,7 +39,7 @@ const data = [
     },
     {
         sr: 2,
-        photo: "xyz",
+        photo: <Avatar alt="Remy Sharp" src={avtar} />,
         citizen_name: "leena",
         citizenid: "56124",
         mobile: "9564215748",
@@ -49,7 +50,8 @@ const data = [
     },
 ]
 
-function Petient_view() {
+
+function Citizen_profile() {
     const Navigate = useNavigate()
 
     const columns = useMemo(
@@ -100,8 +102,8 @@ function Petient_view() {
                 size: 150,
                 Cell: ({ row }) => (
                     <Box>
-                        <FaCheck onClick={() => handleActivateUser1(row)} style={{ fontSize: '20px' }} />
-                        <MdAdsClick onClick={() => handleActivateUser2(row)} style={{ fontSize: '20px', marginLeft: '25px' }} />
+                        <FaUserCheck onClick={() => handleActivateUser1(row)} style={{ fontSize: '20px' }} />
+                        <TbHandClick onClick={() => handleActivateUser2(row)} style={{ fontSize: '20px', marginLeft: '25px' }} />
                     </Box>
                 ),
 
@@ -133,8 +135,8 @@ function Petient_view() {
         Navigate('/citizen-form')
     };
     const handleActivateUser2 = (row) => {
-        // alert('2');
-        Navigate('')
+         alert('Cuurenty this page is not visiable....');
+        //Navigate('/referred_patient/petient_view/Encounter_petient_list')
     };
 
     // function addCity(){
@@ -145,7 +147,7 @@ function Petient_view() {
             <Home />
             <Card className='mt-3'>
                 <Card.Body>
-                    <p style={{ color: "black", fontSize: '20px' }}>Citizen List</p>
+                    <p style={{ color: "black", fontSize: '15px' }}>Citizen List </p>
                     <Box
                         sx={(theme) => ({
                             backgroundColor: lighten(theme.palette.background.default, 0.05),
@@ -161,17 +163,16 @@ function Petient_view() {
                         </Box>
                         <Box>
                             <Box sx={{ display: 'flex', gap: '0.5rem' }}>
-                                <Export_Button data={data} name={"Citizen List"} />
-                                <Button variant='primary' style={{ backgroundColor: '#4848d1', color: 'white' }} >Add Citizen</Button>
+                                <Button variant='primary' style={{ backgroundColor: '#4848d1', color: 'white' }}>Export</Button>
+                                <Link to='/add-citizen'><Button variant='primary' style={{ backgroundColor: '#4848d1', color: 'white' }} >Add Citizen</Button></Link>
                             </Box>
                         </Box>
                     </Box>
                     <MaterialReactTable table={table} />
                 </Card.Body>
             </Card>
-
         </>
     )
 }
 
-export default Petient_view
+export default Citizen_profile

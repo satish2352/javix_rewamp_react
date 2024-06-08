@@ -16,6 +16,7 @@ import Home from '../dashboard/home/Home';
 // import { ButtonGroup } from 'react-bootstrap';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
+import { Card } from 'react-bootstrap';
 
 const data = [
     {
@@ -26,7 +27,7 @@ const data = [
         issue: "vegrh",
         date: "28-12-2023",
         status: "New Issue",
-        action: ActivateUserIcon
+        comments: "ActivateUserIcon mdsbc j "
 
     },
     {
@@ -37,7 +38,7 @@ const data = [
         issue: "able to login",
         date: "28-12-2023",
         status: "New Issue",
-        action: ActivateUserIcon
+        comments: " dcsdc vsd sdv "
 
     },
     {
@@ -48,7 +49,7 @@ const data = [
         issue: "Others",
         date: "28-12-2023",
         status: "New Issue",
-        action: ActivateUserIcon
+        comments: "ActivateUserIcon dkchsbdjc"
 
     },
     {
@@ -59,7 +60,7 @@ const data = [
         issue: "citizen photo not working",
         date: "19-12-2023",
         status: "New Issue",
-        action: ActivateUserIcon
+        comments: " dhcbjsh dcsc "
 
     },
 
@@ -105,17 +106,9 @@ function Update_issue() {
                 size: 150,
             },
             {
-                accessorKey: 'action',
-                header: 'Action',
+                accessorKey: 'comments',
+                header: 'Comments',
                 size: 150,
-                Cell: ({ row }) => (
-                    <Box>
-                        <button onClick={() => handleActivateUser(row)} style={{ height: '32px', width: '32px', borderRadius: '50%' }}>
-                            {/* <img src={ActivateUserIcon} alt="" style={{ width: '100%', height: 'auto' }} /> */}
-                            <IoScanCircle style={{fontSize : "30px"}}/>
-                        </button>
-                    </Box>
-                ),
             },
         ],
         []
@@ -142,28 +135,28 @@ function Update_issue() {
     const handleActivateUser = (row) => {
         alert('activating ' + row.getValue('name'));
     };
-  return (
-    <>
-     <Home />
-     <br></br>
-     <h5 style={{color : "#ea5455"}}>Addressed Issue List</h5>
-            <br></br>
-            <Box
-                sx={(theme) => ({
-                    backgroundColor: lighten(theme.palette.background.default, 0.05),
-                    display: 'flex',
-                    gap: '0.5rem',
-                    p: '8px',
-                    justifyContent: 'space-between',
-                })}
-            >
-                <Box sx={{ display: 'flex', gap: '0.5rem', alignItems: 'center' }}>
-                    <MRT_GlobalFilterTextField table={table} />
-                    <MRT_ToggleFiltersButton table={table} />
-                </Box>
-                <Box>
-                    <Box sx={{ display: 'flex', gap: '0.5rem' }}>
-                        {/* <Button
+    return (
+        <>
+            <Home />
+            <Card className='mt-3'>
+                <Card.Body>
+                    <p style={{ color: "black", fontSize: '20px' }}>Addressed Issue List</p>
+                    <Box
+                        sx={(theme) => ({
+                            backgroundColor: lighten(theme.palette.background.default, 0.05),
+                            display: 'flex',
+                            gap: '0.5rem',
+                            p: '8px',
+                            justifyContent: 'space-between',
+                        })}
+                    >
+                        <Box sx={{ display: 'flex', gap: '0.5rem', alignItems: 'center' }}>
+                            <MRT_GlobalFilterTextField table={table} />
+                            <MRT_ToggleFiltersButton table={table} />
+                        </Box>
+                        <Box>
+                            <Box sx={{ display: 'flex', gap: '0.5rem' }}>
+                                {/* <Button
                             color="success"
                             disabled={!table.getIsSomeRowsSelected()}
                             onClick={handleActivate}
@@ -179,16 +172,17 @@ function Update_issue() {
                         >
                             Deactivate
                         </Button> */}
-                        <Button variant='primary' style={{backgroundColor : '#4848d1' ,  color : 'white'}}>Export</Button>
+                                {/* <Button variant='primary' style={{ backgroundColor: '#4848d1', color: 'white' }}>Export</Button> */}
+                            </Box>
+                        </Box>
                     </Box>
-                </Box>
-            </Box>
-            <br></br>
+                    <MaterialReactTable table={table} />
 
-            <MaterialReactTable table={table} />
-            <br></br>
-    </>
-  )
+                </Card.Body>
+            </Card>
+
+        </>
+    )
 }
 
 export default Update_issue

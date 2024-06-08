@@ -2,7 +2,12 @@ import { lazy, useContext, useEffect } from "react";
 import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom";
 import Footer from "../screens/dashboard/Footer";
 import Loadable from "./Loadable";
-import ChangePasswordDoctor from "../screens/DoctorsProfileDisplay/ChangePasswordDoctor";
+
+
+// import ChangePasswordDoctor from "../screens/DoctorsProfileDisplay/ChangePasswordDoctor";
+// import Citizen_update from "";
+
+// import Ngo_Profile from "../components/home pages/home page components/ngo profile/Ngo_Profile";
 
 // import AddUser from "../screens/adduser/Adduser";
 //LOADEER
@@ -16,8 +21,13 @@ const AdminHome = Loadable(lazy(() => import('../components/home pages/AdminHome
 const DoctorsCard_table = Loadable(lazy(() => import('../components/Home_page_card_data/DoctorsCard_table')));
 const DoctorProfileDisplay = Loadable(lazy(() => import('../screens/DoctorsProfileDisplay/DoctorProfileDisplay')));
 const DoctorProfileEdit = Loadable(lazy(() => import('../screens/DoctorsProfileDisplay/DoctorProfileEdit')));
+const Ngo_Profile = Loadable(lazy(()=>import('../components/home pages/home page components/ngo profile/Ngo_Profile')))
 const Directory = Loadable(lazy(() => import('../screens/dashboard/home/Directory')));
+const Scrennering = Loadable(lazy(() => import('../components/home pages/home page components/scrennings_home/Scrennering')));
+const Add_Citizen = Loadable(lazy(() => import('../components/home pages/home page components/citizen profile/Add_Citizen')));
+const Citizen_form = Loadable(lazy(() => import('../components/home pages/home page components/citizen profile/Citizen_form')));
 const AddUser = Loadable(lazy(() => import('../screens/adduser/Adduser')));
+const Citizen_update = Loadable(lazy(() => import('../components/home pages/home page components/citizen profile/Citizen_update')));
 const Doctors = Loadable(lazy(() => import('../screens/Approved Users/Doctors')));
 const Ngo = Loadable(lazy(() => import('../screens/Approved Users/Ngo')));
 const Screener = Loadable(lazy(() => import('../screens/Approved Users/Screener')));
@@ -98,6 +108,7 @@ const Screening_screener = Loadable(lazy(() => import('../screens/daily and weel
 const Screening_sevika = Loadable(lazy(() => import('../screens/daily and weely data/Screening_sevika')));
 const Patient_List_For_Lipid_Panel_Test = Loadable(lazy(() => import('../screens/daily and weely data/Patient_List_For_Lipid_Panel_Test')));
 const New_issue = Loadable(lazy(() => import('../screens/issue addressing/New_issue')));
+const New_issue_From = Loadable(lazy(() => import('../screens/issue addressing/New_issue_From')));
 const Update_issue = Loadable(lazy(() => import('../screens/issue addressing/Update_issue')));
 const Change_request = Loadable(lazy(() => import('../screens/change request/Change_request')));
 
@@ -107,7 +118,7 @@ const Referred_patient = Loadable(lazy(() => import('../screens/Doctors_Section/
 const Encounter_List = Loadable(lazy(() => import('../screens/Doctors_Section/Referred Petient/Encounter List/Encounter_List')));
 const Patient_Info = Loadable(lazy(() => import('../screens/Doctors_Section/Referred Petient/Encounter List/Patient_Info')));
 const Petient_view = Loadable(lazy(() => import('../screens/Doctors_Section/Petient view/Petient_view')));
-const Citizen_profile = Loadable(lazy(() => import('../screens/Doctors_Section/Petient view/Citizen_profile')));
+const Citizen_profile = Loadable(lazy(() => import('../components/home pages/home page components/citizen profile/Citizen_profile')));
 const Encounter_petient_list = Loadable(lazy(() => import('../screens/Doctors_Section/Petient view/Encounter_petient_list')));
 const Help_doctors = Loadable(lazy(() => import('../screens/Doctors_Section/Help section/Help_doctors')));
 const Prescribed = Loadable(lazy(() => import('../components/home pages/Prescrided/Prescrided')));
@@ -165,6 +176,14 @@ function RouterComponent() {
               <Route path='/approvedusers/screener/screener-profile' element={<ScreenerProfileInfo />} />
               <Route path='/approvedusers/sevika' element={<Sevika />} />
               <Route path='/approvedusers/pharmacy' element={<Pharmacy />} />
+              <Route path='/ngo-profile' element={<Ngo_Profile />} />
+              <Route path='/citizen-list' element={<Citizen_profile />} />
+              <Route path='/add-citizen' element={<Add_Citizen />} />
+              <Route path='/citizen-form' element={<Citizen_form />} />
+              <Route path='/citizen-update-form' element={<Citizen_update />} />
+              <Route path='/scrennings' element={<Scrennering />} />
+
+              
 
 
 
@@ -234,6 +253,7 @@ function RouterComponent() {
               <Route path='/dailyandweeklydata/screening_sevika' element={<Screening_sevika />} />
               <Route path='/dailyandweeklydata/patientlist' element={<Patient_List_For_Lipid_Panel_Test />} />
               <Route path='/issueaddressing/newissue' element={<New_issue />} />
+              <Route path='/new-issue-form' element={<New_issue_From />} />
               <Route path='/issueaddressing/updateissue' element={<Update_issue />} />
               <Route path='/changerequest' element={<Change_request />} />
 
@@ -259,7 +279,7 @@ function RouterComponent() {
           <Route path='/home/doctor_list/doctorprofiledisplay/doctorprofile_edit' element={<DoctorProfileEdit />} />
 
           <Route path='/petient_view' element={<Petient_view />} />
-          <Route path='/referred_patient/petient_view/citizen_profile' element={<Citizen_profile />} />
+          {/* <Route path='/referred_patient/petient_view/citizen_profile' element={<Citizen_profile />} /> */}
           <Route path='/referred_patient/petient_view/Encounter_petient_list' element={<Encounter_petient_list />} />
 
 

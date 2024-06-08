@@ -17,6 +17,7 @@ import Home from '../../screens/dashboard/home/Home';
 // import { ButtonGroup } from 'react-bootstrap';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
+import { Card } from 'react-bootstrap';
 
 
 const data = [
@@ -28,7 +29,7 @@ const data = [
     email: "dvdfv@gmail.com",
     qualification: "BE",
     onboardingdate: "12/02/2021",
-    profile: <Link to="/approvedusers/screener/screener-profile"><RiUserSearchFill style={{ fontSize: "20px" }} /></Link>
+    action: <Link to="/approvedusers/screener/screener-profile"><RiUserSearchFill style={{ fontSize: "20px" }} /></Link>
   },
   {
     sr: 2,
@@ -38,7 +39,7 @@ const data = [
     email: "dvdfv@gmail.com",
     qualification: "BE",
     onboardingdate: "12/02/2021",
-    profile: <Link to="/approvedusers/screener/screener-profile"><RiUserSearchFill style={{ fontSize: "20px" }} /></Link>
+    action: <Link to="/approvedusers/screener/screener-profile"><RiUserSearchFill style={{ fontSize: "20px" }} /></Link>
   },
   {
     sr: 3,
@@ -48,7 +49,7 @@ const data = [
     email: "dvdfv@gmail.com",
     qualification: "BE",
     onboardingdate: "12/02/2021",
-    profile: <Link to="/approvedusers/screener/screener-profile"><RiUserSearchFill style={{ fontSize: "20px" }} /></Link>
+    action: <Link to="/approvedusers/screener/screener-profile"><RiUserSearchFill style={{ fontSize: "20px" }} /></Link>
   },
 
 
@@ -93,8 +94,8 @@ function Screener() {
         size: 150,
       },
       {
-        accessorKey: 'profile',
-        header: 'Profile',
+        accessorKey: 'action',
+        header: 'Action',
         size: 150,
       },
     ],
@@ -124,31 +125,35 @@ function Screener() {
   return (
     <>
       <Home />
-      <br></br>
-      <h5 style={{ color: "#ea5455" }}><b>Screener Lists</b></h5>
-      <Box
-        sx={(theme) => ({
-          backgroundColor: lighten(theme.palette.background.default, 0.05),
-          display: 'flex',
-          gap: '0.5rem',
-          p: '8px',
-          justifyContent: 'space-between',
-        })}
-      >
-        <Box sx={{ display: 'flex', gap: '0.5rem', alignItems: 'center' }}>
-          <MRT_GlobalFilterTextField table={table} />
-          <MRT_ToggleFiltersButton table={table} />
-        </Box>
-        <Box>
-          <Box sx={{ display: 'flex', gap: '0.5rem' }}>
-            <Button variant='primary' style={{ backgroundColor: '#4848d1', color: 'white' }}>Export</Button>
+      <Card className='mt-3'>
+        <Card.Body>
+          <p style={{ color: "black", fontSize: '20px' }}>Screener Lists</p>
+          <Box
+            sx={(theme) => ({
+              backgroundColor: lighten(theme.palette.background.default, 0.05),
+              display: 'flex',
+              gap: '0.5rem',
+              p: '8px',
+              justifyContent: 'space-between',
+            })}
+          >
+            <Box sx={{ display: 'flex', gap: '0.5rem', alignItems: 'center' }}>
+              <MRT_GlobalFilterTextField table={table} />
+              <MRT_ToggleFiltersButton table={table} />
+            </Box>
+            <Box>
+              <Box sx={{ display: 'flex', gap: '0.5rem' }}>
+                <Link to='/approvedusers/ngo'><Button variant='primary' style={{ backgroundColor: '#4848d1', color: 'white' }}>Back</Button></Link>
+              </Box>
+            </Box>
           </Box>
-        </Box>
-      </Box>
-      <br></br>
+          <br></br>
 
-      <MaterialReactTable table={table} />
-      <br></br>
+          <MaterialReactTable table={table} />
+          <br></br>
+        </Card.Body>
+      </Card>
+
     </>
   )
 }

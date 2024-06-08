@@ -1,7 +1,7 @@
 import React from 'react';
 import CustomPieChart from './CustomPieChart';
 import { Link } from 'react-router-dom';
-import { Row, Col, Card } from 'react-bootstrap';
+import { Row, Col, Card, Container } from 'react-bootstrap';
 import Home from '../dashboard/home/Home';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './insights.scss'
@@ -194,11 +194,14 @@ const Insights2 = () => {
                                 barKeys={['Green', 'Amber', 'Red']}
                                 colors={colors}
                             />
-                            <div className='d-flex justify-content-around align-items-center text-center mt-3'>
-                                <Link to='/admin/insights/bloodpresure_table'><p>Blood Pressure Green Cases</p></Link>
+                            {/* <div className='d-flex justify-content-around align-items-center text-center mt-3'> */}
+                            <div style={{textAlign:'center'}} className='mt-3'>
+                                <Link to='/admin/insights/bloodpresure_table'><p >Blood Pressure Green Cases</p></Link>
                                 <Link to='/admin/insights/bloodpresure_table/Blood_Pressure_Amber_Cases'><p>Blood Pressure Amber Cases</p></Link>
                                 <Link to='/admin/insights/bloodpresure_table/Blood_Pressure_Red_Cases'><p>Blood Pressure Red Cases</p></Link>
                             </div>
+
+                            {/* </div> */}
                         </Card.Body>
                     </Card>
                     <br></br>
@@ -213,12 +216,13 @@ const Insights2 = () => {
                                 barKeys={['Green', 'Amber', 'Red']}
                                 colors={colors}
                             />
-                            <div className='d-flex justify-content-around align-items-center text-center mt-3'>
-                                <Link to='/admin/insights/SPO2/SPO2_Green_Cases'><p>SPO2 Green Cases</p></Link>
-                                <Link to='/admin/insights/SPO2/SPO2_Amber_Cases'><p>SPO2 Amber Cases</p></Link>
+                            {/* <div className='d-flex justify-content-around align-items-center text-center mt-3'> */}
+                            <div style={{textAlign:'center'}} className='mt-3'>
+                                <Link to='/admin/insights/SPO2/SPO2_Green_Cases'><p >SPO2 Green Cases</p></Link>
+                                <Link to='/admin/insights/SPO2/SPO2_Amber_Cases'><p >SPO2 Amber Cases</p></Link>
                                 <Link to='/admin/insights/SPO2/SPO2_Red_Cases'><p>SPO2 Red Cases</p></Link>
+                            {/* </div> */}
                             </div>
-                            <br></br>
                         </Card.Body>
                     </Card>
                 </Col>
@@ -235,14 +239,14 @@ const Insights2 = () => {
                                 barKeys={['Green', 'Amber', 'Red']}
                                 colors={colors}
                             />
-                            <div className='d-flex justify-content-around align-items-center text-center mt-3'>
-                                <Link to='/admin/insights/temperature/Temperature_Green_Cases'><p>Temperature Green Cases</p></Link>
-                                <Link to='/admin/insights/temperature/Temperature_Amber_Cases'><p>Temperature Amber Cases</p></Link>
+                            {/* <div className='d-flex justify-content-around align-items-center text-center mt-3'> */}
+                            <div style={{textAlign:'center'}} className='mt-3'>
+                                <Link to='/admin/insights/temperature/Temperature_Green_Cases'><p >Temperature Green Cases</p></Link>
+                                <Link to='/admin/insights/temperature/Temperature_Amber_Cases'><p >Temperature Amber Cases</p></Link>
                                 <Link to='/admin/insights/temperature/Temperature_Red_Cases'><p>Temperature Red Cases</p></Link>
                             </div>
                         </Card.Body>
                     </Card>
-                    <br></br>
                 </Col>
                 <Col lg={6} md={6} sm={12}>
                     <Card id='CARD_IMG'>
@@ -254,12 +258,12 @@ const Insights2 = () => {
                                 barKeys={['Green', 'Amber', 'Red']}
                                 colors={colors}
                             />
-                            <div className='d-flex justify-content-around align-items-center text-center mt-3'>
-                                <Link to='/admin/insights/Heart_rate/Heart_Rate_Green_Cases'><p>Heart Rate Green Cases</p></Link>
-                                <Link to='/admin/insights/Heart_rate/Heart_Rate_Amber_Cases'><p>Heart Rate Amber Cases</p></Link>
+                            {/* <div className='d-flex justify-content-around align-items-center text-center mt-3'> */}
+                            <div style={{textAlign:'center'}} className='mt-3'>
+                                <Link to='/admin/insights/Heart_rate/Heart_Rate_Green_Cases' ><p >Heart Rate Green Cases</p></Link>
+                                <Link to='/admin/insights/Heart_rate/Heart_Rate_Amber_Cases'><p >Heart Rate Amber Cases</p></Link>
                                 <Link to='/admin/insights/Heart_rate/Heart_Rate_Red_Cases'><p>Heart Rate Red Cases</p></Link>
                             </div>
-                            <br></br>
                         </Card.Body>
                     </Card>
                 </Col>
@@ -277,13 +281,12 @@ const Insights2 = () => {
                                 barKeys={['Green', 'Amber', 'Red']}
                                 colors={colors}
                             />
-                            <div className='d-flex justify-content-around align-items-center text-center mt-3'>
-                                <Link to='/admin/insights/BMI/BMI_Green_Cases'><p>BMI Green Cases</p></Link>
-                                <Link to='/admin/insights/BMI/BMI_Amber_Cases'><p>BMI Amber Cases</p></Link>
+                            <div style={{textAlign:'center'}} className='mt-3'>
+                                <Link to='/admin/insights/BMI/BMI_Green_Cases'><p >BMI Green Cases</p></Link>
+                                <Link to='/admin/insights/BMI/BMI_Amber_Cases'><p >BMI Amber Cases</p></Link>
                                 <Link to='/admin/insights/BMI/BMI_Red_Cases'><p>BMI Red Cases</p></Link>
                             </div>
                         </Card.Body>
-                        <br></br>
                     </Card>
                     <br></br>
                 </Col>
@@ -297,9 +300,9 @@ const Insights2 = () => {
                                 barKeys={['Green', 'Amber', 'Red']}
                                 colors={colors}
                             />
-                            <div className='d-flex justify-content-around align-items-center text-center mt-3'>
-                                <Link to='/admin/insights/blood_glucose/Blood_Glucose_Green_Cases'><p>Blood Glucose Green Cases</p></Link>
-                                <Link to='/admin/insights/blood_glucose/Blood_Glucose_Amber_Cases'><p>Blood Glucose Amber Cases</p></Link>
+                            <div style={{textAlign:'center'}} className='mt-3'>
+                                <Link to='/admin/insights/blood_glucose/Blood_Glucose_Green_Cases'><p >Blood Glucose Green Cases</p></Link>
+                                <Link to='/admin/insights/blood_glucose/Blood_Glucose_Amber_Cases'><p >Blood Glucose Amber Cases</p></Link>
                                 <Link to='/admin/insights/blood_glucose/Blood_Glucose_Red_Cases'><p>Blood Glucose Red Cases</p></Link>
                             </div>
                         </Card.Body>
@@ -319,14 +322,13 @@ const Insights2 = () => {
                                 barKeys={['Green', 'Amber', 'Red']}
                                 colors={colors}
                             />
-                            <div className='d-flex justify-content-around align-items-center text-center mt-3'>
-                                <Link to='/admin/insights/LDL-Lipid panel/LDL_Lipid_Panel_Green_cases'><p>LDL-Lipid Panel Green Cases</p></Link>
-                                <Link to='/admin/insights/LDL-Lipid panel/LDL_Lipid_Panel_amber_cases'><p>LDL-Lipid Panel Amber Cases</p></Link>
+                           <div style={{textAlign:'center'}} className='mt-3'>
+                                <Link to='/admin/insights/LDL-Lipid panel/LDL_Lipid_Panel_Green_cases'><p >LDL-Lipid Panel Green Cases</p></Link>
+                                <Link to='/admin/insights/LDL-Lipid panel/LDL_Lipid_Panel_amber_cases'><p >LDL-Lipid Panel Amber Cases</p></Link>
                                 <Link to='/admin/insights/LDL-Lipid panel/LDL_Lipid_Panel_Red_cases'><p>LDL-Lipid Panel Red Cases</p></Link>
                             </div>
                         </Card.Body>
                     </Card>
-                    <br></br>
                 </Col>
                 <Col lg={6} md={6} sm={12}>
                     <Card id='CARD_IMG'>
@@ -338,9 +340,9 @@ const Insights2 = () => {
                                 barKeys={['Green', 'Amber', 'Red']}
                                 colors={colors}
                             />
-                            <div className='d-flex justify-content-around align-items-center text-center mt-3'>
-                                <Link to='/admin/insights/HDL-Lipid Panel/HDL_Lipid_Panel_Green_Cases'><p>HDL-Lipid Panel Green Cases</p></Link>
-                                <Link to='/admin/insights/HDL-Lipid Panel/HDL_Lipid_Panel_Amber_Cases'><p>HDL-Lipid Panel Amber Cases</p></Link>
+                            <div style={{textAlign:'center'}} className='mt-3'>
+                                <Link to='/admin/insights/HDL-Lipid Panel/HDL_Lipid_Panel_Green_Cases'><p >HDL-Lipid Panel Green Cases</p></Link>
+                                <Link to='/admin/insights/HDL-Lipid Panel/HDL_Lipid_Panel_Amber_Cases'><p >HDL-Lipid Panel Amber Cases</p></Link>
                                 <Link to='/admin/insights/HDL-Lipid Panel/HDL_Lipid_Panel_Red_Cases'><p>HDL-Lipid Panel Red Cases</p></Link>
                             </div>
                         </Card.Body>
@@ -360,9 +362,9 @@ const Insights2 = () => {
                                 barKeys={['Green', 'Amber', 'Red']}
                                 colors={colors}
                             />
-                            <div className='d-flex justify-content-around align-items-center text-center mt-3'>
-                                <Link to='/admin/insights/Triglycerides_Lipid_Panel/Triglycerides_Lipid_Panel_green_cases'><p>Triglycerides-Lipid Panel Green Cases</p></Link>
-                                <Link to='/admin/insights/Triglycerides_Lipid_Panel/Triglycerides_Lipid_Panel_amber_cases'><p>Triglycerides-Lipid Panel Amber Cases</p></Link>
+                           <div style={{textAlign:'center'}} className='mt-3'>
+                                <Link to='/admin/insights/Triglycerides_Lipid_Panel/Triglycerides_Lipid_Panel_green_cases'><p >Triglycerides-Lipid Panel Green Cases</p></Link>
+                                <Link to='/admin/insights/Triglycerides_Lipid_Panel/Triglycerides_Lipid_Panel_amber_cases'><p >Triglycerides-Lipid Panel Amber Cases</p></Link>
                                 <Link to='/admin/insights/Triglycerides_Lipid_Panel/Triglycerides_Lipid_Panel_red_cases'><p>Triglycerides-Lipid Panel Red Cases</p></Link>
                             </div>
                         </Card.Body>
@@ -379,9 +381,9 @@ const Insights2 = () => {
                                 barKeys={['Green', 'Amber', 'Red']}
                                 colors={colors}
                             />
-                            <div className='d-flex justify-content-around align-items-center text-center mt-3'>
-                                <Link to='/admin/insights/Cholesterol-Lipid Panel/Cholesterol_Lipid_Panel_Green_Cases'><p>Cholesterol-Lipid Panel Green Cases</p></Link>
-                                <Link to='/admin/insights/Cholesterol-Lipid Panel/Cholesterol_Lipid_Panel_amber_Cases'><p>Cholesterol-Lipid Panel Amber Cases</p></Link>
+                            <div style={{textAlign:'center'}} className='mt-3'>
+                                <Link to='/admin/insights/Cholesterol-Lipid Panel/Cholesterol_Lipid_Panel_Green_Cases'><p >Cholesterol-Lipid Panel Green Cases</p></Link>
+                                <Link to='/admin/insights/Cholesterol-Lipid Panel/Cholesterol_Lipid_Panel_amber_Cases'><p >Cholesterol-Lipid Panel Amber Cases</p></Link>
                                 <Link to='/admin/insights/Cholesterol-Lipid Panel/Cholesterol_Lipid_Panel_Red_Cases'><p>Cholesterol-Lipid Panel Red Cases</p></Link>
                             </div>
                         </Card.Body>
@@ -399,10 +401,10 @@ const Insights2 = () => {
                                 barKeys={['Green', 'Amber', 'Red']}
                                 colors={colors}
                             />
-                            <div className='d-flex justify-content-around align-items-center text-center mt-3'>
-                                <Link to='/admin/insights/Right_Eye_Tests/Right_Eye_Tests_Green_case'><p>Right Eye Tests Green Cases</p></Link>
-                                <Link to='/admin/insights/Right_Eye_Tests/Right_Eye_Tests_Amber_case'><p>Right Eye Tests Amber Cases</p></Link>
-                                <Link to='/admin/insights/Right_Eye_Tests/Right_Eye_Tests_Red_case'><p>Right Eye Tests Red Cases</p></Link>
+                            <div style={{textAlign:'center'}} className='mt-3'>
+                                <Link to='/admin/insights/Right_Eye_Tests/Right_Eye_Tests_Green_case'><p >Right Eye Tests Green Cases</p></Link>
+                                <Link to='/admin/insights/Right_Eye_Tests/Right_Eye_Tests_Amber_case'><p >Right Eye Tests Amber Cases</p></Link>
+                                <Link to='/admin/insights/Right_Eye_Tests/Right_Eye_Tests_Red_case'><p >Right Eye Tests Red Cases</p></Link>
                             </div>
                         </Card.Body>
                     </Card>
@@ -417,10 +419,10 @@ const Insights2 = () => {
                                 barKeys={['Green', 'Amber', 'Red']}
                                 colors={colors}
                             />
-                            <div className='d-flex justify-content-around align-items-center text-center mt-3'>
-                                <Link to='/admin/insights/Left_Eye_Tests/Left_Eye_Tests_Green_Tests'><p>Left Eye Tests Green Cases</p></Link>
-                                <Link to='/admin/insights/Left_Eye_Tests/Left_Eye_Tests_Amber_Tests'><p>Left Eye Tests Amber Cases</p></Link>
-                                <Link to='/admin/insights/Left_Eye_Tests/Left_Eye_Tests_Red_Tests'><p>Left Eye Tests Red Cases</p></Link>
+                            <div style={{textAlign:'center'}} className='mt-3'>
+                                <Link to='/admin/insights/Left_Eye_Tests/Left_Eye_Tests_Green_Tests'><p >Left Eye Tests Green Cases</p></Link>
+                                <Link to='/admin/insights/Left_Eye_Tests/Left_Eye_Tests_Amber_Tests'><p >Left Eye Tests Amber Cases</p></Link>
+                                <Link to='/admin/insights/Left_Eye_Tests/Left_Eye_Tests_Red_Tests'><p >Left Eye Tests Red Cases</p></Link>
                             </div>
                         </Card.Body>
                     </Card>
@@ -437,7 +439,7 @@ const Insights2 = () => {
                             colors={colors}
                         />
                     </div>
-                    <div className='d-flex justify-content-around align-items-center text-center mt-3'>
+                    <div style={{textAlign:'center'}} className='mt-3'>
                         <Link to='/admin/insights/Haemoglobin/Haemoglobin_green_case'><p>Haemoglobin Green Cases</p></Link>
                         <Link to='/admin/insights/Haemoglobin/Haemoglobin_amber_case'><p>Haemoglobin Amber Cases</p></Link>
                         <Link to='/admin/insights/Haemoglobin/Haemoglobin_red_case'><p>Haemoglobin Red Cases</p></Link>

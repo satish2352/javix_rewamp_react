@@ -16,6 +16,8 @@ import Home from '../dashboard/home/Home';
 // import { ButtonGroup } from 'react-bootstrap';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
+import { Card } from 'react-bootstrap';
+import Export_Button from '../dashboard/Exportbuttoncomponents/Export_Button';
 
 const data = [
     {
@@ -76,18 +78,96 @@ function Health_survey() {
                 size: 150,
             },
             {
-                accessorKey: 'action',
-                header: 'Action',
+                accessorKey: 'family_member_name',
+                header: 'Driking Water Source',
                 size: 150,
-                Cell: ({ row }) => (
-                    <Box>
-                        <button onClick={() => handleActivateUser(row)} style={{ height: '32px', width: '32px', borderRadius: '50%' }}>
-                            {/* <img src={ActivateUserIcon} alt="" style={{ width: '100%', height: 'auto' }} /> */}
-                            <IoScanCircle style={{ fontSize: "30px" }} />
-                        </button>
-                    </Box>
-                ),
             },
+            {
+                accessorKey: 'family_member_name',
+                header: 'Driking Water Distance',
+                size: 150,
+            },
+            {
+                accessorKey: 'family_member_name',
+                header: 'Distance of Subcenters',
+                size: 150,
+            },
+
+            {
+                accessorKey: 'family_member_name',
+                header: 'Distance of Primary Helath Centers',
+                size: 150,
+            },
+            {
+                accessorKey: 'family_member_name',
+                header: 'Distance of Community Health centers',
+                size: 150,
+            },
+
+            {
+                accessorKey: 'family_member_name',
+                header: 'Distance of Pathology Lab',
+                size: 150,
+            },
+            {
+                accessorKey: 'family_member_name',
+                header: 'Distance of Medical Store',
+                size: 150,
+            },
+            {
+                accessorKey: 'family_member_name',
+                header: 'Status of Delivery of Children',
+                size: 150,
+            },
+            {
+                accessorKey: 'family_member_name',
+                header: 'Status of Vaccination of Children',
+                size: 150,
+            },
+            {
+                accessorKey: 'family_member_name',
+                header: 'Status of Female Releted Problems',
+                size: 150,
+            },
+            {
+                accessorKey: 'family_member_name',
+                header: 'Centrally Issued Health Insurance',
+                size: 150,
+            },
+            {
+                accessorKey: 'family_member_name',
+                header: 'State Issued Health Insurance',
+                size: 150,
+            },
+
+            {
+                accessorKey: 'family_member_name',
+                header: 'Personal Health Insurance',
+                size: 150,
+            },
+            {
+                accessorKey: 'family_member_name',
+                header: 'Distance of District Hospital',
+                size: 150,
+            },
+            {
+                accessorKey: 'family_member_name',
+                header: 'Survey Date',
+                size: 150,
+            },
+            // {
+            //     accessorKey: 'action',
+            //     header: 'Action',
+            //     size: 150,
+            //     Cell: ({ row }) => (
+            //         <Box>
+            //             <button onClick={() => handleActivateUser(row)} style={{ height: '32px', width: '32px', borderRadius: '50%' }}>
+            //                 {/* <img src={ActivateUserIcon} alt="" style={{ width: '100%', height: 'auto' }} /> */}
+            //                 <IoScanCircle style={{ fontSize: "30px" }} />
+            //             </button>
+            //         </Box>
+            //     ),
+            // },
         ],
         []
     );
@@ -112,27 +192,28 @@ function Health_survey() {
     const handleActivateUser = (row) => {
         alert('activating ' + row.getValue('name'));
     };
-  return (
-    <>
-     <Home />
-            <br></br>
-            <h5 style={{ color: "#ea5455" }}>Health Survey Data</h5>
-            <Box
-                sx={(theme) => ({
-                    backgroundColor: lighten(theme.palette.background.default, 0.05),
-                    display: 'flex',
-                    gap: '0.5rem',
-                    p: '8px',
-                    justifyContent: 'space-between',
-                })}
-            >
-                <Box sx={{ display: 'flex', gap: '0.5rem', alignItems: 'center' }}>
-                    <MRT_GlobalFilterTextField table={table} />
-                    <MRT_ToggleFiltersButton table={table} />
-                </Box>
-                <Box>
-                    <Box sx={{ display: 'flex', gap: '0.5rem' }}>
-                        {/* <Button
+    return (
+        <>
+            <Home />
+            <Card className='mt-3'>
+                <Card.Body>
+                    <p style={{ color: "black", fontSize: '20px' }}>Health Survey Data</p>
+                    <Box
+                        sx={(theme) => ({
+                            backgroundColor: lighten(theme.palette.background.default, 0.05),
+                            display: 'flex',
+                            gap: '0.5rem',
+                            p: '8px',
+                            justifyContent: 'space-between',
+                        })}
+                    >
+                        <Box sx={{ display: 'flex', gap: '0.5rem', alignItems: 'center' }}>
+                            <MRT_GlobalFilterTextField table={table} />
+                            <MRT_ToggleFiltersButton table={table} />
+                        </Box>
+                        <Box>
+                            <Box sx={{ display: 'flex', gap: '0.5rem' }}>
+                                {/* <Button
                             color="success"
                             disabled={!table.getIsSomeRowsSelected()}
                             onClick={handleActivate}
@@ -148,16 +229,16 @@ function Health_survey() {
                         >
                             Deactivate
                         </Button> */}
-                        <Button variant='primary' style={{backgroundColor : '#4848d1' ,  color : 'white'}}>Export</Button>
+                                <Export_Button data={data} name={"Health Survey"}/>
+                            </Box>
+                        </Box>
                     </Box>
-                </Box>
-            </Box>
-            <br></br>
+                    <MaterialReactTable table={table} />
+                </Card.Body>
+            </Card>
 
-            <MaterialReactTable table={table} />
-            <br></br>
-    </>
-  )
+        </>
+    )
 }
 
 export default Health_survey

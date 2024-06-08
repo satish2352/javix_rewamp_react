@@ -15,6 +15,7 @@ import { Box, Button, lighten } from '@mui/material';
 import Home from '../../screens/dashboard/home/Home';
 import { useNavigate } from "react-router-dom"
 import DoctorProfileDisplay from '../../screens/DoctorsProfileDisplay/DoctorProfileDisplay';
+import { Card } from 'react-bootstrap';
 
 
 const data = [
@@ -40,7 +41,7 @@ const data = [
     mobile: "9562111452",
     email: "reger@gmail.com",
     qualification: "erger",
-    profile: <Button variant="primary"><FaUserCircle/></Button>
+    profile: <Button variant="primary"><FaUserCircle /></Button>
   },
 ]
 function DoctorsCard_table() {
@@ -124,32 +125,35 @@ function DoctorsCard_table() {
   return (
     <>
       <Home />
-      <br></br>
-      <h5 style={{ color: "#ea5455" }}><b>Doctors List</b></h5>
-
-      <Box
-        sx={(theme) => ({
-          backgroundColor: lighten(theme.palette.background.default, 0.05),
-          display: 'flex',
-          gap: '0.5rem',
-          p: '8px',
-          justifyContent: 'space-between',
-        })}
-      >
-        <Box sx={{ display: 'flex', gap: '0.5rem', alignItems: 'center' }}>
-          <MRT_GlobalFilterTextField table={table} />
-          <MRT_ToggleFiltersButton table={table} />
-        </Box>
-        <Box>
-          <Box sx={{ display: 'flex', gap: '0.5rem' }}>
-            <Button variant='primary' style={{ backgroundColor: '#4848d1', color: 'white' }}>Export</Button>
+      <Card className='mt-3'>
+        <Card.Body>
+          <p style={{ color: "black" , fontSize :'20px' }}>Doctors List </p>
+          <Box
+            sx={(theme) => ({
+              backgroundColor: lighten(theme.palette.background.default, 0.05),
+              display: 'flex',
+              gap: '0.5rem',
+              p: '8px',
+              justifyContent: 'space-between',
+            })}
+          >
+            <Box sx={{ display: 'flex', gap: '0.5rem', alignItems: 'center' }}>
+              <MRT_GlobalFilterTextField table={table} />
+              <MRT_ToggleFiltersButton table={table} />
+            </Box>
+            <Box>
+              {/* <Box sx={{ display: 'flex', gap: '0.5rem' }}>
+                <Button variant='primary' style={{ backgroundColor: '#4848d1', color: 'white' }}>Export</Button>
+              </Box> */}
+            </Box>
           </Box>
-        </Box>
-      </Box>
 
-      <MaterialReactTable table={table} />
+          <MaterialReactTable table={table} />
+        </Card.Body>
+      </Card>
 
-      <br></br>
+
+
     </>
   )
 }

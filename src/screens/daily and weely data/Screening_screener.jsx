@@ -431,7 +431,7 @@ function Screening_screener() {
       },
       {
         accessorKey: 'arm',
-        header: 'ARM',
+        header: 'Arm',
         size: 150,
       },
       {
@@ -589,22 +589,22 @@ function Screening_screener() {
 
       {
         accessorKey: 'ldl',
-        header: 'IDL',
+        header: 'LDL',
         size: 150,
       },
       {
         accessorKey: 'tchdl',
-        header: 'TCHDL',
+        header: 'TC/HDL',
         size: 150,
       },
       {
         accessorKey: 'ldlhdl',
-        header: 'LDLHDL',
+        header: 'LDL/HDL',
         size: 150,
       },
       {
         accessorKey: 'nonhdl',
-        header: 'Non HDL',
+        header: 'NON_HDL',
         size: 150,
       },
       {
@@ -622,18 +622,18 @@ function Screening_screener() {
         header: 'Created At',
         size: 150,
       },
-      {
-        accessorKey: 'action',
-        header: 'Action',
-        size: 150,
-        Cell: ({ row }) => (
-          <Box>
-            <button onClick={() => handleActivateUser(row)} style={{ height: '32px', width: '32px', borderRadius: '50%' }}>
-              <img src={ActivateUserIcon} alt="" style={{ width: '100%', height: 'auto' }} />
-            </button>
-          </Box>
-        ),
-      },
+      // {
+      //   accessorKey: 'action',
+      //   header: 'Action',
+      //   size: 150,
+      //   Cell: ({ row }) => (
+      //     <Box>
+      //       <button onClick={() => handleActivateUser(row)} style={{ height: '32px', width: '32px', borderRadius: '50%' }}>
+      //         <img src={ActivateUserIcon} alt="" style={{ width: '100%', height: 'auto' }} />
+      //       </button>
+      //     </Box>
+      //   ),
+      // },
     ],
     []
   );
@@ -664,7 +664,7 @@ function Screening_screener() {
       <Home />
       <br></br>
 
-      <h5 style={{ color: "#ea5455" }}><b>Screening_screener</b></h5>
+      <h5 style={{ color: "#ea5455" }}><b>Daily And Weekly Screening Screener Report</b></h5>
       <Box
         sx={(theme) => ({
           backgroundColor: lighten(theme.palette.background.default, 0.05),

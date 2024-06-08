@@ -12,8 +12,8 @@ const squareCardsData = [
     { title: 'NGO', text: '0', url: '/approvedusers/ngo' },
     { title: 'Screeners', text: '0', url: '/approvedusers/screener' },
     { title: 'Sevikas', text: '0', url: '/approvedusers/sevika' },
-    { title: 'Citizen ', text: '0', url: '/petient_view' },
-    { title: 'Screening', text: '0', url: '/approvedusers/screener' },
+    { title: 'Citizen ', text: '0', url: '/citizen-list' },
+    { title: 'Screening', text: '0', url: '/scrennings' },
     { title: 'Pharmacies', text: '0', url: '/approvedusers/pharmacy' },
     { title: 'Prescribed', text: '0', url: '/prescrided' },
     { title: 'Non-Prescribed', text: '0', url: '/non-prescrided' },
@@ -45,8 +45,8 @@ const AdminHome = () => {
         <>
             <Home />
             <div className="home-container">
-                <div className="welcome-message">
-                    <h2 className='text-capitalize'>Welcome, {role} !</h2>
+                <div className="welcome-message" >
+                    <h2 className='text-capitalize' >Welcome, {role} !</h2>
                 </div>
                 <SquareCards cardsData={squareCardsData}/>
                 <BarAndPie data={barAndPieData} colors={barAndPieColors} />

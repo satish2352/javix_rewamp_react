@@ -200,3 +200,30 @@ ul {
 .ps-menu-icon {
   color: #000;
 }
+
+.activeMenuClass {
+  background-color: #9188f1;
+  border-radius: 10px;
+  color: white;
+}
+.activeMenuClass .ps-menu-label {
+  color: white;
+}
+
+
+
+
+
+.menu-list {
+  .menu-item {
+    .menu-icon {
+      color: #000; // Default icon color
+    }
+
+    &.activeMenuClass {
+      .menu-icon {
+        color: #fff; // Icon color when active
+      }
+    }
+  }
+}
