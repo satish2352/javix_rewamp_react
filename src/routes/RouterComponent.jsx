@@ -17,7 +17,7 @@ const ForgotPassword = Loadable(lazy(() => import('../AuthPages/ForgotPassword')
 
 const BaseLayout = Loadable(lazy(() => import('../layout/BaseLayout')));
 
-const AdminHome = Loadable(lazy(() => import('../components/home pages/AdminHome')));
+const AdminHome = Loadable(lazy(() => import('../Pages/Home/AdminHome')));
 const DoctorsCard_table = Loadable(lazy(() => import('../components/Home_page_card_data/DoctorsCard_table')));
 const DoctorProfileDisplay = Loadable(lazy(() => import('../screens/DoctorsProfileDisplay/DoctorProfileDisplay')));
 const DoctorProfileEdit = Loadable(lazy(() => import('../screens/DoctorsProfileDisplay/DoctorProfileEdit')));

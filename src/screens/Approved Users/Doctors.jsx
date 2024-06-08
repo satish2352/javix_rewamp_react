@@ -131,7 +131,7 @@ function Doctors() {
   };
 
   const handleActivateUser = (row) => {
-    alert('hii');
+    //alert('hii');
     Navigate('/home/doctor_list/doctorprofiledisplay')
   };
   return (
