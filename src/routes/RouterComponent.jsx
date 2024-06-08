@@ -11,9 +11,9 @@ import Loadable from "./Loadable";
 
 // import AddUser from "../screens/adduser/Adduser";
 //LOADEER
-const Firstpage = Loadable(lazy(() => import('../components/home pages/Firstpage')));
-const LoginPage = Loadable(lazy(() => import('../screens/LoginPage')));
-const ForgotPassword = Loadable(lazy(() => import('../screens/ForgotPassword')));
+const Firstpage = Loadable(lazy(() => import('../AuthPages/Firstpage')));
+const LoginPage = Loadable(lazy(() => import('../AuthPages/LoginPage')));
+const ForgotPassword = Loadable(lazy(() => import('../AuthPages/ForgotPassword')));
 
 const BaseLayout = Loadable(lazy(() => import('../layout/BaseLayout')));
 

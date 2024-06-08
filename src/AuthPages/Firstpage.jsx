@@ -1,6 +1,6 @@
 import React from 'react'
-import firstpage_img from '../../assets/images/firstpage.png'
-import page from '../../assets/images/1.png'
+import firstpage_img from '../assets/images/firstpage.png'
+import page from '../assets/images/1.png'
 import Image from 'react-bootstrap/Image';
 import { Button, Col, Container, Row } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
