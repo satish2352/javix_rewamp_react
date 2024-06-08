@@ -17,7 +17,7 @@ const ForgotPassword = Loadable(lazy(() => import('../AuthPages/ForgotPassword')
 
 const BaseLayout = Loadable(lazy(() => import('../layout/BaseLayout')));
 
-const AdminHome = Loadable(lazy(() => import('../Pages/Home/AdminHome')));
+const Home = Loadable(lazy(() => import('../Pages/Home/Home')));
 const DoctorsCard_table = Loadable(lazy(() => import('../components/Home_page_card_data/DoctorsCard_table')));
 const DoctorProfileDisplay = Loadable(lazy(() => import('../screens/DoctorsProfileDisplay/DoctorProfileDisplay')));
 const DoctorProfileEdit = Loadable(lazy(() => import('../screens/DoctorsProfileDisplay/DoctorProfileEdit')));
@@ -26,16 +26,16 @@ const Directory = Loadable(lazy(() => import('../screens/dashboard/home/Director
 const Scrennering = Loadable(lazy(() => import('../components/home pages/home page components/scrennings_home/Scrennering')));
 const Add_Citizen = Loadable(lazy(() => import('../components/home pages/home page components/citizen profile/Add_Citizen')));
 const Citizen_form = Loadable(lazy(() => import('../components/home pages/home page components/citizen profile/Citizen_form')));
-const AddUser = Loadable(lazy(() => import('../screens/adduser/Adduser')));
+const AddUser = Loadable(lazy(() => import('../Pages/adduser/Adduser')));
 const Citizen_update = Loadable(lazy(() => import('../components/home pages/home page components/citizen profile/Citizen_update')));
-const Doctors = Loadable(lazy(() => import('../screens/Approved Users/Doctors')));
-const Ngo = Loadable(lazy(() => import('../screens/Approved Users/Ngo')));
-const Screener = Loadable(lazy(() => import('../screens/Approved Users/Screener')));
-const ScreenerProfileInfo = Loadable(lazy(() => import('../screens/Approved Users/ScreenerProfileInfo')));
-const Sevika = Loadable(lazy(() => import('../screens/Approved Users/Sevika')));
-const Pharmacy = Loadable(lazy(() => import('../screens/Approved Users/Pharmacy')));
-const Active_users = Loadable(lazy(() => import('../screens/users/Active_users')));
-const Inactive_users = Loadable(lazy(() => import('../screens/users/Inactive_users')));
+const Doctors = Loadable(lazy(() => import('../Pages/Approved Users/Doctors')));
+const Ngo = Loadable(lazy(() => import('../Pages/Approved Users/Ngo')));
+const Screener = Loadable(lazy(() => import('../Pages/Approved Users/Screener')));
+const ScreenerProfileInfo = Loadable(lazy(() => import('../Pages/Approved Users/ScreenerProfileInfo')));
+const Sevika = Loadable(lazy(() => import('../Pages/Approved Users/Sevika')));
+const Pharmacy = Loadable(lazy(() => import('../Pages/Approved Users/Pharmacy')));
+const Active_users = Loadable(lazy(() => import('../Pages/users/Active_users')));
+const Inactive_users = Loadable(lazy(() => import('../Pages/users/Inactive_users')));
 const General_survey = Loadable(lazy(() => import('../screens/general survey/General_survey')));
 const Health_survey = Loadable(lazy(() => import('../screens/health survey/Health_survey')));
 const Insights2 = Loadable(lazy(() => import('../screens/insights/Insights2')));
@@ -104,9 +104,9 @@ const Haemoglobin_red_case = Loadable(lazy(() => import('../screens/insights/Hae
 const Haemoglobin_amber_case = Loadable(lazy(() => import('../screens/insights/Haemoglobin/Haemoglobin_amber_case')));
 
 const Socieconomin_survey = Loadable(lazy(() => import('../screens/socieconomic survey/Socieconomin_survey')));
-const Screening_screener = Loadable(lazy(() => import('../screens/daily and weely data/Screening_screener')));
-const Screening_sevika = Loadable(lazy(() => import('../screens/daily and weely data/Screening_sevika')));
-const Patient_List_For_Lipid_Panel_Test = Loadable(lazy(() => import('../screens/daily and weely data/Patient_List_For_Lipid_Panel_Test')));
+const Screening_screener = Loadable(lazy(() => import('../Pages/daily and weely data/Screening_screener')));
+const Screening_sevika = Loadable(lazy(() => import('../Pages/daily and weely data/Screening_sevika')));
+const Patient_List_For_Lipid_Panel_Test = Loadable(lazy(() => import('../Pages/daily and weely data/Patient_List_For_Lipid_Panel_Test')));
 const New_issue = Loadable(lazy(() => import('../screens/issue addressing/New_issue')));
 const New_issue_From = Loadable(lazy(() => import('../screens/issue addressing/New_issue_From')));
 const Update_issue = Loadable(lazy(() => import('../screens/issue addressing/Update_issue')));
@@ -155,7 +155,7 @@ function RouterComponent() {
 
         {/* Base layout start */}
         <Route element={<BaseLayout />}>
-          <Route path="/dashboard" element={<AdminHome />} />
+          <Route path="/dashboard" element={<Home />} />
           <Route path='/insights' element={<Insights2 />} />
           {/* Admin section start */}
           {/* <Route path="/dashboard" element={<AdminHom />} /> */}

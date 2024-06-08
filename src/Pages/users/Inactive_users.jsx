@@ -9,7 +9,7 @@ import {
   MRT_ToggleFiltersButton,
 } from 'material-react-table';
 import { Box, Button, lighten } from '@mui/material';
-import Home from '../dashboard/home/Home';
+import Home from '../../layout/Header';
 import { Card } from 'react-bootstrap';
 
 const data = [

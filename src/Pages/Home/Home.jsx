@@ -1,8 +1,8 @@
 import RectangleCards from '../../components/home pages/home page components/RectangleCards';
-import PieAndBar from '../../components/home pages/home page components/PieAndBar';
+import PieAnkdBar from '../../components/home pages/home page components/PieAndBar';
 import SquareCards from '../../components/home pages/home page components/SqaureCards';
 import BarAndPie from '../../components/home pages/home page components/BarAndPie';
-import './AdminHome.css'
+import './Home.css'
 import { Card } from 'react-bootstrap';
 import Home from '../../screens/dashboard/home/Home'
 // import xyz from '../../screens/Doctors_Section/Petient view/Petient_view'

@@ -3,7 +3,7 @@ import { Form, Button, Col, Container, Row } from 'react-bootstrap';
 import axios from 'axios';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Card from 'react-bootstrap/Card';
-import Home from '../dashboard/home/Home';
+import Home from '../../layout/Header';
 import { FaEye } from "react-icons/fa";
 import { BiSolidHide } from "react-icons/bi";
 

@@ -10,7 +10,7 @@ import {
 
 } from 'material-react-table';
 import { Box, Button, lighten } from '@mui/material';
-import Home from '../dashboard/home/Home';
+import Home from '../../layout/Header';
 
 const data = [
   {
@@ -19,8 +19,9 @@ const data = [
     caseID: "axy",
     screenerID: "Doctors",
     citizen_name: "Inactive",
-    screener_name: "axy sdc",
-    DOB: "No",
+    screenerfullname: "axy sdc",
+    DOB: "124",
+    Role:'dfvdf',
     gender: "No",
     age: "Active",
     aadhar_number: "No",
@@ -81,8 +82,9 @@ const data = [
     caseID: "axffefwy",
     screenerID: "Doctors",
     citizen_name: "Inactive",
-    screener_name: "axy sdc",
-    DOB: "No",
+    screenerfullname: "axy sdc",
+    DOB:'12',
+    Role: "No",
     gender: "No",
     age: "Active",
     aadhar_number: "No",
@@ -143,8 +145,9 @@ const data = [
     caseID: "regerver",
     screenerID: "Doctors",
     citizen_name: "Inactive",
-    screener_name: "axy sdc",
-    DOB: "No",
+    screenerfullname: "axy sdc",
+    DOB: "124",
+    Role: "No",
     gender: "No",
     age: "Active",
     aadhar_number: "No",
@@ -205,8 +208,9 @@ const data = [
     caseID: "fdgfgdfg",
     screenerID: "Doctors",
     citizen_name: "Inactive",
-    screener_name: "axy sdc",
-    DOB: "No",
+    screenerfullname: "axy sdc",
+    DOB: "124",
+    Role: "No",
     gender: "No",
     age: "Active",
     aadhar_number: "No",
@@ -267,8 +271,9 @@ const data = [
     caseID: "ujkyuym",
     screenerID: "Doctors",
     citizen_name: "Inactive",
-    screener_name: "axy sdc",
-    DOB: "No",
+    screenerfullname: "axy sdc",
+    DOB: "124",
+    Role: "No",
     gender: "No",
     age: "Active",
     aadhar_number: "No",
@@ -326,7 +331,7 @@ const data = [
 
 ]
 
-function Screening_screener() {
+function Patient_List_For_Lipid_Panel_Test() {
   const columns = useMemo(
     () => [
       {
@@ -355,13 +360,18 @@ function Screening_screener() {
         size: 150,
       },
       {
-        accessorKey: 'screener_name',
-        header: 'Screener Name',
+        accessorKey: 'screenerfullname',
+        header: 'Screener Full Name',
         size: 150,
       },
       {
         accessorKey: 'DOB',
         header: 'DOB',
+        size: 150,
+      },
+      {
+        accessorKey: 'Role',
+        header: 'Role',
         size: 150,
       },
       {
@@ -374,21 +384,21 @@ function Screening_screener() {
         header: 'Age',
         size: 150,
       },
-      {
-        accessorKey: 'aadhar_number',
-        header: 'Aadhar Number',
-        size: 150,
-      },
-      {
-        accessorKey: 'mobile',
-        header: 'mobile',
-        size: 150,
-      },
-      {
-        accessorKey: 'address',
-        header: 'Address',
-        size: 150,
-      },
+      // {
+      //   accessorKey: 'aadhar_number',
+      //   header: 'Aadhar Number',
+      //   size: 150,
+      // },
+      // {
+      //   accessorKey: 'mobile',
+      //   header: 'mobile',
+      //   size: 150,
+      // },
+      // {
+      //   accessorKey: 'address',
+      //   header: 'Address',
+      //   size: 150,
+      // },
       {
         accessorKey: 'height',
         header: 'Height',
@@ -664,7 +674,7 @@ function Screening_screener() {
       <Home />
       <br></br>
 
-      <h5 style={{ color: "#ea5455" }}><b>Daily And Weekly Screening Screener Report</b></h5>
+      <h5 style={{ color: "#ea5455" }}><b>Lipid Critical Cases</b></h5>
       <Box
         sx={(theme) => ({
           backgroundColor: lighten(theme.palette.background.default, 0.05),
@@ -705,7 +715,9 @@ function Screening_screener() {
       <br></br>
 
     </>
+
+
   )
 }
 
-export default Screening_screener
+export default Patient_List_For_Lipid_Panel_Test
