@@ -12,12 +12,12 @@ import {
 
 } from 'material-react-table';
 import { Box, Button, lighten } from '@mui/material';
-import Home from '../dashboard/home/Home';
+import Home from '../../layout/Header';
 // import { ButtonGroup } from 'react-bootstrap';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Card } from 'react-bootstrap';
-import Export_Button from '../dashboard/Exportbuttoncomponents/Export_Button';
+import Export_Button from '../../screens/dashboard/Exportbuttoncomponents/Export_Button';
 
 const data = [
     {
