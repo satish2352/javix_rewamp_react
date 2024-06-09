@@ -1,6 +1,6 @@
 import { Row, Col } from 'react-bootstrap';
-import CustomPieChart from '../../../screens/insights/CustomPieChart';
-import CustomBarGraph from '../../../screens/insights/CustomBarGraph';
+import CustomPieChart from '../../../Pages/insights/CustomPieChart';
+import CustomBarGraph from '../../../Pages/insights/CustomBarGraph';
 
 const PieAndBar = ({ data, colors }) => {
     return (

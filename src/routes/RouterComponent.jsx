@@ -38,70 +38,70 @@ const Active_users = Loadable(lazy(() => import('../Pages/users/Active_users')))
 const Inactive_users = Loadable(lazy(() => import('../Pages/users/Inactive_users')));
 const General_survey = Loadable(lazy(() => import('../screens/general survey/General_survey')));
 const Health_survey = Loadable(lazy(() => import('../screens/health survey/Health_survey')));
-const Insights2 = Loadable(lazy(() => import('../screens/insights/Insights2')));
+const Insights2 = Loadable(lazy(() => import('../Pages/insights/Insights2')));
 
-const Blood_pressure_table = Loadable(lazy(() => import('../screens/insights/Blood Pressure chart 1/Blood_pressure_table')));
-const Blood_Pressure_Amber_Cases = Loadable(lazy(() => import('../screens/insights/Blood Pressure chart 1/Blood_Pressure_Amber_Cases')));
-const Blood_Pressure_Red_Cases = Loadable(lazy(() => import('../screens/insights/Blood Pressure chart 1/Blood_Pressure_Red_Cases')));
-
-
-const SPO2_Green_Cases = Loadable(lazy(() => import('../screens/insights/spo2 chart/SPO2_Green_Cases')));
-const SPO2_Amber_Cases = Loadable(lazy(() => import('../screens/insights/spo2 chart/SPO2_Amber_Cases')));
-const SPO2_Red_Cases = Loadable(lazy(() => import('../screens/insights/spo2 chart/SPO2_Red_Cases')));
+const Blood_pressure_table = Loadable(lazy(() => import('../Pages/insights/Blood Pressure chart 1/Blood_pressure_table')));
+const Blood_Pressure_Amber_Cases = Loadable(lazy(() => import('../Pages/insights/Blood Pressure chart 1/Blood_Pressure_Amber_Cases')));
+const Blood_Pressure_Red_Cases = Loadable(lazy(() => import('../Pages/insights/Blood Pressure chart 1/Blood_Pressure_Red_Cases')));
 
 
-const Temperature_Green_Cases = Loadable(lazy(() => import('../screens/insights/Temperature/Temperature_Green_Cases')));
-const Temperature_Amber_Cases = Loadable(lazy(() => import('../screens/insights/Temperature/Temperature_Amber_Cases')));
-const Temperature_Red_Cases = Loadable(lazy(() => import('../screens/insights/Temperature/Temperature_Red_Cases')));
+const SPO2_Green_Cases = Loadable(lazy(() => import('../Pages/insights/spo2 chart/SPO2_Green_Cases')));
+const SPO2_Amber_Cases = Loadable(lazy(() => import('../Pages/insights/spo2 chart/SPO2_Amber_Cases')));
+const SPO2_Red_Cases = Loadable(lazy(() => import('../Pages/insights/spo2 chart/SPO2_Red_Cases')));
 
 
-const Heart_Rate_Green_Cases = Loadable(lazy(() => import('../screens/insights/Heart Rate/Heart_Rate_Green_Cases')));
-const Heart_Rate_Amber_Cases = Loadable(lazy(() => import('../screens/insights/Heart Rate/Heart_Rate_Amber_Cases')));
-const Heart_Rate_Red_Cases = Loadable(lazy(() => import('../screens/insights/Heart Rate/Heart_Rate_Red_Cases')));
+const Temperature_Green_Cases = Loadable(lazy(() => import('../Pages/insights/Temperature/Temperature_Green_Cases')));
+const Temperature_Amber_Cases = Loadable(lazy(() => import('../Pages/insights/Temperature/Temperature_Amber_Cases')));
+const Temperature_Red_Cases = Loadable(lazy(() => import('../Pages/insights/Temperature/Temperature_Red_Cases')));
 
 
-const BMI_Green_Cases = Loadable(lazy(() => import('../screens/insights/BMI Chart/BMI_Green_Cases')));
-const BMI_Red_Cases = Loadable(lazy(() => import('../screens/insights/BMI Chart/BMI_Red_Cases')));
-const BMI_Amber_Cases = Loadable(lazy(() => import('../screens/insights/BMI Chart/BMI_Amber_Cases')));
+const Heart_Rate_Green_Cases = Loadable(lazy(() => import('../Pages/insights/Heart Rate/Heart_Rate_Green_Cases')));
+const Heart_Rate_Amber_Cases = Loadable(lazy(() => import('../Pages/insights/Heart Rate/Heart_Rate_Amber_Cases')));
+const Heart_Rate_Red_Cases = Loadable(lazy(() => import('../Pages/insights/Heart Rate/Heart_Rate_Red_Cases')));
 
 
-const Blood_Glucose_Green_Cases = Loadable(lazy(() => import('../screens/insights/Blood Glucose/Blood_Glucose_Green_Cases')));
-const Blood_Glucose_Red_Cases = Loadable(lazy(() => import('../screens/insights/Blood Glucose/Blood_Glucose_Red_Cases')));
-const Blood_Glucose_Amber_Cases = Loadable(lazy(() => import('../screens/insights/Blood Glucose/Blood_Glucose_Amber_Cases')));
+const BMI_Green_Cases = Loadable(lazy(() => import('../Pages/insights/BMI Chart/BMI_Green_Cases')));
+const BMI_Red_Cases = Loadable(lazy(() => import('../Pages/insights/BMI Chart/BMI_Red_Cases')));
+const BMI_Amber_Cases = Loadable(lazy(() => import('../Pages/insights/BMI Chart/BMI_Amber_Cases')));
 
 
-const LDL_Lipid_Panel_Green_cases = Loadable(lazy(() => import('../screens/insights/LDL-Lipid Panel Chart/LDL_Lipid_Panel_Green_cases')));
-const LDL_Lipid_Panel_Red_cases = Loadable(lazy(() => import('../screens/insights/LDL-Lipid Panel Chart/LDL_Lipid_Panel_Red_cases')));
-const LDL_Lipid_Panel_amber_cases = Loadable(lazy(() => import('../screens/insights/LDL-Lipid Panel Chart/LDL_Lipid_Panel_amber_cases')));
+const Blood_Glucose_Green_Cases = Loadable(lazy(() => import('../Pages/insights/Blood Glucose/Blood_Glucose_Green_Cases')));
+const Blood_Glucose_Red_Cases = Loadable(lazy(() => import('../Pages/insights/Blood Glucose/Blood_Glucose_Red_Cases')));
+const Blood_Glucose_Amber_Cases = Loadable(lazy(() => import('../Pages/insights/Blood Glucose/Blood_Glucose_Amber_Cases')));
 
 
-const HDL_Lipid_Panel_Green_Cases = Loadable(lazy(() => import('../screens/insights/HDL-Lipid Panel/HDL_Lipid_Panel_Green_Cases')));
-const HDL_Lipid_Panel_Amber_Cases = Loadable(lazy(() => import('../screens/insights/HDL-Lipid Panel/HDL_Lipid_Panel_Amber_Cases')));
-const HDL_Lipid_Panel_Red_Cases = Loadable(lazy(() => import('../screens/insights/HDL-Lipid Panel/HDL_Lipid_Panel_Red_Cases')));
+const LDL_Lipid_Panel_Green_cases = Loadable(lazy(() => import('../Pages/insights/LDL-Lipid Panel Chart/LDL_Lipid_Panel_Green_cases')));
+const LDL_Lipid_Panel_Red_cases = Loadable(lazy(() => import('../Pages/insights/LDL-Lipid Panel Chart/LDL_Lipid_Panel_Red_cases')));
+const LDL_Lipid_Panel_amber_cases = Loadable(lazy(() => import('../Pages/insights/LDL-Lipid Panel Chart/LDL_Lipid_Panel_amber_cases')));
 
 
-const Triglycerides_Lipid_Panel_green_cases = Loadable(lazy(() => import('../screens/insights/Triglycerides-Lipid Panel/Triglycerides_Lipid_Panel_green_cases')));
-const Triglycerides_Lipid_Panel_red_cases = Loadable(lazy(() => import('../screens/insights/Triglycerides-Lipid Panel/Triglycerides_Lipid_Panel_red_cases')));
-const Triglycerides_Lipid_Panel_amber_cases = Loadable(lazy(() => import('../screens/insights/Triglycerides-Lipid Panel/Triglycerides_Lipid_Panel_amber_cases')));
+const HDL_Lipid_Panel_Green_Cases = Loadable(lazy(() => import('../Pages/insights/HDL-Lipid Panel/HDL_Lipid_Panel_Green_Cases')));
+const HDL_Lipid_Panel_Amber_Cases = Loadable(lazy(() => import('../Pages/insights/HDL-Lipid Panel/HDL_Lipid_Panel_Amber_Cases')));
+const HDL_Lipid_Panel_Red_Cases = Loadable(lazy(() => import('../Pages/insights/HDL-Lipid Panel/HDL_Lipid_Panel_Red_Cases')));
 
 
-const Cholesterol_Lipid_Panel_Green_Cases = Loadable(lazy(() => import('../screens/insights/Cholesterol-Lipid Panel/Cholesterol_Lipid_Panel_Green_Cases')));
-const Cholesterol_Lipid_Panel_Red_Cases = Loadable(lazy(() => import('../screens/insights/Cholesterol-Lipid Panel/Cholesterol_Lipid_Panel_Red_Cases')));
-const Cholesterol_Lipid_Panel_amber_Cases = Loadable(lazy(() => import('../screens/insights/Cholesterol-Lipid Panel/Cholesterol_Lipid_Panel_amber_Cases')));
+const Triglycerides_Lipid_Panel_green_cases = Loadable(lazy(() => import('../Pages/insights/Triglycerides-Lipid Panel/Triglycerides_Lipid_Panel_green_cases')));
+const Triglycerides_Lipid_Panel_red_cases = Loadable(lazy(() => import('../Pages/insights/Triglycerides-Lipid Panel/Triglycerides_Lipid_Panel_red_cases')));
+const Triglycerides_Lipid_Panel_amber_cases = Loadable(lazy(() => import('../Pages/insights/Triglycerides-Lipid Panel/Triglycerides_Lipid_Panel_amber_cases')));
 
 
-const Right_Eye_Tests_Amber_case = Loadable(lazy(() => import('../screens/insights/Right Eye Tests/Right_Eye_Tests_Amber_case')));
-const Right_Eye_Tests_Green_case = Loadable(lazy(() => import('../screens/insights/Right Eye Tests/Right_Eye_Tests_Green_case')));
-const Right_Eye_Tests_Red_case = Loadable(lazy(() => import('../screens/insights/Right Eye Tests/Right_Eye_Tests_Red_case')));
-
-const Left_Eye_Tests_Green_Tests = Loadable(lazy(() => import('../screens/insights/Left Eye Tests/Left_Eye_Tests_Green_Tests')));
-const Left_Eye_Tests_Red_Tests = Loadable(lazy(() => import('../screens/insights/Left Eye Tests/Left_Eye_Tests_Red_Tests')));
-const Left_Eye_Tests_Amber_Tests = Loadable(lazy(() => import('../screens/insights/Left Eye Tests/Left_Eye_Tests_Amber_Tests')));
+const Cholesterol_Lipid_Panel_Green_Cases = Loadable(lazy(() => import('../Pages/insights/Cholesterol-Lipid Panel/Cholesterol_Lipid_Panel_Green_Cases')));
+const Cholesterol_Lipid_Panel_Red_Cases = Loadable(lazy(() => import('../Pages/insights/Cholesterol-Lipid Panel/Cholesterol_Lipid_Panel_Red_Cases')));
+const Cholesterol_Lipid_Panel_amber_Cases = Loadable(lazy(() => import('../Pages/insights/Cholesterol-Lipid Panel/Cholesterol_Lipid_Panel_amber_Cases')));
 
 
-const Haemoglobin_green_case = Loadable(lazy(() => import('../screens/insights/Haemoglobin/Haemoglobin_green_case')));
-const Haemoglobin_red_case = Loadable(lazy(() => import('../screens/insights/Haemoglobin/Haemoglobin_red_case')));
-const Haemoglobin_amber_case = Loadable(lazy(() => import('../screens/insights/Haemoglobin/Haemoglobin_amber_case')));
+const Right_Eye_Tests_Amber_case = Loadable(lazy(() => import('../Pages/insights/Right Eye Tests/Right_Eye_Tests_Amber_case')));
+const Right_Eye_Tests_Green_case = Loadable(lazy(() => import('../Pages/insights/Right Eye Tests/Right_Eye_Tests_Green_case')));
+const Right_Eye_Tests_Red_case = Loadable(lazy(() => import('../Pages/insights/Right Eye Tests/Right_Eye_Tests_Red_case')));
+
+const Left_Eye_Tests_Green_Tests = Loadable(lazy(() => import('../Pages/insights/Left Eye Tests/Left_Eye_Tests_Green_Tests')));
+const Left_Eye_Tests_Red_Tests = Loadable(lazy(() => import('../Pages/insights/Left Eye Tests/Left_Eye_Tests_Red_Tests')));
+const Left_Eye_Tests_Amber_Tests = Loadable(lazy(() => import('../Pages/insights/Left Eye Tests/Left_Eye_Tests_Amber_Tests')));
+
+
+const Haemoglobin_green_case = Loadable(lazy(() => import('../Pages/insights/Haemoglobin/Haemoglobin_green_case')));
+const Haemoglobin_red_case = Loadable(lazy(() => import('../Pages/insights/Haemoglobin/Haemoglobin_red_case')));
+const Haemoglobin_amber_case = Loadable(lazy(() => import('../Pages/insights/Haemoglobin/Haemoglobin_amber_case')));
 
 const Socieconomin_survey = Loadable(lazy(() => import('../screens/socieconomic survey/Socieconomin_survey')));
 const Screening_screener = Loadable(lazy(() => import('../Pages/daily and weely data/Screening_screener')));

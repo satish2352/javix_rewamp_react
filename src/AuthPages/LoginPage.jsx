@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Form, Button, Container, Row, Col } from 'react-bootstrap';
 import { Link, Navigate, useNavigate } from 'react-router-dom';
-import "../screens/adduser/adduser.scss"
+import "../Pages/adduser/adduser.scss"
 import JavixLogo from '../assets/images/Login/Javix Logo.png';
 import LoginClipart from '../assets/images/Login/Login Clipart.png';
 import '../assets/css/LoginPage.css'
