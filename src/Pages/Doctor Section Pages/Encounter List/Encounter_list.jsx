@@ -1,6 +1,6 @@
 import React, { useMemo } from 'react';
 import "./encounter.scss";
-import ActivateUserIcon from '../../../../assets/images/Activate User.png';
+import ActivateUserIcon from '../../../assets/images/Activate User.png';
 import {
     MaterialReactTable,
     useMaterialReactTable,
@@ -8,7 +8,7 @@ import {
     MRT_ToggleFiltersButton,
 } from 'material-react-table';
 import { Box, Button, lighten } from '@mui/material';
-import Home from '../../../dashboard/home/Home';
+import Home from '../../../layout/Header';
 import { useNavigate } from 'react-router-dom';
 import { Card } from 'react-bootstrap';
 

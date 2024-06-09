@@ -1,5 +1,5 @@
 import { Row, Col, Card } from 'react-bootstrap';
-import user from '../../../../assets/images/user.jpg'
+import user from '../../../assets/images/user.jpg'
 
 function PatientInfoProfile() {
 

@@ -5,7 +5,7 @@ import Card from 'react-bootstrap/Card';
 
 import React, { useMemo } from 'react';
 import './Rx.scss';
-import ActivateUserIcon from '../../../../assets/images/Activate User.png';
+import ActivateUserIcon from '../../../assets/images/Activate User.png';
 import { IoScanCircle } from "react-icons/io5";
 
 

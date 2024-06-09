@@ -114,13 +114,13 @@ const Change_request = Loadable(lazy(() => import('../Pages/change request/Chang
 
 //DOCTORS SECTION
 const DoctorHome = Loadable(lazy(() => import('../components/home pages/DoctorHome')));
-const Referred_patient = Loadable(lazy(() => import('../screens/Doctors_Section/Referred Petient/Referred_patient')));
-const Encounter_List = Loadable(lazy(() => import('../screens/Doctors_Section/Referred Petient/Encounter List/Encounter_List')));
-const Patient_Info = Loadable(lazy(() => import('../screens/Doctors_Section/Referred Petient/Encounter List/Patient_Info')));
-const Petient_view = Loadable(lazy(() => import('../screens/Doctors_Section/Petient view/Petient_view')));
+const Referred_patient = Loadable(lazy(() => import('../Pages/Doctor Section Pages/Referred Petient/Referred_patient')));
+const Encounter_List = Loadable(lazy(() => import('../Pages/Doctor Section Pages/Encounter List/Encounter_list')));
+const Patient_Info = Loadable(lazy(() => import('../Pages/Doctor Section Pages/Encounter List/Patient_Info')));
+const Petient_view = Loadable(lazy(() => import('../Pages/Doctor Section Pages/Petient view/Petient_view')));
 const Citizen_profile = Loadable(lazy(() => import('../components/home pages/home page components/citizen profile/Citizen_profile')));
-const Encounter_petient_list = Loadable(lazy(() => import('../screens/Doctors_Section/Petient view/Encounter_petient_list')));
-const Help_doctors = Loadable(lazy(() => import('../screens/Doctors_Section/Help section/Help_doctors')));
+const Encounter_petient_list = Loadable(lazy(() => import('../Pages/Doctor Section Pages/Petient view/Encounter_petient_list')));
+const Help_doctors = Loadable(lazy(() => import('../Pages/Doctor Section Pages/Help section/Help_doctors')));
 const Prescribed = Loadable(lazy(() => import('../components/home pages/Prescrided/Prescrided')));
 const Non_Prescribed = Loadable(lazy(() => import('../components/home pages/Non-Prescrided/Non_prescrided')));
 const Advanced_screnning_pendding_Case = Loadable(lazy(() => import('../components/home pages/Advanced Screnning Pending Cases/Advanced_screnning_pendding_Case')));

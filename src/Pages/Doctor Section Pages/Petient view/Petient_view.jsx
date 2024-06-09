@@ -1,7 +1,9 @@
 import React, { useMemo } from 'react';
-import './referred_petient.scss';
+import './petient_view.scss';
 import ActivateUserIcon from '../../../assets/images/Activate User.png';
-import { useNavigate } from 'react-router-dom';
+import { FaCheck } from "react-icons/fa";
+import { MdAdsClick } from "react-icons/md";
+
 
 import {
     MaterialReactTable,
@@ -11,40 +13,45 @@ import {
 
 } from 'material-react-table';
 import { Box, Button, lighten } from '@mui/material';
-import Home from '../../dashboard/home/Home';
+import Home from '../../../layout/Header';
 // import { ButtonGroup } from 'react-bootstrap';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
+import { useNavigate } from 'react-router-dom';
+import Export_Button from '../../../screens/dashboard/Exportbuttoncomponents/Export_Button';
 import { Card } from 'react-bootstrap';
-import Export_Button from '../../dashboard/Exportbuttoncomponents/Export_Button';
+
+
 
 const data = [
     {
         sr: 1,
-        citizenID: "102",
-        citizen_name: "safs",
-        screener_name: "esfsf",
+        photo: "abc",
+        citizen_name: "rahul",
+        citizenid: "1234",
         mobile: "9564215748",
-        gender: "female",
-        status: "Active",
-        date: "20/2/2021",
+        email: "rahuls@gmail.com",
+        scrennerfullname: "rahul borse",
+        onboardingdate: "20/2/2021",
         action: ActivateUserIcon
 
     },
     {
         sr: 2,
-        citizenID: "103",
-        citizen_name: "fdfv",
-        screener_name: "rtgbr",
-        mobile: "95612165",
-        gender: "male",
-        status: "Active",
-        date: "22/10/2021",
+        photo: "xyz",
+        citizen_name: "leena",
+        citizenid: "56124",
+        mobile: "9564215748",
+        email: "xyzz@gmail.com",
+        scrennerfullname: "xyzds",
+        onboardingdate: "20/2/2021",
         action: ActivateUserIcon
     },
 ]
-function Referred_patient() {
-    const navi = useNavigate()
+
+function Petient_view() {
+    const Navigate = useNavigate()
+
     const columns = useMemo(
         () => [
             {
@@ -53,8 +60,8 @@ function Referred_patient() {
                 size: 150,
             },
             {
-                accessorKey: 'citizenID',
-                header: 'Citizen ID',
+                accessorKey: 'photo',
+                header: 'Photo',
                 size: 150,
             },
             {
@@ -63,8 +70,8 @@ function Referred_patient() {
                 size: 150,
             },
             {
-                accessorKey: 'screener_name',
-                header: 'Screener Name',
+                accessorKey: 'citizenid',
+                header: 'Citizen ID',
                 size: 150,
             },
             {
@@ -73,18 +80,18 @@ function Referred_patient() {
                 size: 150,
             },
             {
-                accessorKey: 'gender',
-                header: 'Gender',
+                accessorKey: 'email',
+                header: 'Email',
                 size: 150,
             },
             {
-                accessorKey: 'status',
-                header: 'Status',
+                accessorKey: 'scrennerfullname',
+                header: 'Screener Full Name',
                 size: 150,
             },
             {
-                accessorKey: 'date',
-                header: 'Date',
+                accessorKey: 'onboardingdate',
+                header: 'On Bording Date',
                 size: 150,
             },
             {
@@ -93,11 +100,11 @@ function Referred_patient() {
                 size: 150,
                 Cell: ({ row }) => (
                     <Box>
-                        <button onClick={() => handleActivateUser(row)} style={{ height: '32px', width: '32px', borderRadius: '50%' }}>
-                            <img src={ActivateUserIcon} alt="" style={{ width: '100%', height: 'auto' }} />
-                        </button>
+                        <FaCheck onClick={() => handleActivateUser1(row)} style={{ fontSize: '20px' }} />
+                        <MdAdsClick onClick={() => handleActivateUser2(row)} style={{ fontSize: '20px', marginLeft: '25px' }} />
                     </Box>
                 ),
+
             },
         ],
         []
@@ -121,17 +128,24 @@ function Referred_patient() {
         });
     };
 
-    const handleActivateUser = (row) => {
-        // alert('activating ' + row.getValue('name'));
-        navi('/referred_patient/Encounter_List')
-
+    const handleActivateUser1 = (row) => {
+        // alert('1');
+        Navigate('/citizen-form')
     };
+    const handleActivateUser2 = (row) => {
+        // alert('2');
+        Navigate('')
+    };
+
+    // function addCity(){
+    //     alert('Sorry as a Doctor you are not entitled for this.')
+    // }
     return (
         <>
             <Home />
             <Card className='mt-3'>
                 <Card.Body>
-                    <p style={{ color: "black", fontSize: '20px' }}>Referred Petient</p>
+                    <p style={{ color: "black", fontSize: '20px' }}>Citizen List</p>
                     <Box
                         sx={(theme) => ({
                             backgroundColor: lighten(theme.palette.background.default, 0.05),
@@ -147,17 +161,17 @@ function Referred_patient() {
                         </Box>
                         <Box>
                             <Box sx={{ display: 'flex', gap: '0.5rem' }}>
-                                <Export_Button data={data} name={"Referred Petient"} />
+                                <Export_Button data={data} name={"Citizen List"} />
+                                <Button variant='primary' style={{ backgroundColor: '#4848d1', color: 'white' }} >Add Citizen</Button>
                             </Box>
                         </Box>
                     </Box>
                     <MaterialReactTable table={table} />
                 </Card.Body>
             </Card>
+
         </>
-
-
     )
 }
 
-export default Referred_patient
+export default Petient_view

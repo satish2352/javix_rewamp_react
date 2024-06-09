@@ -11,7 +11,7 @@ import MedicalHistory from './MedicalHistory';
 import ReproductiveHistory from './ReproductiveHistory';
 import Rx from './Rx';
 import Documents from './Documents';
-import Home from '../../../../screens/dashboard/home/Home'
+import Home from '../../../layout/Header'
 export default function ScrollableTabsButtonPrevent() {
   const [value, setValue] = useState(0);
 

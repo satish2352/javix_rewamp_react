@@ -1,9 +1,7 @@
 import React, { useMemo } from 'react';
-import './petient_view.scss';
+import './referred_petient.scss';
 import ActivateUserIcon from '../../../assets/images/Activate User.png';
-import { FaCheck } from "react-icons/fa";
-import { MdAdsClick } from "react-icons/md";
-
+import { useNavigate } from 'react-router-dom';
 
 import {
     MaterialReactTable,
@@ -13,45 +11,40 @@ import {
 
 } from 'material-react-table';
 import { Box, Button, lighten } from '@mui/material';
-import Home from '../../dashboard/home/Home';
+import Home from '../../../layout/Header';
 // import { ButtonGroup } from 'react-bootstrap';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { useNavigate } from 'react-router-dom';
-import Export_Button from '../../dashboard/Exportbuttoncomponents/Export_Button';
 import { Card } from 'react-bootstrap';
-
-
+import Export_Button from '../../../screens/dashboard/Exportbuttoncomponents/Export_Button';
 
 const data = [
     {
         sr: 1,
-        photo: "abc",
-        citizen_name: "rahul",
-        citizenid: "1234",
+        citizenID: "102",
+        citizen_name: "safs",
+        screener_name: "esfsf",
         mobile: "9564215748",
-        email: "rahuls@gmail.com",
-        scrennerfullname: "rahul borse",
-        onboardingdate: "20/2/2021",
+        gender: "female",
+        status: "Active",
+        date: "20/2/2021",
         action: ActivateUserIcon
 
     },
     {
         sr: 2,
-        photo: "xyz",
-        citizen_name: "leena",
-        citizenid: "56124",
-        mobile: "9564215748",
-        email: "xyzz@gmail.com",
-        scrennerfullname: "xyzds",
-        onboardingdate: "20/2/2021",
+        citizenID: "103",
+        citizen_name: "fdfv",
+        screener_name: "rtgbr",
+        mobile: "95612165",
+        gender: "male",
+        status: "Active",
+        date: "22/10/2021",
         action: ActivateUserIcon
     },
 ]
-
-function Petient_view() {
-    const Navigate = useNavigate()
-
+function Referred_patient() {
+    const navi = useNavigate()
     const columns = useMemo(
         () => [
             {
@@ -60,8 +53,8 @@ function Petient_view() {
                 size: 150,
             },
             {
-                accessorKey: 'photo',
-                header: 'Photo',
+                accessorKey: 'citizenID',
+                header: 'Citizen ID',
                 size: 150,
             },
             {
@@ -70,8 +63,8 @@ function Petient_view() {
                 size: 150,
             },
             {
-                accessorKey: 'citizenid',
-                header: 'Citizen ID',
+                accessorKey: 'screener_name',
+                header: 'Screener Name',
                 size: 150,
             },
             {
@@ -80,18 +73,18 @@ function Petient_view() {
                 size: 150,
             },
             {
-                accessorKey: 'email',
-                header: 'Email',
+                accessorKey: 'gender',
+                header: 'Gender',
                 size: 150,
             },
             {
-                accessorKey: 'scrennerfullname',
-                header: 'Screener Full Name',
+                accessorKey: 'status',
+                header: 'Status',
                 size: 150,
             },
             {
-                accessorKey: 'onboardingdate',
-                header: 'On Bording Date',
+                accessorKey: 'date',
+                header: 'Date',
                 size: 150,
             },
             {
@@ -100,11 +93,11 @@ function Petient_view() {
                 size: 150,
                 Cell: ({ row }) => (
                     <Box>
-                        <FaCheck onClick={() => handleActivateUser1(row)} style={{ fontSize: '20px' }} />
-                        <MdAdsClick onClick={() => handleActivateUser2(row)} style={{ fontSize: '20px', marginLeft: '25px' }} />
+                        <button onClick={() => handleActivateUser(row)} style={{ height: '32px', width: '32px', borderRadius: '50%' }}>
+                            <img src={ActivateUserIcon} alt="" style={{ width: '100%', height: 'auto' }} />
+                        </button>
                     </Box>
                 ),
-
             },
         ],
         []
@@ -128,24 +121,17 @@ function Petient_view() {
         });
     };
 
-    const handleActivateUser1 = (row) => {
-        // alert('1');
-        Navigate('/citizen-form')
-    };
-    const handleActivateUser2 = (row) => {
-        // alert('2');
-        Navigate('')
-    };
+    const handleActivateUser = (row) => {
+        // alert('activating ' + row.getValue('name'));
+        navi('/referred_patient/Encounter_List')
 
-    // function addCity(){
-    //     alert('Sorry as a Doctor you are not entitled for this.')
-    // }
+    };
     return (
         <>
             <Home />
             <Card className='mt-3'>
                 <Card.Body>
-                    <p style={{ color: "black", fontSize: '20px' }}>Citizen List</p>
+                    <p style={{ color: "black", fontSize: '20px' }}>Referred Petient</p>
                     <Box
                         sx={(theme) => ({
                             backgroundColor: lighten(theme.palette.background.default, 0.05),
@@ -161,17 +147,17 @@ function Petient_view() {
                         </Box>
                         <Box>
                             <Box sx={{ display: 'flex', gap: '0.5rem' }}>
-                                <Export_Button data={data} name={"Citizen List"} />
-                                <Button variant='primary' style={{ backgroundColor: '#4848d1', color: 'white' }} >Add Citizen</Button>
+                                <Export_Button data={data} name={"Referred Petient"} />
                             </Box>
                         </Box>
                     </Box>
                     <MaterialReactTable table={table} />
                 </Card.Body>
             </Card>
-
         </>
+
+
     )
 }
 
-export default Petient_view
+export default Referred_patient

@@ -1,16 +1,16 @@
 import { useState } from 'react';
 import './Encounters.css';
 import { Container, Row, Col, Image, Table, Button } from 'react-bootstrap';
-import vitalSigns from '../../../../assets/images/Encounters/vital signs.png';
-import bloodGlucose from '../../../../assets/images/Encounters/blood glucose.png';
-import rapidTest from '../../../../assets/images/Encounters/rapid test.png';
-import drugTest from '../../../../assets/images/Encounters/drug test.png';
-import lipidPanel from '../../../../assets/images/Encounters/lipid panel.png';
-import sickleCell from '../../../../assets/images/Encounters/sickle cell.png';
-import thalassemia from '../../../../assets/images/Encounters/thalassemia.png';
-import lungFunction from '../../../../assets/images/Encounters/lung function.png';
-import eyeTest from '../../../../assets/images/Encounters/eye test.png';
-import haemoglobin from '../../../../assets/images/Encounters/haemoglobin.png';
+import vitalSigns from '../../../assets/images/Encounters/vital signs.png';
+import bloodGlucose from '../../../assets/images/Encounters/blood glucose.png';
+import rapidTest from '../../../assets/images/Encounters/rapid test.png';
+import drugTest from '../../../assets/images/Encounters/drug test.png';
+import lipidPanel from '../../../assets/images/Encounters/lipid panel.png';
+import sickleCell from '../../../assets/images/Encounters/sickle cell.png';
+import thalassemia from '../../../assets/images/Encounters/thalassemia.png';
+import lungFunction from '../../../assets/images/Encounters/lung function.png';
+import eyeTest from '../../../assets/images/Encounters/eye test.png';
+import haemoglobin from '../../../assets/images/Encounters/haemoglobin.png';
 
 const encounterData = {
   '28-5-2024': [

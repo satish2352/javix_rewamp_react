@@ -254,7 +254,7 @@ function Screening_sevika() {
           >
             Deactivate
           </Button> */}
-                <Export_Button data={data} name={"Screening sevika"}/>
+                <Export_Button data={data} name={"Screening sevika"} />
               </Box>
             </Box>
           </Box>
