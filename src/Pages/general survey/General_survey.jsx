@@ -8,11 +8,11 @@ import {
     MRT_ToggleFiltersButton,
 } from 'material-react-table';
 import { Box, Button, lighten } from '@mui/material';
-import Home from '../dashboard/home/Home';
+import Home from '../../layout/Header';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Card } from 'react-bootstrap';
 import * as XLSX from 'xlsx';
-import Export_Button from '../dashboard/Exportbuttoncomponents/Export_Button';
+import Export_Button from '../../screens/dashboard/Exportbuttoncomponents/Export_Button';
 
 const data = [
     {
@@ -72,18 +72,18 @@ function GeneralSurvey() {
             { accessorKey: 'no_of_children_male', header: 'No of Children Male', size: 150 },
             { accessorKey: 'no_of_children_female', header: 'No of Children Female', size: 150 },
             { accessorKey: 'survey_date', header: 'Survey Date', size: 150 },
-            {
-                accessorKey: 'action',
-                header: 'Action',
-                size: 150,
-                Cell: ({ row }) => (
-                    <Box>
-                        <button onClick={() => handleActivateUser(row)} style={{ height: '32px', width: '32px', borderRadius: '50%' }}>
-                            <IoScanCircle style={{ fontSize: "30px" }} />
-                        </button>
-                    </Box>
-                ),
-            },
+            // {
+            //     accessorKey: 'action',
+            //     header: 'Action',
+            //     size: 150,
+            //     Cell: ({ row }) => (
+            //         <Box>
+            //             <button onClick={() => handleActivateUser(row)} style={{ height: '32px', width: '32px', borderRadius: '50%' }}>
+            //                 <IoScanCircle style={{ fontSize: "30px" }} />
+            //             </button>
+            //         </Box>
+            //     ),
+            // },
         ],
         []
     );

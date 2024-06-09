@@ -36,7 +36,7 @@ const Sevika = Loadable(lazy(() => import('../Pages/Approved Users/Sevika')));
 const Pharmacy = Loadable(lazy(() => import('../Pages/Approved Users/Pharmacy')));
 const Active_users = Loadable(lazy(() => import('../Pages/users/Active_users')));
 const Inactive_users = Loadable(lazy(() => import('../Pages/users/Inactive_users')));
-const General_survey = Loadable(lazy(() => import('../screens/general survey/General_survey')));
+const General_survey = Loadable(lazy(() => import('../Pages/general survey/General_survey')));
 const Health_survey = Loadable(lazy(() => import('../screens/health survey/Health_survey')));
 const Insights2 = Loadable(lazy(() => import('../Pages/insights/Insights2')));
 
