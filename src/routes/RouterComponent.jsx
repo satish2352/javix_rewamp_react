@@ -295,10 +295,10 @@ function RouterComponent() {
         {/* Base layout End */}
 
       </Routes>
-      {
+      {/* {
         window.location.href != "/" &&
         <Footer />
-      }
+      } */}
 
     </>
   );

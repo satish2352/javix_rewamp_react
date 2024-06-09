@@ -170,7 +170,7 @@ const Insights2 = () => {
         <>
             <Row>
                 <Col lg={6} md={6} sm={12}>
-                    <Card id='CARD_IMG'>
+                    <Card id='CARD_IMG' className='mt-3'>
                         <Card.Body>
                             <h5>Blood Pressure</h5>
                             <CustomPieChart
@@ -189,10 +189,10 @@ const Insights2 = () => {
                             {/* </div> */}
                         </Card.Body>
                     </Card>
-                    <br></br>
+                    
                 </Col>
                 <Col lg={6} md={6} sm={12}>
-                    <Card id='CARD_IMG'>
+                    <Card id='CARD_IMG' className='mt-3'>
                         <Card.Body>
                             <h5>SPO2</h5>
                             <CustomPieChart
@@ -212,10 +212,10 @@ const Insights2 = () => {
                     </Card>
                 </Col>
             </Row>
-            <br></br>
+            
             <Row>
                 <Col lg={6} md={6} sm={12}>
-                    <Card id='CARD_IMG'>
+                    <Card id='CARD_IMG' className='mt-3'>
                         <Card.Body>
                             <h5>Temperature</h5>
                             <CustomPieChart
@@ -234,7 +234,7 @@ const Insights2 = () => {
                     </Card>
                 </Col>
                 <Col lg={6} md={6} sm={12}>
-                    <Card id='CARD_IMG'>
+                    <Card id='CARD_IMG' className='mt-3'>
                         <Card.Body>
                             <h5>Heart Rate</h5>
                             <CustomPieChart
@@ -253,11 +253,11 @@ const Insights2 = () => {
                     </Card>
                 </Col>
             </Row>
-            <br></br>
+            
 
             <Row>
                 <Col lg={6} md={6} sm={12}>
-                    <Card id='CARD_IMG'>
+                    <Card id='CARD_IMG' className='mt-3'>
                         <Card.Body>
                             <h5>BMI</h5>
                             <CustomPieChart
@@ -273,10 +273,10 @@ const Insights2 = () => {
                             </div>
                         </Card.Body>
                     </Card>
-                    <br></br>
+                    
                 </Col>
                 <Col lg={6} md={6} sm={12}>
-                    <Card id='CARD_IMG'>
+                    <Card id='CARD_IMG' className='mt-3'>
                         <Card.Body>
                             <h5>Blood Glucose</h5>
                             <CustomPieChart
@@ -294,11 +294,11 @@ const Insights2 = () => {
                     </Card>
                 </Col>
             </Row>
-            <br></br>
+            
 
             <Row>
                 <Col lg={6} md={6} sm={12}>
-                    <Card id='CARD_IMG'>
+                    <Card id='CARD_IMG' className='mt-3'>
                         <Card.Body>
                             <h5>LDL-Lipid Panel</h5>
                             <CustomPieChart
@@ -316,7 +316,7 @@ const Insights2 = () => {
                     </Card>
                 </Col>
                 <Col lg={6} md={6} sm={12}>
-                    <Card id='CARD_IMG'>
+                    <Card id='CARD_IMG' className='mt-3'>
                         <Card.Body>
                             <h5>HDL-Lipid Panel</h5>
                             <CustomPieChart
@@ -334,11 +334,11 @@ const Insights2 = () => {
                     </Card>
                 </Col>
             </Row>
-            <br></br>
+            
 
             <Row>
                 <Col lg={6} md={6} sm={12}>
-                    <Card id='CARD_IMG'>
+                    <Card id='CARD_IMG' className='mt-3'>
                         <Card.Body>
                             <h5>Triglycerides-Lipid Panel</h5>
                             <CustomPieChart
@@ -354,10 +354,10 @@ const Insights2 = () => {
                             </div>
                         </Card.Body>
                     </Card>
-                    <br></br>
+                    
                 </Col>
                 <Col lg={6} md={6} sm={12}>
-                    <Card id='CARD_IMG'>
+                    <Card id='CARD_IMG' className='mt-3'>
                         <Card.Body>
                             <h5>Cholesterol-Lipid Panel</h5>
                             <CustomPieChart
@@ -377,7 +377,7 @@ const Insights2 = () => {
             </Row>
             <Row>
                 <Col lg={6} md={6} sm={12}>
-                    <Card id='CARD_IMG'>
+                    <Card id='CARD_IMG' className='mt-3'>
                         <Card.Body>
                             <h5>Right Eye Tests</h5>
                             <CustomPieChart
@@ -395,7 +395,7 @@ const Insights2 = () => {
                     </Card>
                 </Col>
                 <Col lg={6} md={6} sm={12}>
-                    <Card id='CARD_IMG'>
+                    <Card id='CARD_IMG' className='mt-3'>
                         <Card.Body>
                             <h5>Left Eye Tests</h5>
                             <CustomPieChart
@@ -431,9 +431,9 @@ const Insights2 = () => {
                     </div>
                 </div>
             </Row>
-            <br></br>
+            
 
-            <Card id='CARD_IMG'>
+            <Card id='CARD_IMG' className='mt-3'>
                 <Card.Body>
                     <h4 style={{ textAlign: "center", color: 'rgb(196, 83, 102)' }}><b>Sevika And Screnner Report</b></h4>
                 </Card.Body>

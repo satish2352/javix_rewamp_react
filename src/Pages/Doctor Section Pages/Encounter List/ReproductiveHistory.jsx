@@ -162,7 +162,7 @@ function ReproductiveHistory() {
               <Form.Control type="text" placeholder="Input Value" value={Haveyoureachedmenopause} onChange={(e) => setHaveyoureachedmenopause(e.target.value)} />
               {errors.Haveyoureachedmenopause && <span className="error text-danger">{errors.Haveyoureachedmenopause}</span>}
             </Form.Group>
-            <br></br>
+            
             <hr></hr>
             <h5><b>Periods History</b></h5>
             <hr></hr>
@@ -204,7 +204,7 @@ function ReproductiveHistory() {
               value={no} onChange={(e) => setno(e.target.value)}
             />
             {errors.no && <span className="error text-danger">{errors.no}</span>}
-            <br></br>
+            
 
             <Row>
               <Col lg={6} md={12} sm={12}>

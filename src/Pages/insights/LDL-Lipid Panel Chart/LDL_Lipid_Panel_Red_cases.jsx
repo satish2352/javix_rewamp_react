@@ -191,10 +191,10 @@ function LDL_Lipid_Panel_Red_cases() {
               </Box>
             </Box>
           </Box>
-          <br></br>
+          
 
           <MaterialReactTable table={table} />
-          <br></br>
+          
 
         </Card.Body>
       </Card>

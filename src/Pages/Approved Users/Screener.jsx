@@ -147,10 +147,10 @@ function Screener() {
               </Box>
             </Box>
           </Box>
-          <br></br>
+          
 
           <MaterialReactTable table={table} />
-          <br></br>
+          
         </Card.Body>
       </Card>
 

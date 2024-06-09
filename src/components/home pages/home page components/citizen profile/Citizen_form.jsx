@@ -36,7 +36,7 @@ function Citizen_profile() {
   // }
   return (
     <>
-      <br></br>
+      
       {/* <Card>
         <Card.Header></Card.Header>
         <Card.Body>

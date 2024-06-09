@@ -1,6 +1,7 @@
 import { Outlet } from "react-router-dom";
 import { Sidebar } from "../components";
 import Header from './Header'
+import Footer from './Footer'
 const BaseLayout = () => {
   return (
     <main className="page-wrapper">
@@ -10,6 +11,7 @@ const BaseLayout = () => {
       <div className="content-wrapper">
         <Header/>
         <Outlet />
+        <Footer/>
       </div>
     </main>
   );

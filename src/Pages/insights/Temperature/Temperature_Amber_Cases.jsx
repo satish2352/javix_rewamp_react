@@ -188,10 +188,10 @@ function Temperature_Amber_Cases() {
                     </Box>
                 </Box>
             </Box>
-            <br></br>
+            
 
             <MaterialReactTable table={table} />
-            <br></br>
+            
         </>
     )
 }

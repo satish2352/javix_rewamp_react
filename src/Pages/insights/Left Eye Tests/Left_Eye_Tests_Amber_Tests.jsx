@@ -190,10 +190,10 @@ function Left_Eye_Tests_Amber_Tests() {
               </Box>
             </Box>
           </Box>
-          <br></br>
+          
 
           <MaterialReactTable table={table} />
-          <br></br>
+          
 
         </Card.Body>
       </Card>

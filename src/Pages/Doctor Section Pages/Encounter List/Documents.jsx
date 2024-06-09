@@ -86,16 +86,16 @@ function Documents() {
               <option value="15">Other</option>
             </Form.Select>
             {errors.DocumentType && <span className="error text-danger">{errors.DocumentType}</span>}
-            <br></br>
+            
             <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
               <Form.Label>Add note/comment</Form.Label>
               <Form.Control as="textarea" rows={3} value={Addnote_comment} onChange={(e) => setAddnote_comment(e.target.value)}/>
               {errors.Addnote_comment && <span className="error text-danger">{errors.Addnote_comment}</span>}
             </Form.Group>
 
-            <Form.Label>Attachment</Form.Label><br></br>
+            <Form.Label>Attachment</Form.Label>
             <input type='file' value={Attachment} onChange={(e) => setAttachment(e.target.value)}></input>
-            <br></br>
+            
             {errors.Attachment && <span className="error text-danger">{errors.Attachment}</span>}
             <hr></hr>
             <Button variant="primary" type='submit'>

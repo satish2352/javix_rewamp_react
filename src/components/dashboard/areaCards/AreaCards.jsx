@@ -9,7 +9,7 @@ import {
   MRT_ToggleFiltersButton,
 } from 'material-react-table';
 import { Box, Button, lighten } from '@mui/material';
-import Home from '../../../screens/dashboard/home/Home';
+
 
 
 const data = [
@@ -402,8 +402,7 @@ const AreaCards = () => {
 
   return (
     <>
-    <Home/>
-    <br></br>
+
     <h5 style={{color : "#ea5455"}}>Active users</h5>
     
       <Box
@@ -442,7 +441,7 @@ const AreaCards = () => {
       </Box>
 
       <MaterialReactTable table={table} />
-      <br></br>
+      
       
     </>
   );

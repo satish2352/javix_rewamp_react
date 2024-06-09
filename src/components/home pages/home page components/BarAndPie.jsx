@@ -6,11 +6,12 @@ import './BaiAndPie.css'
 const BarAndPie = ({ data, colors }) => {
     return (
         <div>
+            <br></br>
             <Row>
                 <Col lg={6} md={6} sm={12}>
                     <Card id='Homepage_card_graph'>
                         <Card.Body>
-                            <h5 className='my-3'>Pai Charts</h5>
+                            <h5 className='my-3'>Pai Charts </h5>
                             <CustomPieChart data={data} xAxisKey="name" barKey="value" colors={colors} />
                         </Card.Body>
                     </Card>

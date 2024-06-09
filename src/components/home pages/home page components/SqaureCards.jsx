@@ -19,7 +19,7 @@ const SquareCards = ({ cardsData }) => {
                     </Col>
                 ))}
             </Row>
-            <br></br>
+       
         </>
     );
 }

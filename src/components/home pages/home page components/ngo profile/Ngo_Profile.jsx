@@ -33,7 +33,7 @@ function Ngo_Profile() {
     // }
     return (
         <>
-            <br></br>
+            
             {/* <Card className='mt-3'>
                 <Card.Header>NGO Profile</Card.Header>
                 <Card.Body>

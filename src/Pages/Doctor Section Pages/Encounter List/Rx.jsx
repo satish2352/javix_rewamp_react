@@ -283,7 +283,7 @@ function Rx() {
                                 {errors.unit && <span className="error text-danger">{errors.unit}</span>}
                             </Col>
                         </Row>
-                        <br></br>
+                        
                         <Row>
                             <Col lg={6} md={6} sm={12}>
                                 <Form.Select aria-label="Default select example" value={direaction} onChange={(e) => setdirection(e.target.value)}>
@@ -304,7 +304,7 @@ function Rx() {
                                 {errors.frq && <span className="error text-danger">{errors.frq}</span>}
                             </Col>
                         </Row>
-                        <br></br>
+                        
                         <Row>
                             <Col lg={6} md={6} sm={12}>
                                 <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
