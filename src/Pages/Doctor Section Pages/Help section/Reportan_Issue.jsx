@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import {  Card } from 'react-bootstrap'
-import Header from '../../../layout/Header'
+
 import Button from 'react-bootstrap/Button';
 
 import Form from 'react-bootstrap/Form';
@@ -37,7 +37,6 @@ function Reportan_Issue() {
     }
     return (
         <>
-            <Header />
             <Card className='mt-3'>
                 <p style={{ color: "black", fontSize: '20px', padding:'10px'}}>Report an Issue</p>
                 <Card.Body>
