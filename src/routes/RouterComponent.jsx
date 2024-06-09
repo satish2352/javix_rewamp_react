@@ -103,7 +103,7 @@ const Haemoglobin_green_case = Loadable(lazy(() => import('../Pages/insights/Hae
 const Haemoglobin_red_case = Loadable(lazy(() => import('../Pages/insights/Haemoglobin/Haemoglobin_red_case')));
 const Haemoglobin_amber_case = Loadable(lazy(() => import('../Pages/insights/Haemoglobin/Haemoglobin_amber_case')));
 
-const Socieconomin_survey = Loadable(lazy(() => import('../screens/socieconomic survey/Socieconomin_survey')));
+const Socieconomin_survey = Loadable(lazy(() => import('../Pages/socieconomic survey/Socieconomin_survey')));
 const Screening_screener = Loadable(lazy(() => import('../Pages/daily and weely data/Screening_screener')));
 const Screening_sevika = Loadable(lazy(() => import('../Pages/daily and weely data/Screening_sevika')));
 const Patient_List_For_Lipid_Panel_Test = Loadable(lazy(() => import('../Pages/daily and weely data/Patient_List_For_Lipid_Panel_Test')));
