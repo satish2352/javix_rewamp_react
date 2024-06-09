@@ -1,5 +1,5 @@
 import React from 'react'
-import Home from '../../../../screens/dashboard/home/Home'
+
 import { useNavigate } from "react-router-dom"
 import ngo_profile from '../../../../assets/images/user.jpg'
 import { Button, Card, Col, Row } from 'react-bootstrap'
@@ -33,7 +33,6 @@ function Ngo_Profile() {
     // }
     return (
         <>
-            <Home />
             <br></br>
             {/* <Card className='mt-3'>
                 <Card.Header>NGO Profile</Card.Header>

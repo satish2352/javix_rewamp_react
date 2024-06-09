@@ -12,7 +12,7 @@ import {
 
 } from 'material-react-table';
 import { Box, Button, lighten } from '@mui/material';
-import Home from '../../screens/dashboard/home/Home';
+
 // import { ButtonGroup } from 'react-bootstrap';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -105,7 +105,7 @@ function Sevika() {
   };
   return (
     <>
-      <Home />
+  
       <Card className='mt-3'>
         <Card.Body>
           <p style={{ color: "black", fontSize: '20px' }}>Sevika Lists</p>

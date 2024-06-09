@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Form, Button, Col, Row } from 'react-bootstrap';
 import Card from 'react-bootstrap/Card';
-import Home from '../../screens/dashboard/home/Home'
+// import Home from '../../screens/dashboard/home/Home'
 
 function DoctorProfileEdit() {
     const [firstName , setfirstName] = useState('');
@@ -138,9 +138,9 @@ function DoctorProfileEdit() {
 
     return (
         <>
-        <Home/>
-        <br></br>
-            <Card>
+        {/* <Home/>
+        <br></br> */}
+            <Card className='mt-3'>
                 <Card.Body>
                     <Card.Title className='mt-3 mb-4' style={{ textAlign: "center", color: 'rgb(205, 9, 142)', fontWeight: 'bold', fontFamily: 'Montserrat', fontSize: '24px' }}>Doctor Registration Form</Card.Title>
                     <Card.Text>

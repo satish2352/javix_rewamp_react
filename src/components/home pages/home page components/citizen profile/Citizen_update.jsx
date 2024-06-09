@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import Home from '../../../../screens/dashboard/home/Home'
+
 import { Button, Card, Col, Form, Row } from 'react-bootstrap'
 
 function Citizen_update() {
@@ -124,7 +124,7 @@ function Citizen_update() {
 
   return (
     <>
-      <Home />
+     
       <br></br>
       <Card>
         <Card.Body>

@@ -8,7 +8,7 @@ import {
     MRT_ToggleFiltersButton,
 } from 'material-react-table';
 import { Box, Button, lighten } from '@mui/material';
-import Home from '../../layout/Header';
+
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Card } from 'react-bootstrap';
 import * as XLSX from 'xlsx';
@@ -119,7 +119,6 @@ function GeneralSurvey() {
 
     return (
         <>
-            <Home />
             <Card className='mt-3'>
                 <Card.Body>
                     <p style={{ color: "black", fontSize: '20px' }}>General Survey Data</p>

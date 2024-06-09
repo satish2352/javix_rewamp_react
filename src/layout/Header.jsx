@@ -37,7 +37,7 @@ function Header() {
                   <i class="fa-solid fa-user"></i>
                 </Dropdown.Toggle>
                 <Dropdown.Menu className="dropdown-menu-end mt-2">
-                  <Link to='/home/directory'><Dropdown.Item href="#/action-1"><i className="fa-regular fa-message"></i> Directory</Dropdown.Item></Link>
+                  <Link to='/directory'><Dropdown.Item href="/directory"><i className="fa-regular fa-message"></i> Directory</Dropdown.Item></Link>
                   <Link to='/home/doctor_list/doctorprofiledisplay'><Dropdown.Item href="#/action-2"><i className="fa-regular fa-square-check"></i> My Profile</Dropdown.Item></Link>
                   <Link to='/login'><Dropdown.Item href="#/action-3"><i className="fa-solid fa-right-from-bracket"></i> Log out</Dropdown.Item></Link>
                 </Dropdown.Menu>

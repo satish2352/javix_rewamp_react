@@ -14,7 +14,7 @@ import {
 
 } from 'material-react-table';
 import { Avatar, Box, lighten } from '@mui/material';
-import Home from '../../../screens/dashboard/home/Home';
+
 // import { ButtonGroup } from 'react-bootstrap';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -173,7 +173,7 @@ function Advanced_screnning_pendding_Case() {
   // }
   return (
     <>
-    <Home />
+     
       <Card className='mt-3'>
         <Card.Body>
           <p style={{ color: "black", fontSize: '16px' }}>Advanced Screnning Pendding Case</p>

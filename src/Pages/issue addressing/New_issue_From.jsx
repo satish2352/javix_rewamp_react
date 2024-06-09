@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import Home from '../../layout/Header'
+
 import { Button, Card } from 'react-bootstrap'
 import Form from 'react-bootstrap/Form';
 function New_issue_From() {
@@ -37,7 +37,6 @@ function New_issue_From() {
 
     return (
         <>
-            <Home />
             <Card className='mt-3'>
                 <Card.Body>
                     <Form onSubmit={handlesubmit}>

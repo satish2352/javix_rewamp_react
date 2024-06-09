@@ -23,7 +23,7 @@ const DoctorsCard_table = Loadable(lazy(() => import('../components/Home_page_ca
 const DoctorProfileDisplay = Loadable(lazy(() => import('../screens/DoctorsProfileDisplay/DoctorProfileDisplay')));
 const DoctorProfileEdit = Loadable(lazy(() => import('../screens/DoctorsProfileDisplay/DoctorProfileEdit')));
 const Ngo_Profile = Loadable(lazy(()=>import('../components/home pages/home page components/ngo profile/Ngo_Profile')))
-const Directory = Loadable(lazy(() => import('../screens/dashboard/home/Directory')));
+const Directory = Loadable(lazy(() => import('../comman components/directory list/Directory')));
 const Scrennering = Loadable(lazy(() => import('../components/home pages/home page components/scrennings_home/Scrennering')));
 const Add_Citizen = Loadable(lazy(() => import('../components/home pages/home page components/citizen profile/Add_Citizen')));
 const Citizen_form = Loadable(lazy(() => import('../components/home pages/home page components/citizen profile/Citizen_form')));
@@ -168,7 +168,7 @@ function RouterComponent() {
             <>
 
 
-              <Route path="/home/directory" element={<Directory />} />
+              <Route path="/directory" element={<Directory />} />
               <Route path='/adduser' element={<AddUser />} />
 
               

@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import Home from '../../../../screens/dashboard/home/Home'
+
 import { Button, Card, Col, Row } from 'react-bootstrap'
 
 import Form from 'react-bootstrap/Form';
@@ -110,7 +110,7 @@ function Add_Citizen() {
 
     return (
         <>
-            <Home />
+        
             <br></br>
             <Card>
                 <Card.Body>

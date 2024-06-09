@@ -3,7 +3,7 @@ import { Form, Button, Col, Container, Row } from 'react-bootstrap';
 import axios from 'axios';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Card from 'react-bootstrap/Card';
-import Home from '../../layout/Header';
+
 import { FaEye } from "react-icons/fa";
 import { BiSolidHide } from "react-icons/bi";
 
@@ -95,10 +95,8 @@ const AddUser = () => {
         };
     }
     return (
-        <div >
-            <Home />
-            <br></br>
-            <Card>
+        <>
+            <Card className='mt-3'>
                 <Card.Body>
                     <Card.Title style={{ textAlign: "center", color: 'rgb(205, 9, 142)', fontWeight: 'bold', fontFamily: 'Montserrat', fontSize: '24px' }}>User Registration Form</Card.Title>
                     <Card.Text>
@@ -208,9 +206,7 @@ const AddUser = () => {
                     </Card.Text>
                 </Card.Body>
             </Card>
-
-        </div >
-
+        </>
     );
 };
 

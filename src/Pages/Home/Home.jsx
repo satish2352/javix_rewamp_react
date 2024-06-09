@@ -1,10 +1,7 @@
-import RectangleCards from '../../components/home pages/home page components/RectangleCards';
-import PieAnkdBar from '../../components/home pages/home page components/PieAndBar';
+
 import SquareCards from '../../components/home pages/home page components/SqaureCards';
 import BarAndPie from '../../components/home pages/home page components/BarAndPie';
 import './Home.css'
-import { Card } from 'react-bootstrap';
-import Home from '../../screens/dashboard/home/Home'
 // import xyz from '../../screens/Doctors_Section/Petient view/Petient_view'
 
 const squareCardsData = [
@@ -43,12 +40,11 @@ const AdminHome = () => {
     }
     return (
         <>
-            <Home />
             <div className="home-container">
                 <div className="welcome-message" >
                     <h2 className='text-capitalize' >Welcome, {role} !</h2>
                 </div>
-                <SquareCards cardsData={squareCardsData}/>
+                <SquareCards cardsData={squareCardsData} />
                 <BarAndPie data={barAndPieData} colors={barAndPieColors} />
                 {/* <PieAndBar data={pieAndBarData} colors={pieAndBarColors} /> */}
             </div>

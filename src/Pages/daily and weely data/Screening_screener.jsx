@@ -10,7 +10,7 @@ import {
 
 } from 'material-react-table';
 import { Box, Button, lighten } from '@mui/material';
-import Home from '../../layout/Header';
+
 import Export_Button from '../../screens/dashboard/Exportbuttoncomponents/Export_Button';
 import { Card } from 'react-bootstrap';
 
@@ -663,7 +663,7 @@ function Screening_screener() {
   };
   return (
     <>
-      <Home />
+   
       <Card className='mt-3'>
         <Card.Body>
           <p style={{ color: "black", fontSize: '20px' }}>Daily And Weekly Screening Screener Report</p>

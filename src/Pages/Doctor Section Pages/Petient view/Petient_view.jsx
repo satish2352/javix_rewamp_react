@@ -14,7 +14,7 @@ import {
 
 } from 'material-react-table';
 import { Avatar, Box, Button, lighten } from '@mui/material';
-import Home from '../../../layout/Header';
+
 // import { ButtonGroup } from 'react-bootstrap';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -144,7 +144,6 @@ function Petient_view() {
     // }
     return (
         <>
-            <Home />
             <Card className='mt-3'>
                 <Card.Body>
                     <p style={{ color: "black", fontSize: '20px' }}>Citizen List</p>

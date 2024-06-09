@@ -1,6 +1,6 @@
 import { Row, Col, Card, Button } from 'react-bootstrap';
 import user from '../../assets/images/user.jpg';
-import Home from '../../screens/dashboard/home/Home'
+
 import { Navigate, useNavigate } from 'react-router-dom';
 function ScreenerProfileInfo() {
 
@@ -33,7 +33,6 @@ function ScreenerProfileInfo() {
 
     return (
         <>
-        <Home/>
             <Card className='mt-4'>
                 <Card.Header>Screener Profile</Card.Header>
                 <Card.Body>

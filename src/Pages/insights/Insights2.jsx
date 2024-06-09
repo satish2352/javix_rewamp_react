@@ -2,7 +2,7 @@ import React from 'react';
 import CustomPieChart from './CustomPieChart';
 import { Link, useNavigate } from 'react-router-dom';
 import { Row, Col, Card, Container } from 'react-bootstrap';
-import Home from '../../layout/Header';
+
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './insights.scss'
 import Button from 'react-bootstrap/Button';
@@ -168,8 +168,6 @@ const Insights2 = () => {
 
     return (
         <>
-            <Home />
-            <br></br>
             <Row>
                 <Col lg={6} md={6} sm={12}>
                     <Card id='CARD_IMG'>

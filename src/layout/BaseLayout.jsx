@@ -1,6 +1,6 @@
 import { Outlet } from "react-router-dom";
 import { Sidebar } from "../components";
-
+import Header from './Header'
 const BaseLayout = () => {
   return (
     <main className="page-wrapper">
@@ -8,6 +8,7 @@ const BaseLayout = () => {
       <Sidebar />
       {/* right side/content of the page */}
       <div className="content-wrapper">
+        <Header/>
         <Outlet />
       </div>
     </main>

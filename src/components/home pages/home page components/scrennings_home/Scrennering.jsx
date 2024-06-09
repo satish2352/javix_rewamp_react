@@ -14,7 +14,7 @@ import {
 
 } from 'material-react-table';
 import { Avatar, Box, Button, lighten } from '@mui/material';
-import Home from '../../../../screens/dashboard/home/Home';
+
 // import { ButtonGroup } from 'react-bootstrap';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -22,6 +22,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import { Card } from 'react-bootstrap';
 import { FaUserCheck } from "react-icons/fa6";
 import { TbHandClick } from "react-icons/tb";
+import Export_Button from '../../../../screens/dashboard/Exportbuttoncomponents/Export_Button';
 
 
 const data = [
@@ -150,7 +151,7 @@ function Scrennering() {
   // }
   return (
     <>
-      <Home />
+    
       <Card className='mt-3'>
         <Card.Body>
           <p style={{ color: "black", fontSize: '16px' }}>Screening Case List</p>
@@ -169,7 +170,7 @@ function Scrennering() {
             </Box>
             <Box>
               <Box sx={{ display: 'flex', gap: '0.5rem' }}>
-                 <Button variant='primary' style={{ backgroundColor: '#4848d1', color: 'white' }}>Export</Button>
+              <Export_Button data={data} name={"scrennering list"} />
                 {/* //<Link to='/add-citizen'><Button variant='primary' style={{ backgroundColor: '#4848d1', color: 'white' }} >Add Citizen</Button></Link>  */}
               </Box>
             </Box>

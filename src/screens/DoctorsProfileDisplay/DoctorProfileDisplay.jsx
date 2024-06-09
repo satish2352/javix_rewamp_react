@@ -1,7 +1,7 @@
 import { Row, Col, Card } from 'react-bootstrap';
 import './DoctorProfileDisplay.css';
 import Button from 'react-bootstrap/Button';
-import Home from '../../screens/dashboard/home/Home'
+// import Home from '../../screens/dashboard/home/Home'
 import { useNavigate } from "react-router-dom"
 import doctorphoto from '../DoctorsProfileDisplay/photodoctor.png'
 import doctorsign from '../DoctorsProfileDisplay/doctorsign.png'
@@ -37,9 +37,9 @@ function DoctorProfileDisplay() {
 
     return (
         <>
-            <Home />
-            <br></br>
-            <Card>
+            {/* <Home />
+            <br></br> */}
+            <Card className='mt-3'>
                 <Card.Header>Doctor Profile</Card.Header>
                 <Card.Body>
                     {/* <div className="profile-title">Doctor Profile</div> */}

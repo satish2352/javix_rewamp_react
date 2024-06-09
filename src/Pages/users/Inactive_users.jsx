@@ -9,7 +9,6 @@ import {
   MRT_ToggleFiltersButton,
 } from 'material-react-table';
 import { Box, Button, lighten } from '@mui/material';
-import Home from '../../layout/Header';
 import { Card } from 'react-bootstrap';
 
 const data = [
@@ -147,7 +146,6 @@ function Active_users() {
 
   return (
     <>
-      <Home />
       <Card className='mt-3'>
         <Card.Body>
           <p style={{ color: "black", fontSize: '20px' }}>InActive user List</p>

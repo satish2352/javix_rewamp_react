@@ -1,7 +1,6 @@
 import React, { useMemo } from 'react';
-import './Right_Eye_Tests.scss';
+import './directory.scss';
 // import ActivateUserIcon from '../../../assets/images/Activate User.png';
-import { IoScanCircle } from "react-icons/io5";
 
 
 import {
@@ -15,52 +14,57 @@ import { Box, Button, lighten } from '@mui/material';
 // import { ButtonGroup } from 'react-bootstrap';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Export_Button from '../../../screens/dashboard/Exportbuttoncomponents/Export_Button';
 import { Card } from 'react-bootstrap';
 
 
 const data = [
     {
         sr: 1,
-        petient_details: "fddfg",
-        citizenid: "124",
-        caseid: "1021",
-        mobile: "9561245157",
-        address: "sdfd",
-        screnner_fullname: "gsegts  esfs",
-        onboarding_date: "21/04/2021",
-        date: "21/04/2021",
-        alert: "Hey Alert",
+        name: "Rakesh Sinha",
+        email: "Rakesh.Sinha@gmail.com",
+        phone: "95612457",
+        role: "NGO"
+        // action: ActivateUserIcon
     },
     {
         sr: 2,
-        petient_details: "dvsdv",
-        citizenid: "125",
-        caseid: "632",
-        mobile: "9561245157",
-        address: "dsvfds",
-        screnner_fullname: "rgdrgdsd sfdsf",
-        onboarding_date: "21/04/2021",
-        date: "21/04/2021",
-        alert: "Hey Alert",
+        name: "System admin",
+        email: "javixlife@gmail.com",
+        phone: "7541254859",
+        role: "System Admin"
     },
     {
         sr: 3,
-        petient_details: "hgnh",
-        citizenid: "201",
-        caseid: "632",
-        mobile: "653125147",
-        address: "gfgh",
-        screnner_fullname: "fhfg sfdsf",
-        onboarding_date: "21/04/2021",
-        date: "21/04/2021",
-        alert: "Hey Alert",
+        name: "Chulbul Pandey",
+        email: "rahul.borse@gmail.com",
+        phone: "9564124571",
+        role: "Pharmacy"
     },
-
+    {
+        sr: 4,
+        name: "Amit sales",
+        email: "amin.sales@gmail.com",
+        phone: "8541245715",
+        role: "Pharmacy"
+    },
+    {
+        sr: 5,
+        name: "som kishan",
+        email: "som.sales@gmail.com",
+        phone: "965231522",
+        role: "Pharmacy"
+    },
+    {
+        sr: 6,
+        name: "Amit Mukharjee",
+        email: "amin1254@gmail.com",
+        phone: "8541236547",
+        role: "Pharmacy"
+    },
 ]
 
 
-function Right_Eye_Tests_Green_case() {
+function Directory() {
     const columns = useMemo(
         () => [
             {
@@ -69,48 +73,23 @@ function Right_Eye_Tests_Green_case() {
                 size: 150,
             },
             {
-                accessorKey: 'petient_details',
-                header: 'Petient Details',
+                accessorKey: 'name',
+                header: 'Name',
                 size: 150,
             },
             {
-                accessorKey: 'citizenid',
-                header: 'Citizen ID ',
+                accessorKey: 'email',
+                header: 'Email',
                 size: 150,
             },
             {
-                accessorKey: 'caseid',
-                header: 'Case ID',
+                accessorKey: 'phone',
+                header: 'Phone',
                 size: 150,
             },
             {
-                accessorKey: 'mobile',
-                header: 'Mobile',
-                size: 150,
-            },
-            {
-                accessorKey: 'address',
-                header: 'Address',
-                size: 150,
-            },
-            {
-                accessorKey: 'screnner_fullname',
-                header: 'Screnner Full Name',
-                size: 150,
-            },
-            {
-                accessorKey: 'onboarding_date',
-                header: 'Onbording Date',
-                size: 150,
-            },
-            {
-                accessorKey: 'date',
-                header: 'Date',
-                size: 150,
-            },
-            {
-                accessorKey: 'alert',
-                header: 'Alert',
+                accessorKey: 'role',
+                header: 'Role',
                 size: 150,
             },
             // {
@@ -120,8 +99,7 @@ function Right_Eye_Tests_Green_case() {
             //     Cell: ({ row }) => (
             //         <Box>
             //             <button onClick={() => handleActivateUser(row)} style={{ height: '32px', width: '32px', borderRadius: '50%' }}>
-            //                 {/* <img src={ActivateUserIcon} alt="" style={{ width: '100%', height: 'auto' }} /> */}
-            //                 <IoScanCircle style={{ fontSize: "30px" }} />
+            //                 <img src={ActivateUserIcon} alt="" style={{ width: '100%', height: 'auto' }} />
             //             </button>
             //         </Box>
             //     ),
@@ -129,6 +107,7 @@ function Right_Eye_Tests_Green_case() {
         ],
         []
     );
+
     const table = useMaterialReactTable({
         columns,
         data,
@@ -154,7 +133,7 @@ function Right_Eye_Tests_Green_case() {
         <>
             <Card className='mt-3'>
                 <Card.Body>
-                    <p style={{ color: "black", fontSize: '20px' }}>Right Eye Tests Green case</p>
+                    <p style={{ color: "black", fontSize: '20px' }}>Directory List</p>
                     <Box
                         sx={(theme) => ({
                             backgroundColor: lighten(theme.palette.background.default, 0.05),
@@ -185,16 +164,17 @@ function Right_Eye_Tests_Green_case() {
                             variant="contained"
                         >
                             Deactivate
-                        </Button> */}
-                                <Export_Button data={data} name={"rght eye green cases"} />
+                        </Button>
+                        <Button variant='primary' style={{ backgroundColor: '#4848d1', color: 'white' }}>Export</Button> */}
                             </Box>
                         </Box>
                     </Box>
                     <MaterialReactTable table={table} />
                 </Card.Body>
             </Card>
+
         </>
     )
 }
 
-export default Right_Eye_Tests_Green_case
+export default Directory

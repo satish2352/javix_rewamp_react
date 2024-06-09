@@ -12,7 +12,7 @@ import {
   MRT_ToggleFiltersButton,
 } from 'material-react-table';
 import { Box, Button, lighten } from '@mui/material';
-import Home from '../../screens/dashboard/home/Home';
+
 import { useNavigate } from "react-router-dom"
 import DoctorProfileDisplay from '../../screens/DoctorsProfileDisplay/DoctorProfileDisplay';
 import { Card } from 'react-bootstrap';
@@ -124,7 +124,7 @@ function DoctorsCard_table() {
 
   return (
     <>
-      <Home />
+     
       <Card className='mt-3'>
         <Card.Body>
           <p style={{ color: "black" , fontSize :'20px' }}>Doctors List </p>

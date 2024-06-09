@@ -1,7 +1,7 @@
 import { Row, Col, Card } from 'react-bootstrap';
 // import './DoctorProfileDisplay.css';
 import Button from 'react-bootstrap/Button';
-import Home from '../../../../screens/dashboard/home/Home'
+
 import { useNavigate } from "react-router-dom"
 import citizen_profile from '../../../../assets/images/user.jpg'
 // import doctorsign from '../DoctorsProfileDisplay/doctorsign.png'
@@ -36,7 +36,6 @@ function Citizen_profile() {
   // }
   return (
     <>
-      <Home />
       <br></br>
       {/* <Card>
         <Card.Header></Card.Header>

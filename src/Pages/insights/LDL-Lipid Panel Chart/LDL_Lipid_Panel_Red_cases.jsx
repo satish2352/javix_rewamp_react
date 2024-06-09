@@ -12,7 +12,6 @@ import {
 
 } from 'material-react-table';
 import { Box, Button, lighten } from '@mui/material';
-import Home from '../../../layout/Header';
 // import { ButtonGroup } from 'react-bootstrap';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -153,7 +152,6 @@ function LDL_Lipid_Panel_Red_cases() {
   };
   return (
     <>
-      <Home />
       <Card className='mt-3'>
         <Card.Body>
           <p style={{ color: "black", fontSize: '20px' }}>LDL-Lipid Panel Red Cases</p>
