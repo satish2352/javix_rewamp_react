@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import Home from '../dashboard/home/Home'
+import Home from '../../layout/Header'
 import { Button, Card } from 'react-bootstrap'
 import Form from 'react-bootstrap/Form';
 function New_issue_From() {

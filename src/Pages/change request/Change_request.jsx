@@ -1,5 +1,5 @@
 import React from 'react'
-import Home from '../dashboard/home/Home'
+import Home from '../../layout/Header'
 import changerequest_img from '../../assets/images/change.png'
 import Image from 'react-bootstrap/Image';
 import 'bootstrap/dist/css/bootstrap.min.css';

@@ -1,8 +1,7 @@
 import React, { useMemo } from 'react';
 import './Newissue.scss';
 import ActivateUserIcon from '../../assets/images/Activate User.png';
-import { IoScanCircle } from "react-icons/io5";
-
+import { MdPlaylistAddCheckCircle } from "react-icons/md";
 
 import {
     MaterialReactTable,
@@ -12,11 +11,12 @@ import {
 
 } from 'material-react-table';
 import { Box, Button, lighten } from '@mui/material';
-import Home from '../dashboard/home/Home';
+import Home from '../../layout/Header';
 // import { ButtonGroup } from 'react-bootstrap';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Card } from 'react-bootstrap';
+import { Navigate, useNavigate } from 'react-router-dom';
 
 const data = [
     {
@@ -27,7 +27,7 @@ const data = [
         issue: "vegrh",
         date: "28-12-2023",
         status: "New Issue",
-        comments: "ActivateUserIcon mdsbc j "
+        action: ActivateUserIcon
 
     },
     {
@@ -38,7 +38,7 @@ const data = [
         issue: "able to login",
         date: "28-12-2023",
         status: "New Issue",
-        comments: " dcsdc vsd sdv "
+        action: ActivateUserIcon
 
     },
     {
@@ -49,7 +49,7 @@ const data = [
         issue: "Others",
         date: "28-12-2023",
         status: "New Issue",
-        comments: "ActivateUserIcon dkchsbdjc"
+        action: ActivateUserIcon
 
     },
     {
@@ -60,14 +60,14 @@ const data = [
         issue: "citizen photo not working",
         date: "19-12-2023",
         status: "New Issue",
-        comments: " dhcbjsh dcsc "
+        action: ActivateUserIcon
 
     },
 
 
 ]
-
-function Update_issue() {
+function New_issue() {
+    const Navigate = useNavigate();
     const columns = useMemo(
         () => [
             {
@@ -106,9 +106,17 @@ function Update_issue() {
                 size: 150,
             },
             {
-                accessorKey: 'comments',
-                header: 'Comments',
+                accessorKey: 'action',
+                header: 'Action',
                 size: 150,
+                Cell: ({ row }) => (
+                    <Box>
+                        <button onClick={() => handleActivateUser(row)} style={{ height: '32px', width: '32px', borderRadius: '50%' }}>
+                            {/* <img src={ActivateUserIcon} alt="" style={{ width: '100%', height: 'auto' }} /> */}
+                            <MdPlaylistAddCheckCircle style={{ fontSize: "30px" }} />
+                        </button>
+                    </Box>
+                ),
             },
         ],
         []
@@ -133,14 +141,14 @@ function Update_issue() {
     };
 
     const handleActivateUser = (row) => {
-        alert('activating ' + row.getValue('name'));
+        Navigate('/new-issue-form')
     };
     return (
         <>
             <Home />
             <Card className='mt-3'>
                 <Card.Body>
-                    <p style={{ color: "black", fontSize: '20px' }}>Addressed Issue List</p>
+                    <p style={{ color: "black", fontSize: '20px' }}>New Issue</p>
                     <Box
                         sx={(theme) => ({
                             backgroundColor: lighten(theme.palette.background.default, 0.05),
@@ -177,12 +185,13 @@ function Update_issue() {
                         </Box>
                     </Box>
                     <MaterialReactTable table={table} />
-
                 </Card.Body>
             </Card>
 
         </>
+
+
     )
 }
 
-export default Update_issue
+export default New_issue

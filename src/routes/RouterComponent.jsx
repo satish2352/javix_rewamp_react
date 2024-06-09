@@ -107,10 +107,10 @@ const Socieconomin_survey = Loadable(lazy(() => import('../Pages/socieconomic su
 const Screening_screener = Loadable(lazy(() => import('../Pages/daily and weely data/Screening_screener')));
 const Screening_sevika = Loadable(lazy(() => import('../Pages/daily and weely data/Screening_sevika')));
 const Patient_List_For_Lipid_Panel_Test = Loadable(lazy(() => import('../Pages/daily and weely data/Patient_List_For_Lipid_Panel_Test')));
-const New_issue = Loadable(lazy(() => import('../screens/issue addressing/New_issue')));
-const New_issue_From = Loadable(lazy(() => import('../screens/issue addressing/New_issue_From')));
-const Update_issue = Loadable(lazy(() => import('../screens/issue addressing/Update_issue')));
-const Change_request = Loadable(lazy(() => import('../screens/change request/Change_request')));
+const New_issue = Loadable(lazy(() => import('../Pages/issue addressing/New_issue')));
+const New_issue_From = Loadable(lazy(() => import('../Pages/issue addressing/New_issue_From')));
+const Update_issue = Loadable(lazy(() => import('../Pages/issue addressing/Update_issue')));
+const Change_request = Loadable(lazy(() => import('../Pages/change request/Change_request')));
 
 //DOCTORS SECTION
 const DoctorHome = Loadable(lazy(() => import('../components/home pages/DoctorHome')));
