@@ -4,6 +4,7 @@ import Footer from "../screens/dashboard/Footer";
 import Loadable from "./Loadable";
 
 
+
 // import ChangePasswordDoctor from "../screens/DoctorsProfileDisplay/ChangePasswordDoctor";
 // import Citizen_update from "";
 
@@ -122,6 +123,8 @@ const Citizen_profile = Loadable(lazy(() => import('../components/home pages/hom
 const Encounter_petient_list = Loadable(lazy(() => import('../Pages/Doctor Section Pages/Petient view/Encounter_petient_list')));
 const Help_doctors = Loadable(lazy(() => import('../Pages/Doctor Section Pages/Help section/Help_doctors')));
 const Prescribed = Loadable(lazy(() => import('../components/home pages/Prescrided/Prescrided')));
+const Caselist = Loadable(lazy(() => import('../Pages/Doctor Section Pages/caselist_components/Caselist')));
+const Reportan_Issue = Loadable(lazy(() => import('../Pages/Doctor Section Pages/Help section/Reportan_Issue')));
 const Non_Prescribed = Loadable(lazy(() => import('../components/home pages/Non-Prescrided/Non_prescrided')));
 const Advanced_screnning_pendding_Case = Loadable(lazy(() => import('../components/home pages/Advanced Screnning Pending Cases/Advanced_screnning_pendding_Case')));
 const Advanced_Screnning_total_Cases = Loadable(lazy(() => import('../components/home pages/Advanced Screnning Total Cases/Advanced_Screnning_total_Cases')));
@@ -284,6 +287,8 @@ function RouterComponent() {
 
 
           <Route path='/help_doctors' element={<Help_doctors />} />
+          <Route path='/report-an-issue' element={<Reportan_Issue />} />
+          <Route path='/caselist' element={<Caselist/>} />
 
 
         </Route>

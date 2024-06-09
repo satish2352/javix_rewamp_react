@@ -16,6 +16,7 @@ import Home from '../../../layout/Header';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Card } from 'react-bootstrap';
+import { Navigate, useNavigate } from 'react-router-dom';
 
 
 const data = [
@@ -50,6 +51,7 @@ const data = [
 ]
 
 function Help_doctors() {
+    const Navigate = useNavigate();
     const columns = useMemo(
         () => [
             {
@@ -127,6 +129,8 @@ function Help_doctors() {
 
     function raise() {
         // prompt('Do you what Raise and Issues...')
+        alert('Do you want raise an issues...')
+        Navigate('/report-an-issue')
     }
     return (
         <>
@@ -149,7 +153,7 @@ function Help_doctors() {
                         </Box>
                         <Box>
                             <Box sx={{ display: 'flex', gap: '0.5rem' }}>
-                                <Button variant='primary' style={{ backgroundColor: '#4848d1', color: 'white' }} onClick={raise()}>Raise an Issues</Button>
+                                <Button variant='primary' style={{ backgroundColor: '#4848d1', color: 'white' }} onClick={()=>raise()}>Raise an Issues</Button>
                             </Box>
                         </Box>
                     </Box>

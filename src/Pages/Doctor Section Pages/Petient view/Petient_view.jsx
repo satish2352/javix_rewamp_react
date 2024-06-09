@@ -3,6 +3,7 @@ import './petient_view.scss';
 import ActivateUserIcon from '../../../assets/images/Activate User.png';
 import { FaCheck } from "react-icons/fa";
 import { MdAdsClick } from "react-icons/md";
+import { RiUserSearchFill } from "react-icons/ri";
 
 
 import {
@@ -12,7 +13,7 @@ import {
     MRT_ToggleFiltersButton,
 
 } from 'material-react-table';
-import { Box, Button, lighten } from '@mui/material';
+import { Avatar, Box, Button, lighten } from '@mui/material';
 import Home from '../../../layout/Header';
 // import { ButtonGroup } from 'react-bootstrap';
 
@@ -20,13 +21,14 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { useNavigate } from 'react-router-dom';
 import Export_Button from '../../../screens/dashboard/Exportbuttoncomponents/Export_Button';
 import { Card } from 'react-bootstrap';
+import user from '../../../assets/images/User.jpg'
 
 
 
 const data = [
     {
         sr: 1,
-        photo: "abc",
+        photo: <Avatar alt="Remy Sharp" src={user}/>,
         citizen_name: "rahul",
         citizenid: "1234",
         mobile: "9564215748",
@@ -38,7 +40,7 @@ const data = [
     },
     {
         sr: 2,
-        photo: "xyz",
+        photo: <Avatar alt="Remy Sharp" src={user}/>,
         citizen_name: "leena",
         citizenid: "56124",
         mobile: "9564215748",
@@ -100,7 +102,7 @@ function Petient_view() {
                 size: 150,
                 Cell: ({ row }) => (
                     <Box>
-                        <FaCheck onClick={() => handleActivateUser1(row)} style={{ fontSize: '20px' }} />
+                        <RiUserSearchFill onClick={() => handleActivateUser1(row)} style={{ fontSize: '20px' }} />
                         <MdAdsClick onClick={() => handleActivateUser2(row)} style={{ fontSize: '20px', marginLeft: '25px' }} />
                     </Box>
                 ),
@@ -133,8 +135,8 @@ function Petient_view() {
         Navigate('/citizen-form')
     };
     const handleActivateUser2 = (row) => {
-        // alert('2');
-        Navigate('')
+         alert('Sorry data not found ');
+        //Navigate('')
     };
 
     // function addCity(){
@@ -162,7 +164,7 @@ function Petient_view() {
                         <Box>
                             <Box sx={{ display: 'flex', gap: '0.5rem' }}>
                                 <Export_Button data={data} name={"Citizen List"} />
-                                <Button variant='primary' style={{ backgroundColor: '#4848d1', color: 'white' }} >Add Citizen</Button>
+                                <Button variant='primary' style={{ backgroundColor: '#4848d1', color: 'white' }} onClick={() => handleActivateUser2(alert('Sorry no data'))} >Add Citizen</Button>
                             </Box>
                         </Box>
                     </Box>

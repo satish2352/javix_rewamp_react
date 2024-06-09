@@ -10,12 +10,12 @@ import {
     MRT_ToggleFiltersButton,
 
 } from 'material-react-table';
-import { Box, Button, lighten } from '@mui/material';
+import { Box, lighten } from '@mui/material';
 import Home from '../../../layout/Header';
 // import { ButtonGroup } from 'react-bootstrap';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { Card } from 'react-bootstrap';
+import { Button, Card } from 'react-bootstrap';
 import Export_Button from '../../../screens/dashboard/Exportbuttoncomponents/Export_Button';
 
 const data = [
@@ -93,9 +93,10 @@ function Referred_patient() {
                 size: 150,
                 Cell: ({ row }) => (
                     <Box>
-                        <button onClick={() => handleActivateUser(row)} style={{ height: '32px', width: '32px', borderRadius: '50%' }}>
+                        <Button variant="outline-success" size="sm" onClick={() => handleActivateUser(row)}>Pick and Prescribe</Button>
+                        {/* <button onClick={() => handleActivateUser(row)} style={{ height: '32px', width: '32px', borderRadius: '50%' }}>
                             <img src={ActivateUserIcon} alt="" style={{ width: '100%', height: 'auto' }} />
-                        </button>
+                        </button> */}
                     </Box>
                 ),
             },

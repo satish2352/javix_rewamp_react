@@ -1,10 +1,11 @@
 import React from 'react';
 import CustomPieChart from './CustomPieChart';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { Row, Col, Card, Container } from 'react-bootstrap';
 import Home from '../../layout/Header';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './insights.scss'
+import Button from 'react-bootstrap/Button';
 
 const data1 = [
     { name: 'Green', value: 400 },
@@ -20,21 +21,13 @@ const data2 = [
 
 import { useMemo } from 'react';
 import './insights.scss';
-// import ActivateUserIcon from '../../../assets/images/Activate User.png';
-import { IoScanCircle } from "react-icons/io5";
-
 
 import {
     MaterialReactTable,
     useMaterialReactTable,
-    MRT_GlobalFilterTextField,
-    MRT_ToggleFiltersButton,
 
 } from 'material-react-table';
-import { Box, Button, lighten } from '@mui/material';
-// import Home from '../dashboard/home/Home';
-// import { ButtonGroup } from 'react-bootstrap';
-
+import { Box, lighten } from '@mui/material';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 
@@ -92,6 +85,7 @@ const data = [
 
 
 const Insights2 = () => {
+    const Navigate = useNavigate();
     const colors = ['#28C76F', '#FFBF00', '#EA5455']; // Green, Amber, Red
 
     const columns = useMemo(
@@ -147,10 +141,11 @@ const Insights2 = () => {
                 size: 150,
                 Cell: ({ row }) => (
                     <Box>
-                        <button onClick={() => handleActivateUser(row)} style={{ height: '32px', width: '32px', borderRadius: '50%' }}>
+                        <Button variant="outline-success" onClick={() => handleActivate()}>View</Button>
+                        {/* <button onClick={() => handleActivateUser(row)} style={{ height: '32px', width: '32px', borderRadius: '50%' }}>
                             {/* <img src={ActivateUserIcon} alt="" style={{ width: '100%', height: 'auto' }} /> */}
-                            <IoScanCircle style={{ fontSize: "30px" }} />
-                        </button>
+                        {/* <IoScanCircle style={{ fontSize: "30px" }} />
+                        </button> */}
                     </Box>
                 ),
             },
@@ -163,21 +158,13 @@ const Insights2 = () => {
         enableRowSelection: true,
     });
 
-    const handleDeactivate = () => {
-        table.getSelectedRowModel().flatRows.forEach((row) => {
-            alert('deactivating ' + row.getValue('name'));
-        });
-    };
+
 
     const handleActivate = () => {
-        table.getSelectedRowModel().flatRows.forEach((row) => {
-            alert('activating ' + row.getValue('name'));
-        });
+        alert('Do you want to see case list..???');
+        Navigate('/caselist')
     };
 
-    const handleActivateUser = (row) => {
-        alert('activating ' + row.getValue('name'));
-    };
 
     return (
         <>
@@ -195,7 +182,7 @@ const Insights2 = () => {
                                 colors={colors}
                             />
                             {/* <div className='d-flex justify-content-around align-items-center text-center mt-3'> */}
-                            <div style={{textAlign:'center'}} className='mt-3'>
+                            <div style={{ textAlign: 'center' }} className='mt-3'>
                                 <Link to='/admin/insights/bloodpresure_table'><p >Blood Pressure Green Cases</p></Link>
                                 <Link to='/admin/insights/bloodpresure_table/Blood_Pressure_Amber_Cases'><p>Blood Pressure Amber Cases</p></Link>
                                 <Link to='/admin/insights/bloodpresure_table/Blood_Pressure_Red_Cases'><p>Blood Pressure Red Cases</p></Link>
@@ -217,11 +204,11 @@ const Insights2 = () => {
                                 colors={colors}
                             />
                             {/* <div className='d-flex justify-content-around align-items-center text-center mt-3'> */}
-                            <div style={{textAlign:'center'}} className='mt-3'>
+                            <div style={{ textAlign: 'center' }} className='mt-3'>
                                 <Link to='/admin/insights/SPO2/SPO2_Green_Cases'><p >SPO2 Green Cases</p></Link>
                                 <Link to='/admin/insights/SPO2/SPO2_Amber_Cases'><p >SPO2 Amber Cases</p></Link>
                                 <Link to='/admin/insights/SPO2/SPO2_Red_Cases'><p>SPO2 Red Cases</p></Link>
-                            {/* </div> */}
+                                {/* </div> */}
                             </div>
                         </Card.Body>
                     </Card>
@@ -240,7 +227,7 @@ const Insights2 = () => {
                                 colors={colors}
                             />
                             {/* <div className='d-flex justify-content-around align-items-center text-center mt-3'> */}
-                            <div style={{textAlign:'center'}} className='mt-3'>
+                            <div style={{ textAlign: 'center' }} className='mt-3'>
                                 <Link to='/admin/insights/temperature/Temperature_Green_Cases'><p >Temperature Green Cases</p></Link>
                                 <Link to='/admin/insights/temperature/Temperature_Amber_Cases'><p >Temperature Amber Cases</p></Link>
                                 <Link to='/admin/insights/temperature/Temperature_Red_Cases'><p>Temperature Red Cases</p></Link>
@@ -259,7 +246,7 @@ const Insights2 = () => {
                                 colors={colors}
                             />
                             {/* <div className='d-flex justify-content-around align-items-center text-center mt-3'> */}
-                            <div style={{textAlign:'center'}} className='mt-3'>
+                            <div style={{ textAlign: 'center' }} className='mt-3'>
                                 <Link to='/admin/insights/Heart_rate/Heart_Rate_Green_Cases' ><p >Heart Rate Green Cases</p></Link>
                                 <Link to='/admin/insights/Heart_rate/Heart_Rate_Amber_Cases'><p >Heart Rate Amber Cases</p></Link>
                                 <Link to='/admin/insights/Heart_rate/Heart_Rate_Red_Cases'><p>Heart Rate Red Cases</p></Link>
@@ -281,7 +268,7 @@ const Insights2 = () => {
                                 barKeys={['Green', 'Amber', 'Red']}
                                 colors={colors}
                             />
-                            <div style={{textAlign:'center'}} className='mt-3'>
+                            <div style={{ textAlign: 'center' }} className='mt-3'>
                                 <Link to='/admin/insights/BMI/BMI_Green_Cases'><p >BMI Green Cases</p></Link>
                                 <Link to='/admin/insights/BMI/BMI_Amber_Cases'><p >BMI Amber Cases</p></Link>
                                 <Link to='/admin/insights/BMI/BMI_Red_Cases'><p>BMI Red Cases</p></Link>
@@ -300,7 +287,7 @@ const Insights2 = () => {
                                 barKeys={['Green', 'Amber', 'Red']}
                                 colors={colors}
                             />
-                            <div style={{textAlign:'center'}} className='mt-3'>
+                            <div style={{ textAlign: 'center' }} className='mt-3'>
                                 <Link to='/admin/insights/blood_glucose/Blood_Glucose_Green_Cases'><p >Blood Glucose Green Cases</p></Link>
                                 <Link to='/admin/insights/blood_glucose/Blood_Glucose_Amber_Cases'><p >Blood Glucose Amber Cases</p></Link>
                                 <Link to='/admin/insights/blood_glucose/Blood_Glucose_Red_Cases'><p>Blood Glucose Red Cases</p></Link>
@@ -322,7 +309,7 @@ const Insights2 = () => {
                                 barKeys={['Green', 'Amber', 'Red']}
                                 colors={colors}
                             />
-                           <div style={{textAlign:'center'}} className='mt-3'>
+                            <div style={{ textAlign: 'center' }} className='mt-3'>
                                 <Link to='/admin/insights/LDL-Lipid panel/LDL_Lipid_Panel_Green_cases'><p >LDL-Lipid Panel Green Cases</p></Link>
                                 <Link to='/admin/insights/LDL-Lipid panel/LDL_Lipid_Panel_amber_cases'><p >LDL-Lipid Panel Amber Cases</p></Link>
                                 <Link to='/admin/insights/LDL-Lipid panel/LDL_Lipid_Panel_Red_cases'><p>LDL-Lipid Panel Red Cases</p></Link>
@@ -340,7 +327,7 @@ const Insights2 = () => {
                                 barKeys={['Green', 'Amber', 'Red']}
                                 colors={colors}
                             />
-                            <div style={{textAlign:'center'}} className='mt-3'>
+                            <div style={{ textAlign: 'center' }} className='mt-3'>
                                 <Link to='/admin/insights/HDL-Lipid Panel/HDL_Lipid_Panel_Green_Cases'><p >HDL-Lipid Panel Green Cases</p></Link>
                                 <Link to='/admin/insights/HDL-Lipid Panel/HDL_Lipid_Panel_Amber_Cases'><p >HDL-Lipid Panel Amber Cases</p></Link>
                                 <Link to='/admin/insights/HDL-Lipid Panel/HDL_Lipid_Panel_Red_Cases'><p>HDL-Lipid Panel Red Cases</p></Link>
@@ -362,7 +349,7 @@ const Insights2 = () => {
                                 barKeys={['Green', 'Amber', 'Red']}
                                 colors={colors}
                             />
-                           <div style={{textAlign:'center'}} className='mt-3'>
+                            <div style={{ textAlign: 'center' }} className='mt-3'>
                                 <Link to='/admin/insights/Triglycerides_Lipid_Panel/Triglycerides_Lipid_Panel_green_cases'><p >Triglycerides-Lipid Panel Green Cases</p></Link>
                                 <Link to='/admin/insights/Triglycerides_Lipid_Panel/Triglycerides_Lipid_Panel_amber_cases'><p >Triglycerides-Lipid Panel Amber Cases</p></Link>
                                 <Link to='/admin/insights/Triglycerides_Lipid_Panel/Triglycerides_Lipid_Panel_red_cases'><p>Triglycerides-Lipid Panel Red Cases</p></Link>
@@ -381,7 +368,7 @@ const Insights2 = () => {
                                 barKeys={['Green', 'Amber', 'Red']}
                                 colors={colors}
                             />
-                            <div style={{textAlign:'center'}} className='mt-3'>
+                            <div style={{ textAlign: 'center' }} className='mt-3'>
                                 <Link to='/admin/insights/Cholesterol-Lipid Panel/Cholesterol_Lipid_Panel_Green_Cases'><p >Cholesterol-Lipid Panel Green Cases</p></Link>
                                 <Link to='/admin/insights/Cholesterol-Lipid Panel/Cholesterol_Lipid_Panel_amber_Cases'><p >Cholesterol-Lipid Panel Amber Cases</p></Link>
                                 <Link to='/admin/insights/Cholesterol-Lipid Panel/Cholesterol_Lipid_Panel_Red_Cases'><p>Cholesterol-Lipid Panel Red Cases</p></Link>
@@ -401,7 +388,7 @@ const Insights2 = () => {
                                 barKeys={['Green', 'Amber', 'Red']}
                                 colors={colors}
                             />
-                            <div style={{textAlign:'center'}} className='mt-3'>
+                            <div style={{ textAlign: 'center' }} className='mt-3'>
                                 <Link to='/admin/insights/Right_Eye_Tests/Right_Eye_Tests_Green_case'><p >Right Eye Tests Green Cases</p></Link>
                                 <Link to='/admin/insights/Right_Eye_Tests/Right_Eye_Tests_Amber_case'><p >Right Eye Tests Amber Cases</p></Link>
                                 <Link to='/admin/insights/Right_Eye_Tests/Right_Eye_Tests_Red_case'><p >Right Eye Tests Red Cases</p></Link>
@@ -419,7 +406,7 @@ const Insights2 = () => {
                                 barKeys={['Green', 'Amber', 'Red']}
                                 colors={colors}
                             />
-                            <div style={{textAlign:'center'}} className='mt-3'>
+                            <div style={{ textAlign: 'center' }} className='mt-3'>
                                 <Link to='/admin/insights/Left_Eye_Tests/Left_Eye_Tests_Green_Tests'><p >Left Eye Tests Green Cases</p></Link>
                                 <Link to='/admin/insights/Left_Eye_Tests/Left_Eye_Tests_Amber_Tests'><p >Left Eye Tests Amber Cases</p></Link>
                                 <Link to='/admin/insights/Left_Eye_Tests/Left_Eye_Tests_Red_Tests'><p >Left Eye Tests Red Cases</p></Link>
@@ -439,7 +426,7 @@ const Insights2 = () => {
                             colors={colors}
                         />
                     </div>
-                    <div style={{textAlign:'center'}} className='mt-3'>
+                    <div style={{ textAlign: 'center' }} className='mt-3'>
                         <Link to='/admin/insights/Haemoglobin/Haemoglobin_green_case'><p>Haemoglobin Green Cases</p></Link>
                         <Link to='/admin/insights/Haemoglobin/Haemoglobin_amber_case'><p>Haemoglobin Amber Cases</p></Link>
                         <Link to='/admin/insights/Haemoglobin/Haemoglobin_red_case'><p>Haemoglobin Red Cases</p></Link>
@@ -453,43 +440,6 @@ const Insights2 = () => {
                     <h4 style={{ textAlign: "center", color: 'rgb(196, 83, 102)' }}><b>Sevika And Screnner Report</b></h4>
                 </Card.Body>
             </Card>
-            {/* <h5 style={{ color: "#ea5455" }}><b>Heart Rate Amber Cases</b></h5> */}
-            {/* <Box
-                sx={(theme) => ({
-                    backgroundColor: lighten(theme.palette.background.default, 0.05),
-                    display: 'flex',
-                    gap: '0.5rem',
-                    p: '8px',
-                    justifyContent: 'space-between',
-                })}
-            >
-                <Box sx={{ display: 'flex', gap: '0.5rem', alignItems: 'center' }}>
-                    <MRT_GlobalFilterTextField table={table} />
-                    <MRT_ToggleFiltersButton table={table} />
-                </Box>
-                <Box>
-                    <Box sx={{ display: 'flex', gap: '0.5rem' }}>
-                        <Button
-                            color="success"
-                            disabled={!table.getIsSomeRowsSelected()}
-                            onClick={handleActivate}
-                            variant="contained"
-                        >
-                            Activate
-                        </Button>
-                        <Button
-                            color="error"
-                            disabled={!table.getIsSomeRowsSelected()}
-                            onClick={handleDeactivate}
-                            variant="contained"
-                        >
-                            Deactivate
-                        </Button>
-                        <Button variant='primary' style={{ backgroundColor: '#4848d1', color: 'white' }}>Export</Button>
-                    </Box>
-                </Box>
-            </Box> */}
-            <br></br>
 
             <MaterialReactTable table={table} />
 
