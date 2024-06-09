@@ -11,6 +11,8 @@ import {
 } from 'material-react-table';
 import { Box, Button, lighten } from '@mui/material';
 import Home from '../../layout/Header';
+import Export_Button from '../../screens/dashboard/Exportbuttoncomponents/Export_Button';
+import { Card } from 'react-bootstrap';
 
 const data = [
   {
@@ -21,7 +23,7 @@ const data = [
     citizen_name: "Inactive",
     screenerfullname: "axy sdc",
     DOB: "124",
-    Role:'dfvdf',
+    Role: 'dfvdf',
     gender: "No",
     age: "Active",
     aadhar_number: "No",
@@ -83,7 +85,7 @@ const data = [
     screenerID: "Doctors",
     citizen_name: "Inactive",
     screenerfullname: "axy sdc",
-    DOB:'12',
+    DOB: '12',
     Role: "No",
     gender: "No",
     age: "Active",
@@ -672,25 +674,25 @@ function Patient_List_For_Lipid_Panel_Test() {
   return (
     <>
       <Home />
-      <br></br>
-
-      <h5 style={{ color: "#ea5455" }}><b>Lipid Critical Cases</b></h5>
-      <Box
-        sx={(theme) => ({
-          backgroundColor: lighten(theme.palette.background.default, 0.05),
-          display: 'flex',
-          gap: '0.5rem',
-          p: '8px',
-          justifyContent: 'space-between',
-        })}
-      >
-        <Box sx={{ display: 'flex', gap: '0.5rem', alignItems: 'center' }}>
-          <MRT_GlobalFilterTextField table={table} />
-          <MRT_ToggleFiltersButton table={table} />
-        </Box>
-        <Box>
-          <Box sx={{ display: 'flex', gap: '0.5rem' }}>
-            {/* <Button
+      <Card className='mt-3'>
+        <Card.Body>
+          <p style={{ color: "black", fontSize: '20px' }}>Lipid Critical Cases</p>
+          <Box
+            sx={(theme) => ({
+              backgroundColor: lighten(theme.palette.background.default, 0.05),
+              display: 'flex',
+              gap: '0.5rem',
+              p: '8px',
+              justifyContent: 'space-between',
+            })}
+          >
+            <Box sx={{ display: 'flex', gap: '0.5rem', alignItems: 'center' }}>
+              <MRT_GlobalFilterTextField table={table} />
+              <MRT_ToggleFiltersButton table={table} />
+            </Box>
+            <Box>
+              <Box sx={{ display: 'flex', gap: '0.5rem' }}>
+                {/* <Button
               color="success"
               disabled={!table.getIsSomeRowsSelected()}
               onClick={handleActivate}
@@ -706,13 +708,13 @@ function Patient_List_For_Lipid_Panel_Test() {
             >
               Deactivate
             </Button> */}
-            <Button variant='primary' style={{ backgroundColor: '#4848d1', color: 'white' }}>Export</Button>
+                <Export_Button data={data} name={"Patient list test"} />
+              </Box>
+            </Box>
           </Box>
-        </Box>
-      </Box>
-
-      <MaterialReactTable table={table} />
-      <br></br>
+          <MaterialReactTable table={table} />
+        </Card.Body>
+      </Card>
 
     </>
 

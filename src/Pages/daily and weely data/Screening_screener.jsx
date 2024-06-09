@@ -11,6 +11,8 @@ import {
 } from 'material-react-table';
 import { Box, Button, lighten } from '@mui/material';
 import Home from '../../layout/Header';
+import Export_Button from '../../screens/dashboard/Exportbuttoncomponents/Export_Button';
+import { Card } from 'react-bootstrap';
 
 const data = [
   {
@@ -662,25 +664,25 @@ function Screening_screener() {
   return (
     <>
       <Home />
-      <br></br>
-
-      <h5 style={{ color: "#ea5455" }}><b>Daily And Weekly Screening Screener Report</b></h5>
-      <Box
-        sx={(theme) => ({
-          backgroundColor: lighten(theme.palette.background.default, 0.05),
-          display: 'flex',
-          gap: '0.5rem',
-          p: '8px',
-          justifyContent: 'space-between',
-        })}
-      >
-        <Box sx={{ display: 'flex', gap: '0.5rem', alignItems: 'center' }}>
-          <MRT_GlobalFilterTextField table={table} />
-          <MRT_ToggleFiltersButton table={table} />
-        </Box>
-        <Box>
-          <Box sx={{ display: 'flex', gap: '0.5rem' }}>
-            {/* <Button
+      <Card className='mt-3'>
+        <Card.Body>
+          <p style={{ color: "black", fontSize: '20px' }}>Daily And Weekly Screening Screener Report</p>
+          <Box
+            sx={(theme) => ({
+              backgroundColor: lighten(theme.palette.background.default, 0.05),
+              display: 'flex',
+              gap: '0.5rem',
+              p: '8px',
+              justifyContent: 'space-between',
+            })}
+          >
+            <Box sx={{ display: 'flex', gap: '0.5rem', alignItems: 'center' }}>
+              <MRT_GlobalFilterTextField table={table} />
+              <MRT_ToggleFiltersButton table={table} />
+            </Box>
+            <Box>
+              <Box sx={{ display: 'flex', gap: '0.5rem' }}>
+                {/* <Button
               color="success"
               disabled={!table.getIsSomeRowsSelected()}
               onClick={handleActivate}
@@ -696,13 +698,14 @@ function Screening_screener() {
             >
               Deactivate
             </Button> */}
-            <Button variant='primary' style={{ backgroundColor: '#4848d1', color: 'white' }}>Export</Button>
+                <Export_Button data={data} name={"Screening screener"}/>
+              </Box>
+            </Box>
           </Box>
-        </Box>
-      </Box>
+          <MaterialReactTable table={table} />
+        </Card.Body>
+      </Card>
 
-      <MaterialReactTable table={table} />
-      <br></br>
 
     </>
   )

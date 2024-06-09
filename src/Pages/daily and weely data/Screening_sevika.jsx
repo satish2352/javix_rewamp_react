@@ -8,18 +8,20 @@ import {
   useMaterialReactTable,
   MRT_GlobalFilterTextField,
   MRT_ToggleFiltersButton,
-  
+
 } from 'material-react-table';
 import { Box, Button, lighten } from '@mui/material';
 import Home from '../../layout/Header';
 // import { ButtonGroup } from 'react-bootstrap';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
+import { Card } from 'react-bootstrap';
+import Export_Button from '../../screens/dashboard/Exportbuttoncomponents/Export_Button';
 
 const data = [
   {
-    sr:1,
-    citizenID :"abc",
+    sr: 1,
+    citizenID: "abc",
     caseID: "axy",
     screenerID: "Doctors",
     citizen_name: "Inactive",
@@ -45,8 +47,8 @@ const data = [
 
   },
   {
-    sr:2,
-    citizenID :"gnfgn",
+    sr: 2,
+    citizenID: "gnfgn",
     caseID: "sdssdf",
     screenerID: "sevika",
     citizen_name: "Inactive",
@@ -60,8 +62,8 @@ const data = [
     action: ActivateUserIcon
 
   },
- 
-  
+
+
 ]
 
 function Screening_sevika() {
@@ -216,50 +218,50 @@ function Screening_sevika() {
   };
   return (
     <>
-    <Home/>
-    <br></br>
-    <h5 style={{color : "#ea5455"}}><b>Daily And Weekly Screening Sevika Report</b></h5>
+      <Home />
+      <Card className='mt-3'>
+        <Card.Body>
+          <p style={{ color: "black", fontSize: '20px' }}>Daily And Weekly Screening Sevika Report</p>
 
-    
-      <Box
-        sx={(theme) => ({
-          backgroundColor: lighten(theme.palette.background.default, 0.05),
-          display: 'flex',
-          gap: '0.5rem',
-          p: '8px',
-          justifyContent: 'space-between',
-        })}
-      >
-        <Box sx={{ display: 'flex', gap: '0.5rem', alignItems: 'center' }}>
-          <MRT_GlobalFilterTextField table={table} />
-          <MRT_ToggleFiltersButton table={table} />
-        </Box>
-        <Box>
-          <Box sx={{ display: 'flex', gap: '0.5rem' }}>
-            {/* <Button
-              color="success"
-              disabled={!table.getIsSomeRowsSelected()}
-              onClick={handleActivate}
-              variant="contained"
-            >
-              Activate
-            </Button>
-            <Button
-              color="error"
-              disabled={!table.getIsSomeRowsSelected()}
-              onClick={handleDeactivate}
-              variant="contained"
-            >
-              Deactivate
-            </Button> */}
-            <Button variant='primary' style={{backgroundColor : '#4848d1' ,  color : 'white'}}>Export</Button>
+          <Box
+            sx={(theme) => ({
+              backgroundColor: lighten(theme.palette.background.default, 0.05),
+              display: 'flex',
+              gap: '0.5rem',
+              p: '8px',
+              justifyContent: 'space-between',
+            })}
+          >
+            <Box sx={{ display: 'flex', gap: '0.5rem', alignItems: 'center' }}>
+              <MRT_GlobalFilterTextField table={table} />
+              <MRT_ToggleFiltersButton table={table} />
+            </Box>
+            <Box>
+              <Box sx={{ display: 'flex', gap: '0.5rem' }}>
+                {/* <Button
+            color="success"
+            disabled={!table.getIsSomeRowsSelected()}
+            onClick={handleActivate}
+            variant="contained"
+          >
+            Activate
+          </Button>
+          <Button
+            color="error"
+            disabled={!table.getIsSomeRowsSelected()}
+            onClick={handleDeactivate}
+            variant="contained"
+          >
+            Deactivate
+          </Button> */}
+                <Export_Button data={data} name={"Screening sevika"}/>
+              </Box>
+            </Box>
           </Box>
-        </Box>
-      </Box>
-      <br></br>
-    
-      <MaterialReactTable table={table} />
-      <br></br>
+          <MaterialReactTable table={table} />
+        </Card.Body>
+      </Card>
+
     </>
   )
 }
