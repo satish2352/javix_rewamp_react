@@ -283,6 +283,7 @@ function Rx() {
                                 {errors.unit && <span className="error text-danger">{errors.unit}</span>}
                             </Col>
                         </Row>
+                        <br></br>
                         
                         <Row>
                             <Col lg={6} md={6} sm={12}>
@@ -304,6 +305,7 @@ function Rx() {
                                 {errors.frq && <span className="error text-danger">{errors.frq}</span>}
                             </Col>
                         </Row>
+                        <br></br>
                         
                         <Row>
                             <Col lg={6} md={6} sm={12}>
