@@ -1,5 +1,5 @@
 import React, { useMemo } from 'react';
-import './approved_users.scss';
+import './Ngo.scss';
 // import ActivateUserIcon from '../../../assets/images/Activate User.png';
 import { FaRegUser } from "react-icons/fa";
 import ActivateUserIcon from '../../assets/images/Activate User.png';

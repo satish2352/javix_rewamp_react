@@ -14,7 +14,7 @@ import {
 import { Box, Button, lighten } from '@mui/material';
 
 import { useNavigate } from "react-router-dom"
-import DoctorProfileDisplay from '../../screens/DoctorsProfileDisplay/DoctorProfileDisplay';
+import DoctorProfileDisplay from '../../comman components/DoctorsProfileDisplay/DoctorProfileDisplay';
 import { Card } from 'react-bootstrap';
 
 

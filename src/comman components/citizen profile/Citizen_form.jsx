@@ -3,7 +3,7 @@ import { Row, Col, Card } from 'react-bootstrap';
 import Button from 'react-bootstrap/Button';
 
 import { useNavigate } from "react-router-dom"
-import citizen_profile from '../../../../assets/images/user.jpg'
+import citizen_profile from '../../assets/images/user.jpg'
 // import doctorsign from '../DoctorsProfileDisplay/doctorsign.png'
 function Citizen_profile() {
   const navigate = useNavigate()
@@ -50,7 +50,7 @@ function Citizen_profile() {
         </Card.Body>
       </Card> */} 
       <Card className='mt-4'>
-        <Card.Header>Citizen Profile</Card.Header>
+        <Card.Header>Screener Profile</Card.Header>
         <Card.Body>
           <div>
             <Row className='mt-3'>

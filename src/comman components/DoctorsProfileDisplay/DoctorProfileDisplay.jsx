@@ -3,8 +3,8 @@ import './DoctorProfileDisplay.css';
 import Button from 'react-bootstrap/Button';
 
 import { useNavigate } from "react-router-dom"
-import doctorphoto from '../DoctorsProfileDisplay/photodoctor.png'
-import doctorsign from '../DoctorsProfileDisplay/doctorsign.png'
+import doctorphoto from './photodoctor.png'
+import doctorsign from './doctorsign.png'
 function DoctorProfileDisplay() {
     
     const navigate = useNavigate()

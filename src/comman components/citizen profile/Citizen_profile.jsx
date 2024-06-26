@@ -1,8 +1,8 @@
 import React, { useMemo } from 'react';
 import './Citizenprofile.scss';
-import ActivateUserIcon from '../../../../assets/images/Activate User.png';
+import ActivateUserIcon from '../../assets/images/Activate User.png';
 
-import avtar from '../../../../assets/images/user.jpg'
+import avtar from '../../assets/images/user.jpg';
 
 
 import {

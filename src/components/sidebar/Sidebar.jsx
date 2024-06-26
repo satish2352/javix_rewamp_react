@@ -83,7 +83,7 @@ const Sidebar = () => {
 
   // Get the user's role from localStorage
   const userRole = localStorage.getItem('userRole') || 'doctor';
-
+ 
   const logoutBtn = () => {
     localStorage.removeItem('login');
     localStorage.removeItem('userRole');
@@ -107,6 +107,41 @@ const Sidebar = () => {
     };
   }, []);
 
+  const renderMenuItems = (menuItems) => {
+    return menuItems.map((menuItem, index) => (
+      menuItem.subMenu ? (
+        <li className="menu-item" key={index}>
+          <SubMenu
+            label={menuItem.label}
+            icon={<span className={`menu-item-icon ${activeSubMenuItem === menuItem.link ? "active-icon" : ""}`}>{menuItem.icon}</span>}
+          >
+            {menuItem.subMenu.map((subItem, subIndex) => (
+              <Link to={subItem.link} key={subIndex} onClick={() => setActiveSubMenuItem(subItem.link)}>
+                <MenuItem
+                  className={activeSubMenuItem === subItem.link ? "activeMenuClass" : ""}
+                  icon={<span className={`menu-item-icon ${activeSubMenuItem === subItem.link ? "active-icon" : ""}`}>{subItem.icon}</span>}
+                >
+                  {subItem.label}
+                </MenuItem>
+              </Link>
+            ))}
+          </SubMenu>
+        </li>
+      ) : (
+        <li className="menu-item" key={index}>
+          <Link to={menuItem.link} onClick={() => setActiveSubMenuItem(menuItem.link)}>
+            <MenuItem
+              className={activeSubMenuItem === menuItem.link ? "activeMenuClass" : ""}
+              icon={<span className={`menu-item-icon ${activeSubMenuItem === menuItem.link ? "active-icon" : ""}`}>{menuItem.icon}</span>}
+            >
+              {menuItem.label}
+            </MenuItem>
+          </Link>
+        </li>
+      )
+    ));
+  };
+
   return (
     <nav className={`sidebar ${isSidebarOpen ? "sidebar-show" : ""}`} ref={navbarRef}>
       <div className="sidebar-top">
@@ -123,42 +158,11 @@ const Sidebar = () => {
         <div className="sidebar-menu">
           <ul className="menu-list">
             <Menu>
-              {menuConfig[userRole]?.map((menuItem, index) => (
-                menuItem.subMenu ? (
-                  <li className="menu-item" key={index}>
-                    <SubMenu
-                      label={menuItem.label}
-                      icon={menuItem.icon}
-                    >
-                      {menuItem.subMenu.map((subItem, subIndex) => (
-                        <Link to={subItem.link} key={subIndex} onClick={() => setActiveSubMenuItem(subItem.link)}>
-                          <MenuItem
-                            className={activeSubMenuItem === subItem.link ? "activeMenuClass" : ""}
-                            icon={subItem.icon}
-                          >
-                            {subItem.label}
-                          </MenuItem>
-                        </Link>
-                      ))}
-                    </SubMenu>
-                  </li>
-                ) : (
-                  <li className="menu-item" key={index}>
-                    <Link to={menuItem.link} onClick={() => setActiveSubMenuItem(menuItem.link)}>
-                      <MenuItem
-                        className={activeSubMenuItem === menuItem.link ? "activeMenuClass" : ""}
-                        icon={menuItem.icon}
-                      >
-                        {menuItem.label}
-                      </MenuItem>
-                    </Link>
-                  </li>
-                )
-              ))}
+              {renderMenuItems(menuConfig[userRole] || [])}
               {/* Logout button always displayed */}
               <li className="menu-item">
                 <Link onClick={logoutBtn} to="/login">
-                  <MenuItem icon={<IoMdLogOut />}>Logout</MenuItem>
+                  <MenuItem icon={<span className="menu-item-icon"><IoMdLogOut /></span>}>Logout</MenuItem>
                 </Link>
               </li>
             </Menu>

@@ -227,3 +227,43 @@ ul {
     }
   }
 }
+
+.activeMenuClass .menu-item-icon {
+  color: white;
+}
+
+.menu-item-icon {
+  color: inherit; // Default icon color
+}
+
+.active-icon {
+  color: white; // Change to desired active icon color
+}
+
+// .activeMenuClass {
+//   background-color:#9188f1 ;
+// }
+
+// .sidebar-menu .menu-list .menu-item .activeMenuClass .pro-icon-wrapper {
+//   color: white;
+// }
+
+// .sidebar-menu .menu-list .menu-item a {
+//   color: inherit;
+//   text-decoration: none;
+// }
+
+// .sidebar-menu .menu-list .menu-item a:hover {
+//   background-color: #9188f1;
+// }
+
+
+
+
+
+
+
+
+
+
+
